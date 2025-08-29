@@ -85,7 +85,7 @@ const Pricing = () => {
       
       <main className="pt-16">
         {/* Hero Section */}
-        <Section variant="accent" padding="xl">
+        <Section className="py-24 bg-gradient-subtle">
           <Container>
             <div className="text-center max-w-4xl mx-auto">
               <h1 className="text-4xl md:text-5xl lg:text-6xl font-light tracking-tight text-foreground mb-6">
@@ -102,7 +102,7 @@ const Pricing = () => {
         </Section>
 
         {/* Interactive Calculator */}
-        <Section padding="xl">
+        <Section className="py-24">
           <Container>
             <Card className="max-w-4xl mx-auto border-primary/20 shadow-lg">
               <CardHeader className="text-center">
@@ -183,9 +183,9 @@ const Pricing = () => {
         </Section>
 
         {/* What's Included */}
-        <Section variant="muted" padding="xl">
+        <Section className="py-24 bg-muted/30">
           <Container>
-            <Grid cols={2} gap="xl" responsive>
+            <div className="grid grid-cols-1 lg:grid-cols-2 gap-16">
               <div>
                 <h2 className="text-3xl font-light text-foreground mb-8 flex items-center gap-3">
                   <CheckCircle className="w-8 h-8 text-success" />
@@ -215,12 +215,12 @@ const Pricing = () => {
                   ))}
                 </div>
               </div>
-            </Grid>
+            </div>
           </Container>
         </Section>
 
         {/* FAQ */}
-        <Section padding="xl">
+        <Section className="py-24">
           <Container>
             <div className="max-w-3xl mx-auto">
               <h2 className="text-3xl font-light text-foreground text-center mb-12">
@@ -269,7 +269,7 @@ const Pricing = () => {
         </Section>
 
         {/* CTA Section */}
-        <Section variant="accent" padding="xl">
+        <Section className="py-24 bg-gradient-subtle">
           <Container>
             <div className="text-center max-w-3xl mx-auto">
               <Zap className="w-12 h-12 mx-auto text-primary mb-6" />

@@ -162,7 +162,7 @@ const Resources = () => {
       
       <main className="pt-16">
         {/* Hero Section */}
-        <Section variant="accent" padding="xl">
+        <Section className="py-24 bg-gradient-subtle">
           <Container>
             <div className="text-center max-w-4xl mx-auto">
               <h1 className="text-4xl md:text-5xl lg:text-6xl font-light tracking-tight text-foreground mb-6">
@@ -188,7 +188,7 @@ const Resources = () => {
         </Section>
 
         {/* Content Tabs */}
-        <Section padding="xl">
+        <Section className="py-24">
           <Container>
             <Tabs defaultValue="blog" className="w-full">
               <TabsList className="grid w-full grid-cols-3 max-w-md mx-auto mb-12">
@@ -211,7 +211,7 @@ const Resources = () => {
                 {/* Featured Posts */}
                 <div className="mb-12">
                   <h2 className="text-2xl font-light text-foreground mb-6">Рекомендуем</h2>
-                  <Grid cols={2} gap="lg" responsive>
+                  <div className="grid grid-cols-1 lg:grid-cols-2 gap-8">
                     {filteredContent(blogPosts.filter(post => post.featured)).map((post) => (
                       <Card key={post.id} className="group hover:shadow-lg transition-shadow">
                         <div className="aspect-video bg-muted rounded-t-lg overflow-hidden">
@@ -247,7 +247,7 @@ const Resources = () => {
                         </CardContent>
                       </Card>
                     ))}
-                  </Grid>
+                  </div>
                 </div>
 
                 {/* All Posts */}
@@ -374,7 +374,7 @@ const Resources = () => {
         </Section>
 
         {/* Newsletter CTA */}
-        <Section variant="muted" padding="xl">
+        <Section className="py-24 bg-muted/30">
           <Container>
             <div className="text-center max-w-3xl mx-auto">
               <h2 className="text-3xl font-light text-foreground mb-4">
