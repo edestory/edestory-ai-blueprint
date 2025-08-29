@@ -151,7 +151,7 @@ const Index = () => {
       
       <main>
         {/* Hero Section */}
-        <Section className="pt-32 pb-16 text-white relative overflow-hidden" style={{background: 'linear-gradient(135deg, #565656, #5a5a5a)'}}>
+        <Section className="pt-32 pb-16 text-white relative overflow-hidden" style={{background: 'linear-gradient(135deg, #3d3d3d, #414141)'}}>
           <div className="absolute inset-0 bg-[radial-gradient(circle_at_30%_20%,rgba(230,168,83,0.06),transparent_50%)]" />
           <div className="absolute inset-0 bg-[radial-gradient(circle_at_70%_80%,rgba(230,168,83,0.03),transparent_50%)]" />
           <Container className="relative z-10">
