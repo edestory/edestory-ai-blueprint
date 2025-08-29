@@ -5,7 +5,7 @@ import { Input } from '@/components/ui/input';
 import { Textarea } from '@/components/ui/textarea';
 import { useLanguage } from '@/contexts/LanguageContext';
 
-interface LeadFormProps extends Omit<React.HTMLAttributes<HTMLFormElement>, 'onSubmit'> {
+interface LeadFormProps extends React.HTMLAttributes<HTMLFormElement> {
   title?: string;
   description?: string;
   onSubmit?: (data: FormData) => void;

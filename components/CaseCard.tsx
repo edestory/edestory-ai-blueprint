@@ -4,7 +4,7 @@ import { Card, CardContent } from '@/components/ui/card';
 import { Badge } from '@/components/ui/badge';
 import { Button } from '@/components/ui/button';
 
-interface CaseCardProps extends Omit<React.HTMLAttributes<HTMLDivElement>, 'results'> {
+interface CaseCardProps extends React.HTMLAttributes<HTMLDivElement> {
   title: string;
   description: string;
   industry: string;
