@@ -13,6 +13,8 @@ import AISupport from "./pages/product/AISupport";
 import AILogistics from "./pages/product/AILogistics";
 import AIAnalyst from "./pages/product/AIAnalyst";
 import Templates from "./pages/Templates";
+import TemplatesHowItWorks from "./pages/templates/HowItWorks";
+import TemplateDemo from "./pages/templates/TemplateDemo";
 import Solutions from "./pages/Solutions";
 import Pricing from "./pages/Pricing";
 import Resources from "./pages/Resources";
@@ -40,6 +42,8 @@ const App = () => (
             <Route path="/product/ai-logistics" element={<AILogistics />} />
             <Route path="/product/ai-analyst" element={<AIAnalyst />} />
             <Route path="/templates" element={<Templates />} />
+            <Route path="/templates/how-it-works" element={<TemplatesHowItWorks />} />
+            <Route path="/templates/:slug" element={<TemplateDemo />} />
             <Route path="/solutions" element={<Solutions />} />
             <Route path="/pricing" element={<Pricing />} />
             <Route path="/resources" element={<Resources />} />
