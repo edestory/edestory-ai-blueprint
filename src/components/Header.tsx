@@ -23,27 +23,27 @@ const Header = () => {
   };
 
   return (
-    <header className="fixed top-0 w-full bg-white/90 backdrop-blur-sm border-b border-border z-50">
+    <header className="sticky top-0 z-50 w-full border-b border-border/30 backdrop-elegant">
       <nav className="container-wide">
-        <div className="flex items-center justify-between h-16">
-          {/* Logo */}
-          <Link to="/" className="flex items-center space-x-2">
-            <div className="w-8 h-8 bg-gradient-primary rounded-lg flex items-center justify-center">
-              <span className="text-white font-bold text-sm">E</span>
+        <div className="flex items-center justify-between h-20">
+          {/* Logo - Savoy Style */}
+          <Link to="/" className="flex items-center space-x-3">
+            <div className="w-10 h-10 bg-primary rounded-md flex items-center justify-center">
+              <span className="text-primary-foreground font-semibold text-lg">E</span>
             </div>
-            <span className="text-xl font-bold text-foreground">Edestory</span>
+            <span className="font-light text-2xl tracking-wide text-foreground">EDESTORY</span>
           </Link>
 
           {/* Desktop Navigation */}
-          <div className="hidden md:flex items-center space-x-8">
-            {navigation.map((item) => (
+          <div className="hidden md:flex items-center space-x-12">
+            {navigation.slice(1).map((item) => (
               <Link
                 key={item.href}
                 to={item.href}
-                className={`text-sm font-medium transition-colors hover:text-primary ${
+                className={`text-sm font-normal transition-colors duration-normal ${
                   location.pathname === item.href
-                    ? 'text-primary'
-                    : 'text-muted-foreground'
+                    ? 'text-foreground'
+                    : 'text-muted-foreground hover:text-foreground'
                 }`}
               >
                 {item.name}
@@ -52,25 +52,25 @@ const Header = () => {
           </div>
 
           {/* Actions */}
-          <div className="flex items-center space-x-4">
+          <div className="flex items-center space-x-6">
             {/* Language Toggle */}
             <button
               onClick={toggleLanguage}
-              className="hidden md:flex items-center space-x-1 px-2 py-1 text-sm text-muted-foreground hover:text-foreground transition-colors"
+              className="hidden md:flex items-center space-x-1 px-3 py-2 text-sm text-muted-foreground hover:text-foreground transition-colors duration-normal"
             >
               <Globe className="w-4 h-4" />
-              <span className="uppercase font-medium">{language}</span>
+              <span className="uppercase font-normal tracking-wide">{language}</span>
             </button>
 
             {/* CTA Button */}
-            <Button variant="default" size="sm" className="hidden md:inline-flex">
+            <Button variant="default" size="sm" className="hidden md:inline-flex font-normal">
               {t('common.demo')}
             </Button>
 
             {/* Mobile Menu Button */}
             <button
               onClick={() => setIsOpen(!isOpen)}
-              className="md:hidden p-2 rounded-md hover:bg-muted"
+              className="md:hidden p-2 rounded-md hover:bg-muted transition-colors duration-normal"
             >
               {isOpen ? <X className="w-5 h-5" /> : <Menu className="w-5 h-5" />}
             </button>
@@ -79,15 +79,15 @@ const Header = () => {
 
         {/* Mobile Navigation */}
         {isOpen && (
-          <div className="md:hidden border-t border-border bg-white/95 backdrop-blur-sm">
+          <div className="md:hidden border-t border-border backdrop-elegant">
             <div className="px-2 pt-2 pb-3 space-y-1">
-              {navigation.map((item) => (
+              {navigation.slice(1).map((item) => (
                 <Link
                   key={item.href}
                   to={item.href}
-                  className={`block px-3 py-2 rounded-md text-base font-medium transition-colors ${
+                  className={`block px-4 py-3 rounded-md text-base font-normal transition-colors duration-normal ${
                     location.pathname === item.href
-                      ? 'bg-primary/10 text-primary'
+                      ? 'bg-primary/5 text-primary'
                       : 'text-muted-foreground hover:bg-muted hover:text-foreground'
                   }`}
                   onClick={() => setIsOpen(false)}
@@ -96,16 +96,16 @@ const Header = () => {
                 </Link>
               ))}
               
-              <div className="px-3 py-2 flex items-center justify-between border-t border-border mt-3 pt-3">
+              <div className="px-4 py-3 flex items-center justify-between border-t border-border mt-4 pt-4">
                 <button
                   onClick={toggleLanguage}
-                  className="flex items-center space-x-2 text-sm text-muted-foreground"
+                  className="flex items-center space-x-2 text-sm text-muted-foreground hover:text-foreground transition-colors duration-normal"
                 >
                   <Globe className="w-4 h-4" />
-                  <span className="uppercase font-medium">{language === 'ru' ? 'Русский' : 'English'}</span>
+                  <span className="uppercase font-normal tracking-wide">{language === 'ru' ? 'Русский' : 'English'}</span>
                 </button>
                 
-                <Button variant="default" size="sm" onClick={() => setIsOpen(false)}>
+                <Button variant="default" size="sm" onClick={() => setIsOpen(false)} className="font-normal">
                   {t('common.demo')}
                 </Button>
               </div>

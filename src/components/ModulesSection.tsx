@@ -59,25 +59,25 @@ const ModulesSection = () => {
   ];
 
   return (
-    <section className="section bg-white">
+    <section className="section bg-secondary/30">
       <div className="container-wide">
         {/* Header */}
-        <div className="text-center max-w-3xl mx-auto mb-16">
-          <h2 className="text-3xl md:text-4xl lg:text-5xl font-bold text-foreground mb-6">
+        <div className="text-center max-w-4xl mx-auto mb-20">
+          <h2 className="text-headline font-light text-foreground mb-8">
             {t('modules.title')}
           </h2>
-          <p className="text-lg md:text-xl text-muted-foreground text-balance">
+          <p className="text-body-large text-muted-foreground text-balance">
             {t('modules.subtitle')}
           </p>
         </div>
 
         {/* Modules Grid */}
-        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
+        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
           {modules.map((module, index) => (
             <div
               key={module.title}
               className="animate-slide-up"
-              style={{ animationDelay: `${index * 100}ms` }}
+              style={{ animationDelay: `${index * 150}ms` }}
             >
               <ModuleCard {...module} />
             </div>

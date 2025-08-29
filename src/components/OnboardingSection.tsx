@@ -25,14 +25,14 @@ const OnboardingSection = () => {
   ];
 
   return (
-    <section className="section bg-muted/30">
+    <section className="section bg-secondary/20">
       <div className="container-wide">
         {/* Header */}
-        <div className="text-center max-w-3xl mx-auto mb-16">
-          <h2 className="text-3xl md:text-4xl lg:text-5xl font-bold text-foreground mb-6">
+        <div className="text-center max-w-4xl mx-auto mb-20">
+          <h2 className="text-headline font-light text-foreground mb-8">
             {t('onboarding.title')}
           </h2>
-          <p className="text-lg md:text-xl text-muted-foreground text-balance">
+          <p className="text-body-large text-muted-foreground text-balance">
             {t('onboarding.subtitle')}
           </p>
         </div>
@@ -40,9 +40,9 @@ const OnboardingSection = () => {
         {/* Steps */}
         <div className="relative">
           {/* Connection Line */}
-          <div className="absolute top-8 left-8 right-8 h-0.5 bg-gradient-to-r from-primary via-accent to-primary hidden lg:block"></div>
+          <div className="absolute top-10 left-10 right-10 h-px bg-gradient-to-r from-primary/20 via-accent/30 to-primary/20 hidden lg:block"></div>
           
-          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
+          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-12">
             {steps.map((step, index) => (
               <div
                 key={index}
@@ -50,20 +50,20 @@ const OnboardingSection = () => {
                 style={{ animationDelay: `${index * 200}ms` }}
               >
                 {/* Step Number */}
-                <div className="relative mb-6">
-                  <div className="w-16 h-16 bg-gradient-primary rounded-full flex items-center justify-center text-white font-bold text-lg shadow-lg mx-auto lg:mx-0">
+                <div className="relative mb-8">
+                  <div className="w-20 h-20 bg-primary rounded-full flex items-center justify-center text-primary-foreground font-light text-xl shadow-md mx-auto lg:mx-0">
                     {index + 1}
                   </div>
                   
                   {/* Connector Arrow (Desktop) */}
                   {index < steps.length - 1 && (
-                    <ArrowRight className="hidden lg:block absolute top-1/2 -translate-y-1/2 left-full ml-4 w-8 h-8 text-primary/30" />
+                    <ArrowRight className="hidden lg:block absolute top-1/2 -translate-y-1/2 left-full ml-6 w-6 h-6 text-primary/30" />
                   )}
                 </div>
 
                 {/* Content */}
                 <div className="text-center lg:text-left">
-                  <h3 className="text-xl font-semibold text-foreground mb-3">
+                  <h3 className="text-xl font-normal text-foreground mb-4">
                     {step.title}
                   </h3>
                   <p className="text-muted-foreground leading-relaxed">
@@ -73,9 +73,9 @@ const OnboardingSection = () => {
 
                 {/* Mobile Connector */}
                 {index < steps.length - 1 && (
-                  <div className="lg:hidden flex justify-center mt-6">
-                    <div className="w-8 h-8 border-2 border-primary/20 rounded-full flex items-center justify-center">
-                      <ArrowRight className="w-4 h-4 text-primary/50 rotate-90" />
+                  <div className="lg:hidden flex justify-center mt-8">
+                    <div className="w-8 h-8 border border-primary/20 rounded-full flex items-center justify-center">
+                      <ArrowRight className="w-4 h-4 text-primary/40 rotate-90" />
                     </div>
                   </div>
                 )}
@@ -85,10 +85,10 @@ const OnboardingSection = () => {
         </div>
 
         {/* CTA */}
-        <div className="text-center mt-16">
-          <div className="inline-flex items-center space-x-2 bg-green-50 border border-green-200 rounded-full px-6 py-3 mb-6">
-            <CheckCircle className="w-5 h-5 text-green-600" />
-            <span className="text-sm font-medium text-green-800">
+        <div className="text-center mt-20">
+          <div className="inline-flex items-center space-x-3 bg-primary/5 border border-primary/20 rounded-full px-8 py-4 mb-8">
+            <CheckCircle className="w-5 h-5 text-primary" />
+            <span className="text-sm font-normal text-primary">
               Среднее время запуска: 45 минут
             </span>
           </div>
