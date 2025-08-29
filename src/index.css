@@ -19,20 +19,20 @@
     --popover-foreground: 0 0% 18%;
     
     /* Brand Colors - Savoy Graphite Palette */
-    --primary: 0 0% 33%; /* #545454 */
-    --primary-light: 0 0% 43%;
-    --primary-dark: 0 0% 23%;
+    --primary: 0 0% 29%; /* #4a4a4a - Darker graphite */
+    --primary-light: 0 0% 39%;
+    --primary-dark: 0 0% 19%; /* Very dark graphite for hero */
     --primary-foreground: 0 0% 100%;
     
-    --accent: 0 0% 42%; /* #6B6B6B */
-    --accent-light: 0 0% 52%;
+    --accent: 35 85% 55%; /* #E6A853 - Warm gold accent */
+    --accent-light: 35 85% 65%;
     --accent-foreground: 0 0% 100%;
     
-    --secondary: 0 0% 97%; /* Light background */
+    --secondary: 0 0% 95%; /* Light gray background */
     --secondary-foreground: 0 0% 18%;
     
-    --muted: 0 0% 97%; /* #F8F8F8 */
-    --muted-foreground: 0 0% 42%;
+    --muted: 0 0% 98%; /* Very light gray */
+    --muted-foreground: 0 0% 45%;
     
     --border: 0 0% 93%; /* #EEEEEE */
     --input: 0 0% 93%;
@@ -43,8 +43,9 @@
 
     /* Sophisticated Gradients */
     --gradient-primary: linear-gradient(135deg, hsl(var(--primary)), hsl(var(--accent)));
-    --gradient-subtle: linear-gradient(180deg, hsl(var(--background)), hsl(var(--secondary)));
-    --gradient-hero: linear-gradient(135deg, hsl(var(--primary)), hsl(var(--primary-dark)));
+    --gradient-subtle: linear-gradient(180deg, hsl(var(--muted)), hsl(var(--secondary)));
+    --gradient-hero: linear-gradient(135deg, hsl(var(--primary-dark)), hsl(var(--primary)));
+    --gradient-graphite: linear-gradient(135deg, #4a4a4a, #333333);
     
     /* Elegant Shadows */
     --shadow-sm: 0 1px 3px 0 hsl(0 0% 0% / 0.1);

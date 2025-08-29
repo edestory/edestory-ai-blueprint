@@ -151,26 +151,28 @@ const Index = () => {
       
       <main>
         {/* Hero Section */}
-        <Section className="pt-32 pb-16 bg-gradient-to-b from-background to-muted/30">
-          <Container>
+        <Section className="pt-32 pb-16 bg-gradient-to-br from-slate-800 via-slate-700 to-slate-600 text-white relative overflow-hidden">
+          <div className="absolute inset-0 bg-[radial-gradient(circle_at_30%_20%,rgba(230,168,83,0.1),transparent_50%)]" />
+          <div className="absolute inset-0 bg-[radial-gradient(circle_at_70%_80%,rgba(230,168,83,0.05),transparent_50%)]" />
+          <Container className="relative z-10">
             <div className="text-center max-w-4xl mx-auto">
-              <h1 className="text-display mb-6 text-balance">
+              <h1 className="text-display mb-6 text-balance text-white">
                 Ваша AI‑команда для управления e‑commerce бизнесом
               </h1>
-              <p className="text-body-large text-muted-foreground mb-12 text-balance">
+              <p className="text-body-large text-gray-200 mb-12 text-balance">
                 <strong>Мы предоставляем IT‑платформу «под ключ»</strong>, которая служит операционной 
                 системой для вашего бизнеса. Наши автономные AI‑агенты автоматизируют до 80% рутины 
                 и позволяют управлять магазином с ассортиментом до 100 000 товаров силами двух человек.
               </p>
               
               <div className="flex flex-col sm:flex-row gap-4 justify-center items-center">
-                <Button asChild size="lg" className="text-lg px-8 py-6">
+                <Button asChild size="lg" className="text-lg px-8 py-6 bg-accent hover:bg-accent/90 text-white border-0">
                   <Link to="/contact">
                     Запросить демо
                     <ArrowRight className="ml-2 h-5 w-5" />
                   </Link>
                 </Button>
-                <Button asChild variant="outline" size="lg" className="text-lg px-8 py-6">
+                <Button asChild variant="outline" size="lg" className="text-lg px-8 py-6 border-white/30 text-white hover:bg-white/10 backdrop-blur-sm">
                   <Link to="/product">Узнать подробнее</Link>
                 </Button>
               </div>
@@ -179,7 +181,7 @@ const Index = () => {
         </Section>
 
         {/* About Section */}
-        <Section>
+        <Section className="bg-muted/50">
           <Container>
             <div className="text-center max-w-4xl mx-auto">
               <h2 className="text-headline mb-6">
@@ -195,7 +197,7 @@ const Index = () => {
         </Section>
 
         {/* Technology Section */}
-        <Section className="bg-muted/30">
+        <Section>
           <Container>
             <div className="text-center max-w-4xl mx-auto mb-12">
               <h2 className="text-headline mb-6">
@@ -209,21 +211,21 @@ const Index = () => {
 
             <Grid cols={3} className="mb-12">
               <div className="text-center">
-                <Zap className="w-12 h-12 mx-auto mb-4 text-primary" />
+                <Zap className="w-12 h-12 mx-auto mb-4 text-accent" />
                 <h3 className="text-xl font-semibold mb-2">Скорость</h3>
                 <p className="text-muted-foreground">
                   средняя загрузка страниц <strong>&lt; 1,5 с</strong> → выше конверсия и позиции в Google
                 </p>
               </div>
               <div className="text-center">
-                <Globe className="w-12 h-12 mx-auto mb-4 text-primary" />
+                <Globe className="w-12 h-12 mx-auto mb-4 text-accent" />
                 <h3 className="text-xl font-semibold mb-2">Гибкость</h3>
                 <p className="text-muted-foreground">
                   лёгкая интеграция любых сервисов под любые бизнес‑задачи
                 </p>
               </div>
               <div className="text-center">
-                <CheckCircle className="w-12 h-12 mx-auto mb-4 text-primary" />
+                <CheckCircle className="w-12 h-12 mx-auto mb-4 text-accent" />
                 <h3 className="text-xl font-semibold mb-2">Надёжность</h3>
                 <p className="text-muted-foreground">
                   технологии, выдерживающие миллионы посетителей
@@ -241,7 +243,7 @@ const Index = () => {
         </Section>
 
         {/* Modules Section */}
-        <Section>
+        <Section className="bg-muted/50">
           <Container>
             <div className="text-center mb-12">
               <h2 className="text-headline mb-6">
@@ -254,7 +256,7 @@ const Index = () => {
                 <Card key={index} className="card-hover">
                   <CardHeader>
                     <div className="flex items-center gap-3">
-                      <div className="p-2 bg-primary/10 rounded-lg text-primary">
+                      <div className="p-2 bg-accent/10 rounded-lg text-accent">
                         {module.icon}
                       </div>
                       <CardTitle className="text-xl">{module.title}</CardTitle>
@@ -272,7 +274,7 @@ const Index = () => {
         </Section>
 
         {/* Onboarding Section */}
-        <Section className="bg-muted/30">
+        <Section>
           <Container>
             <div className="text-center mb-12">
               <h2 className="text-headline mb-6">
@@ -287,7 +289,7 @@ const Index = () => {
         </Section>
 
         {/* Architecture Section */}
-        <Section>
+        <Section className="bg-muted/50">
           <Container>
             <div className="text-center max-w-4xl mx-auto">
               <h2 className="text-headline mb-6">
@@ -305,7 +307,7 @@ const Index = () => {
         </Section>
 
         {/* Financial Benefits Section */}
-        <Section className="bg-muted/30">
+        <Section>
           <Container>
             <div className="text-center mb-12">
               <h2 className="text-headline mb-6">
@@ -336,7 +338,7 @@ const Index = () => {
         </Section>
 
         {/* Pricing Section */}
-        <Section>
+        <Section className="bg-muted/50">
           <Container>
             <div className="text-center max-w-3xl mx-auto">
               <h2 className="text-headline mb-6">
@@ -354,7 +356,7 @@ const Index = () => {
         </Section>
 
         {/* FAQ Section */}
-        <Section className="bg-muted/30">
+        <Section>
           <Container>
             <FAQ 
               title="FAQ (AIO)" 
