@@ -18,21 +18,21 @@
     --popover: 0 0% 100%;
     --popover-foreground: 0 0% 15%;
     
-    /* Brand Colors - Sophisticated Graphite Palette */
-    --primary: 0 0% 25%; /* Dark graphite */
-    --primary-light: 0 0% 35%;
-    --primary-dark: 0 0% 15%;
-    --primary-foreground: 0 0% 100%;
+    /* Core colors - Modern graphite palette inspired by Savoy (lighter) */
+    --primary: 71 85 105; /* Lighter slate-600 graphite */
+    --primary-light: 100 116 139; /* Even lighter */
+    --primary-dark: 51 65 85; /* Darker variant */
+    --primary-foreground: 248 249 250;
     
-    --accent: 0 0% 40%; /* Medium graphite */
-    --accent-light: 0 0% 50%;
-    --accent-foreground: 0 0% 100%;
+    --accent: 148 163 184; /* Light gray accent */
+    --accent-light: 203 213 225; /* Very light accent */
+    --accent-foreground: 15 23 42;
     
-    --secondary: 0 0% 97%; /* Light background */
-    --secondary-foreground: 0 0% 25%;
+    --secondary: 249 250 251; /* Very light background */
+    --secondary-foreground: 71 85 105;
     
-    --muted: 0 0% 97%;
-    --muted-foreground: 0 0% 45%;
+    --muted: 248 249 250;
+    --muted-foreground: 100 116 139;
     
     --border: 0 0% 90%;
     --input: 0 0% 90%;
