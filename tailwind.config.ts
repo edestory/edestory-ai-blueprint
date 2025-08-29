@@ -48,10 +48,8 @@ export default {
 				},
 				muted: {
 					DEFAULT: 'hsl(var(--muted))',
-					foreground: 'hsl(var(--muted-foreground))',
-					lighter: 'hsl(var(--muted-lighter))'
+					foreground: 'hsl(var(--muted-foreground))'
 				},
-				'border-accent': 'hsl(var(--border-accent))',
 				popover: {
 					DEFAULT: 'hsl(var(--popover))',
 					foreground: 'hsl(var(--popover-foreground))'
