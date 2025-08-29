@@ -151,9 +151,9 @@ const Index = () => {
       
       <main>
         {/* Hero Section */}
-        <Section className="pt-32 pb-16 bg-gradient-to-br from-slate-800 via-slate-700 to-slate-600 text-white relative overflow-hidden">
-          <div className="absolute inset-0 bg-[radial-gradient(circle_at_30%_20%,rgba(230,168,83,0.1),transparent_50%)]" />
-          <div className="absolute inset-0 bg-[radial-gradient(circle_at_70%_80%,rgba(230,168,83,0.05),transparent_50%)]" />
+        <Section className="pt-32 pb-16 bg-savoy-graphite text-white relative overflow-hidden">
+          <div className="absolute inset-0 bg-[radial-gradient(circle_at_30%_20%,rgba(230,168,83,0.08),transparent_50%)]" />
+          <div className="absolute inset-0 bg-[radial-gradient(circle_at_70%_80%,rgba(230,168,83,0.04),transparent_50%)]" />
           <Container className="relative z-10">
             <div className="text-center max-w-4xl mx-auto">
               <h1 className="text-display mb-6 text-balance text-white">
@@ -181,7 +181,7 @@ const Index = () => {
         </Section>
 
         {/* About Section */}
-        <Section className="bg-muted/50">
+        <Section className="bg-muted">
           <Container>
             <div className="text-center max-w-4xl mx-auto">
               <h2 className="text-headline mb-6">
@@ -197,7 +197,7 @@ const Index = () => {
         </Section>
 
         {/* Technology Section */}
-        <Section>
+        <Section className="bg-muted-alt">
           <Container>
             <div className="text-center max-w-4xl mx-auto mb-12">
               <h2 className="text-headline mb-6">
@@ -243,7 +243,7 @@ const Index = () => {
         </Section>
 
         {/* Modules Section */}
-        <Section className="bg-muted/50">
+        <Section className="bg-background">
           <Container>
             <div className="text-center mb-12">
               <h2 className="text-headline mb-6">
@@ -274,7 +274,7 @@ const Index = () => {
         </Section>
 
         {/* Onboarding Section */}
-        <Section>
+        <Section className="bg-secondary">
           <Container>
             <div className="text-center mb-12">
               <h2 className="text-headline mb-6">
@@ -289,7 +289,7 @@ const Index = () => {
         </Section>
 
         {/* Architecture Section */}
-        <Section className="bg-muted/50">
+        <Section className="bg-muted-alt">
           <Container>
             <div className="text-center max-w-4xl mx-auto">
               <h2 className="text-headline mb-6">
@@ -307,7 +307,7 @@ const Index = () => {
         </Section>
 
         {/* Financial Benefits Section */}
-        <Section>
+        <Section className="bg-background">
           <Container>
             <div className="text-center mb-12">
               <h2 className="text-headline mb-6">
@@ -338,7 +338,7 @@ const Index = () => {
         </Section>
 
         {/* Pricing Section */}
-        <Section className="bg-muted/50">
+        <Section className="bg-muted">
           <Container>
             <div className="text-center max-w-3xl mx-auto">
               <h2 className="text-headline mb-6">
@@ -356,7 +356,7 @@ const Index = () => {
         </Section>
 
         {/* FAQ Section */}
-        <Section>
+        <Section className="bg-secondary">
           <Container>
             <FAQ 
               title="FAQ (AIO)" 
