@@ -3,9 +3,11 @@ import { Link, useLocation } from 'react-router-dom';
 import { Menu, X, Globe } from 'lucide-react';
 import { useLanguage } from '@/contexts/LanguageContext';
 import { Button } from '@/components/ui/button';
+import Sidebar from '@/components/Sidebar';
 
 const Header = () => {
-  const [isOpen, setIsOpen] = useState(false);
+  const [isMobileMenuOpen, setIsMobileMenuOpen] = useState(false);
+  const [isSidebarOpen, setIsSidebarOpen] = useState(false);
   const { language, setLanguage, t } = useLanguage();
   const location = useLocation();
 
@@ -23,16 +25,22 @@ const Header = () => {
   };
 
   return (
-    <header className="sticky top-0 z-50 w-full border-b border-border/30 backdrop-elegant">
-      <nav className="container-wide">
-        <div className="flex items-center justify-between h-20">
-          {/* Logo - Savoy Style */}
-          <Link to="/" className="flex items-center space-x-3">
-            <div className="w-10 h-10 bg-primary rounded-md flex items-center justify-center">
-              <span className="text-primary-foreground font-semibold text-lg">E</span>
+    <>
+      <header className="sticky top-0 z-50 w-full border-b border-border/30 backdrop-elegant">
+        <nav className="container-wide">
+          <div className="flex items-center justify-between h-20">
+            {/* Sandwich Menu + Logo */}
+            <div className="flex items-center space-x-4">
+              <button
+                onClick={() => setIsSidebarOpen(true)}
+                className="p-2 rounded-md hover:bg-muted transition-colors duration-normal"
+              >
+                <Menu className="w-5 h-5 text-muted-foreground" />
+              </button>
+              <Link to="/" className="flex items-center">
+                <span className="font-light text-xl tracking-wide text-foreground">edestory</span>
+              </Link>
             </div>
-            <span className="font-light text-2xl tracking-wide text-foreground">EDESTORY</span>
-          </Link>
 
           {/* Desktop Navigation */}
           <div className="hidden md:flex items-center space-x-12">
@@ -69,16 +77,16 @@ const Header = () => {
 
             {/* Mobile Menu Button */}
             <button
-              onClick={() => setIsOpen(!isOpen)}
+              onClick={() => setIsMobileMenuOpen(!isMobileMenuOpen)}
               className="md:hidden p-2 rounded-md hover:bg-muted transition-colors duration-normal"
             >
-              {isOpen ? <X className="w-5 h-5" /> : <Menu className="w-5 h-5" />}
+              {isMobileMenuOpen ? <X className="w-5 h-5" /> : <Menu className="w-5 h-5" />}
             </button>
           </div>
         </div>
 
         {/* Mobile Navigation */}
-        {isOpen && (
+        {isMobileMenuOpen && (
           <div className="md:hidden border-t border-border backdrop-elegant">
             <div className="px-2 pt-2 pb-3 space-y-1">
               {navigation.slice(1).map((item) => (
@@ -90,7 +98,7 @@ const Header = () => {
                       ? 'bg-primary/5 text-primary'
                       : 'text-muted-foreground hover:bg-muted hover:text-foreground'
                   }`}
-                  onClick={() => setIsOpen(false)}
+                  onClick={() => setIsMobileMenuOpen(false)}
                 >
                   {item.name}
                 </Link>
@@ -105,7 +113,7 @@ const Header = () => {
                   <span className="uppercase font-normal tracking-wide">{language === 'ru' ? 'Русский' : 'English'}</span>
                 </button>
                 
-                <Button variant="default" size="sm" onClick={() => setIsOpen(false)} className="font-normal">
+                <Button variant="default" size="sm" onClick={() => setIsMobileMenuOpen(false)} className="font-normal">
                   {t('common.demo')}
                 </Button>
               </div>
@@ -114,6 +122,9 @@ const Header = () => {
         )}
       </nav>
     </header>
+
+    <Sidebar isOpen={isSidebarOpen} onClose={() => setIsSidebarOpen(false)} />
+    </>
   );
 };
 
