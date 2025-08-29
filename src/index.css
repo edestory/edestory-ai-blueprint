@@ -10,33 +10,33 @@
   :root {
     /* Base Colors - Savoy Inspired */
     --background: 0 0% 100%;
-    --foreground: 218 50% 8%; /* #0B1220 */
+    --foreground: 0 0% 18%; /* #2D2D2D */
     
     --card: 0 0% 100%;
-    --card-foreground: 0 0% 15%;
+    --card-foreground: 0 0% 18%;
     
     --popover: 0 0% 100%;
-    --popover-foreground: 0 0% 15%;
+    --popover-foreground: 0 0% 18%;
     
-    /* Brand Colors - Modern Blue & Teal */
-    --primary: 229 100% 56%; /* #1E4DFF */
-    --primary-light: 229 100% 66%;
-    --primary-dark: 229 100% 46%;
+    /* Brand Colors - Savoy Graphite Palette */
+    --primary: 0 0% 33%; /* #545454 */
+    --primary-light: 0 0% 43%;
+    --primary-dark: 0 0% 23%;
     --primary-foreground: 0 0% 100%;
     
-    --accent: 171 100% 38%; /* #00C2A8 */
-    --accent-light: 171 100% 48%;
+    --accent: 0 0% 42%; /* #6B6B6B */
+    --accent-light: 0 0% 52%;
     --accent-foreground: 0 0% 100%;
     
     --secondary: 0 0% 97%; /* Light background */
-    --secondary-foreground: 0 0% 25%;
+    --secondary-foreground: 0 0% 18%;
     
-    --muted: 0 0% 97%;
-    --muted-foreground: 0 0% 45%;
+    --muted: 0 0% 97%; /* #F8F8F8 */
+    --muted-foreground: 0 0% 42%;
     
-    --border: 220 20% 90%; /* #E6EAF0 */
-    --input: 0 0% 90%;
-    --ring: 0 0% 25%;
+    --border: 0 0% 93%; /* #EEEEEE */
+    --input: 0 0% 93%;
+    --ring: 0 0% 33%;
     
     --destructive: 0 84.2% 60.2%;
     --destructive-foreground: 0 0% 97%;
