@@ -1,4 +1,4 @@
-@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;500;600;700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap');
 
 @tailwind base;
 @tailwind components;
@@ -10,7 +10,7 @@
   :root {
     /* Base Colors - Savoy Inspired */
     --background: 0 0% 100%;
-    --foreground: 0 0% 15%;
+    --foreground: 218 50% 8%; /* #0B1220 */
     
     --card: 0 0% 100%;
     --card-foreground: 0 0% 15%;
@@ -18,14 +18,14 @@
     --popover: 0 0% 100%;
     --popover-foreground: 0 0% 15%;
     
-    /* Brand Colors - Sophisticated Graphite Palette */
-    --primary: 0 0% 25%; /* Dark graphite */
-    --primary-light: 0 0% 35%;
-    --primary-dark: 0 0% 15%;
+    /* Brand Colors - Modern Blue & Teal */
+    --primary: 229 100% 56%; /* #1E4DFF */
+    --primary-light: 229 100% 66%;
+    --primary-dark: 229 100% 46%;
     --primary-foreground: 0 0% 100%;
     
-    --accent: 0 0% 40%; /* Medium graphite */
-    --accent-light: 0 0% 50%;
+    --accent: 171 100% 38%; /* #00C2A8 */
+    --accent-light: 171 100% 48%;
     --accent-foreground: 0 0% 100%;
     
     --secondary: 0 0% 97%; /* Light background */
@@ -34,7 +34,7 @@
     --muted: 0 0% 97%;
     --muted-foreground: 0 0% 45%;
     
-    --border: 0 0% 90%;
+    --border: 220 20% 90%; /* #E6EAF0 */
     --input: 0 0% 90%;
     --ring: 0 0% 25%;
     

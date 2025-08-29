@@ -1,18 +1,18 @@
 {
   "colors": { 
-    "primary": "#2D3436", 
-    "accent": "#636E72", 
+    "primary": "#1E4DFF", 
+    "accent": "#00C2A8", 
     "bg": "#FFFFFF", 
-    "fg": "#2D3436", 
-    "muted": "#F8F9FA", 
-    "border": "#DDD6FE", 
-    "success": "#00B894", 
-    "warning": "#FDCB6E", 
-    "danger": "#E17055" 
+    "fg": "#0B1220", 
+    "muted": "#F5F7FA", 
+    "border": "#E6EAF0", 
+    "success": "#12B76A", 
+    "warning": "#F79009", 
+    "danger": "#D92D20" 
   },
   "fonts": { 
-    "heading": "Montserrat", 
-    "body": "Montserrat" 
+    "heading": "Inter", 
+    "body": "Inter" 
   },
   "radius": { 
     "sm": "6px", 
