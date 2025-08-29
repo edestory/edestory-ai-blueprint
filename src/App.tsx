@@ -6,6 +6,12 @@ import { BrowserRouter, Routes, Route } from "react-router-dom";
 import { LanguageProvider } from "@/contexts/LanguageContext";
 import Index from "./pages/Index";
 import Product from "./pages/Product";
+import AIArchitect from "./pages/product/AIArchitect";
+import AIContent from "./pages/product/AIContent";
+import AIMarketer from "./pages/product/AIMarketer";
+import AISupport from "./pages/product/AISupport";
+import AILogistics from "./pages/product/AILogistics";
+import AIAnalyst from "./pages/product/AIAnalyst";
 import Templates from "./pages/Templates";
 import Solutions from "./pages/Solutions";
 import Pricing from "./pages/Pricing";
@@ -27,6 +33,12 @@ const App = () => (
           <Routes>
             <Route path="/" element={<Index />} />
             <Route path="/product" element={<Product />} />
+            <Route path="/product/ai-architect" element={<AIArchitect />} />
+            <Route path="/product/ai-content" element={<AIContent />} />
+            <Route path="/product/ai-marketer" element={<AIMarketer />} />
+            <Route path="/product/ai-support" element={<AISupport />} />
+            <Route path="/product/ai-logistics" element={<AILogistics />} />
+            <Route path="/product/ai-analyst" element={<AIAnalyst />} />
             <Route path="/templates" element={<Templates />} />
             <Route path="/solutions" element={<Solutions />} />
             <Route path="/pricing" element={<Pricing />} />
