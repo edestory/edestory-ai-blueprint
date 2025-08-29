@@ -1,0 +1,27 @@
+{
+  "colors": { 
+    "primary": "#2D3436", 
+    "accent": "#636E72", 
+    "bg": "#FFFFFF", 
+    "fg": "#2D3436", 
+    "muted": "#F8F9FA", 
+    "border": "#DDD6FE", 
+    "success": "#00B894", 
+    "warning": "#FDCB6E", 
+    "danger": "#E17055" 
+  },
+  "fonts": { 
+    "heading": "Montserrat", 
+    "body": "Montserrat" 
+  },
+  "radius": { 
+    "sm": "6px", 
+    "md": "10px", 
+    "lg": "16px" 
+  },
+  "spacing": { 
+    "section": "72px", 
+    "grid": "24px", 
+    "container": "1200px" 
+  }
+}

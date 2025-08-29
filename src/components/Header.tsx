@@ -38,7 +38,7 @@ const Header = () => {
                 <Menu className="w-5 h-5 text-muted-foreground" />
               </button>
               <Link to="/" className="flex items-center">
-                <span className="font-light text-xl tracking-wide text-foreground">edestory</span>
+                <span className="font-semibold text-xl tracking-wide text-foreground">edestory</span>
               </Link>
             </div>
 

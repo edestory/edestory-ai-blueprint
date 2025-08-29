@@ -1,0 +1,47 @@
+[
+  {
+    "id": "fashion-store",
+    "title": "Fashion Store",
+    "category": "Мода",
+    "preview": "/templates/fashion.jpg",
+    "description": "Элегантный шаблон для магазина одежды",
+    "features": ["Product showcase", "Size guide", "Wishlist"],
+    "demoUrl": "#"
+  },
+  {
+    "id": "electronics",
+    "title": "Electronics Hub", 
+    "category": "Электроника",
+    "preview": "/templates/electronics.jpg",
+    "description": "Технологичный дизайн для электроники",
+    "features": ["Spec comparison", "Reviews", "Tech specs"],
+    "demoUrl": "#"
+  },
+  {
+    "id": "beauty-cosmetics",
+    "title": "Beauty & Cosmetics",
+    "category": "Красота",
+    "preview": "/templates/beauty.jpg", 
+    "description": "Стильный шаблон для косметики",
+    "features": ["Beauty guides", "Skin analyzer", "Virtual try-on"],
+    "demoUrl": "#"
+  },
+  {
+    "id": "home-decor",
+    "title": "Home & Decor",
+    "category": "Дом",
+    "preview": "/templates/home.jpg",
+    "description": "Уютный дизайн для товаров для дома",
+    "features": ["Room visualizer", "Style guide", "Interior tips"],
+    "demoUrl": "#"
+  },
+  {
+    "id": "sports-outdoor",
+    "title": "Sports & Outdoor",
+    "category": "Спорт",
+    "preview": "/templates/sports.jpg",
+    "description": "Активный шаблон для спортивных товаров",
+    "features": ["Activity tracker", "Gear guides", "Training plans"],
+    "demoUrl": "#"
+  }
+]

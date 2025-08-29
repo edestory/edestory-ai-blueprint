@@ -76,7 +76,7 @@ const Sidebar = ({ isOpen, onClose }: SidebarProps) => {
         {/* Header */}
         <div className="flex items-center justify-between p-6 border-b border-border">
           <Link to="/" onClick={onClose} className="flex items-center space-x-3">
-            <span className="font-light text-2xl tracking-wide text-foreground">edestory</span>
+            <span className="font-semibold text-2xl tracking-wide text-foreground">edestory</span>
           </Link>
           <button
             onClick={onClose}

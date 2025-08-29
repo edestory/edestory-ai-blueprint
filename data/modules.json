@@ -1,0 +1,50 @@
+[
+  {
+    "id": "ai-architect",
+    "title": "AI Architect",
+    "status": "MVP Ready",
+    "description": "Автоматически создает архитектуру e-commerce под ваш бизнес",
+    "features": ["Анализ бизнес-модели", "Генерация архитектуры", "Техническая документация"],
+    "launch": "Q2 2024"
+  },
+  {
+    "id": "ai-content",
+    "title": "AI Content",
+    "status": "MVP Ready", 
+    "description": "Создает SEO-контент и продуктовые описания",
+    "features": ["SEO-тексты", "Описания товаров", "Мета-теги"],
+    "launch": "Q2 2024"
+  },
+  {
+    "id": "ai-marketer",
+    "title": "AI Marketer",
+    "status": "В разработке",
+    "description": "Автоматизирует маркетинговые кампании",
+    "features": ["Email-рассылки", "Реклама", "Аналитика"],
+    "launch": "Q4 2025"
+  },
+  {
+    "id": "ai-support",
+    "title": "AI Support", 
+    "status": "В разработке",
+    "description": "Автоматизированная поддержка клиентов",
+    "features": ["Чат-бот", "База знаний", "Тикеты"],
+    "launch": "Q4 2025"
+  },
+  {
+    "id": "ai-logistics",
+    "title": "AI Logistics",
+    "status": "В планах",
+    "description": "Оптимизация логистики и доставки",
+    "features": ["Управление складом", "Доставка", "Аналитика"],
+    "launch": "Q2 2026"
+  },
+  {
+    "id": "ai-analyst",
+    "title": "AI Analyst",
+    "status": "В планах", 
+    "description": "Глубокая аналитика и прогнозирование",
+    "features": ["Отчеты", "Прогнозы", "Рекомендации"],
+    "launch": "Q1 2026"
+  }
+]
