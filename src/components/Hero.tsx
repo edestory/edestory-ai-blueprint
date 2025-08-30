@@ -30,7 +30,7 @@ const Hero = () => {
           </div>
 
           {/* Hero Title */}
-          <h1 className="text-[1.95rem] md:text-[2.55rem] lg:text-[3.08rem] xl:text-[3.08rem] font-light text-white mb-6 text-balance leading-tight">
+          <h1 className="text-[1.45rem] md:text-[1.9rem] lg:text-[2.3rem] xl:text-[2.3rem] font-light text-white mb-6 text-balance leading-tight">
             Ваша AI-команда для управления<br />
             <span className="font-normal">E-commerce бизнесом</span>
           </h1>
@@ -45,13 +45,13 @@ const Hero = () => {
           {/* CTA Buttons */}
           <div className="flex flex-col sm:flex-row items-center justify-center gap-6 mb-16">
             <Button 
-              variant="secondary" 
+              variant="outline" 
               size="lg" 
-              className="group px-8 py-4 bg-white text-primary hover:bg-white/90 border-0"
+              className="group px-8 py-4 bg-white text-primary border-white hover:bg-white/90 hover:text-primary font-medium"
               onClick={() => setShowDetails(!showDetails)}
             >
               <Zap className="w-5 h-5 mr-2 text-primary" />
-              <span className="text-primary font-medium">Узнать подробнее</span>
+              <span className="font-medium">Узнать подробнее</span>
               {showDetails ? (
                 <ChevronUp className="w-4 h-4 ml-2 group-hover:translate-y-[-2px] transition-transform duration-normal text-primary" />
               ) : (
