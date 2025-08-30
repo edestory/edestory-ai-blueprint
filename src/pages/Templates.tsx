@@ -115,6 +115,8 @@ const Templates = () => {
   const handleSelectTemplate = (templateId: string) => {
     setSelectedTemplate(templateId);
     setShowOnboarding(true);
+    setShowAIChat(true);
+    setIsChatMinimized(false);
   };
 
   const organizationLD = {
@@ -421,10 +423,13 @@ const Templates = () => {
         templateSlug={selectedTemplate || undefined}
       />
 
-      <AIArchitectChat 
-        isMinimized={isChatMinimized}
-        onToggleMinimize={() => setIsChatMinimized(!isChatMinimized)}
-      />
+      {/* AI Chat Widget - показывается только после выбора шаблона */}
+      {showAIChat && selectedTemplate && (
+        <AIArchitectChat 
+          isMinimized={isChatMinimized}
+          onToggleMinimize={() => setIsChatMinimized(!isChatMinimized)}
+        />
+      )}
     </>
   );
 };

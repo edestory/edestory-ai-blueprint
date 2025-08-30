@@ -10,6 +10,10 @@ import { Button } from '@/components/ui/button';
 import { Badge } from '@/components/ui/badge';
 import { Tabs, TabsContent, TabsList, TabsTrigger } from '@/components/ui/tabs';
 import { BookOpen, Video, Download, FileText, Clock, User, ArrowRight, Search } from 'lucide-react';
+import resourcesImage from '@/assets/resources-hub.jpg';
+import blogHeroImage from '@/assets/blog-hero.jpg';
+import d2cGuideImage from '@/assets/d2c-guide.jpg';
+import analyticsDashboardImage from '@/assets/analytics-dashboard.jpg';
 
 const Resources = () => {
   const [searchTerm, setSearchTerm] = useState('');
@@ -23,7 +27,7 @@ const Resources = () => {
       readTime: '12 мин',
       author: 'Команда Edestory',
       date: '2024-08-25',
-      image: '/blog/d2c-launch-guide.jpg',
+      image: d2cGuideImage,
       featured: true
     },
     {
@@ -34,7 +38,7 @@ const Resources = () => {
       readTime: '8 мин',
       author: 'AI Team',
       date: '2024-08-20',
-      image: '/blog/ai-ecommerce.jpg',
+      image: analyticsDashboardImage,
       featured: true
     },
     {
@@ -214,11 +218,13 @@ const Resources = () => {
                   <div className="grid grid-cols-1 lg:grid-cols-2 gap-8">
                     {filteredContent(blogPosts.filter(post => post.featured)).map((post) => (
                       <Card key={post.id} className="group hover:shadow-lg transition-shadow">
-                        <div className="aspect-video bg-muted rounded-t-lg overflow-hidden">
-                          <div className="w-full h-full bg-gradient-subtle flex items-center justify-center">
-                            <FileText className="w-12 h-12 text-primary" />
-                          </div>
-                        </div>
+                         <div className="aspect-video bg-muted rounded-t-lg overflow-hidden">
+                           <img 
+                             src={post.image} 
+                             alt={post.title}
+                             className="w-full h-full object-cover"
+                           />
+                         </div>
                         <CardHeader>
                           <div className="flex items-center gap-2 mb-2">
                             <Badge variant="outline">{post.category}</Badge>
@@ -257,10 +263,14 @@ const Resources = () => {
                     {filteredContent(blogPosts.filter(post => !post.featured)).map((post) => (
                       <Card key={post.id} className="hover:shadow-md transition-shadow">
                         <CardContent className="p-6">
-                          <div className="flex gap-6">
-                            <div className="w-32 h-20 bg-gradient-subtle rounded-lg flex-shrink-0 flex items-center justify-center">
-                              <FileText className="w-8 h-8 text-primary" />
-                            </div>
+                           <div className="flex gap-6">
+                             <div className="w-32 h-20 bg-gradient-subtle rounded-lg flex-shrink-0 overflow-hidden">
+                               <img 
+                                 src={blogHeroImage} 
+                                 alt="Blog thumbnail"
+                                 className="w-full h-full object-cover"
+                               />
+                             </div>
                             <div className="flex-1">
                               <div className="flex items-center gap-2 mb-2">
                                 <Badge variant="outline" className="text-xs">{post.category}</Badge>

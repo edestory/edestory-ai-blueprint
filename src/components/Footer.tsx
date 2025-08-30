@@ -41,9 +41,7 @@ const Footer = () => {
             {/* Brand */}
             <div className="lg:col-span-2">
               <Link to="/" className="flex items-center space-x-2 mb-4">
-                <div className="w-8 h-8 bg-gradient-primary rounded-lg flex items-center justify-center">
-                  <span className="text-white font-bold text-sm">E</span>
-                </div>
+                <div className="w-8 h-8 bg-gradient-primary rounded-lg"></div>
                 <span className="text-xl font-bold text-foreground">Edestory</span>
               </Link>
               
@@ -67,7 +65,7 @@ const Footer = () => {
 
             {/* Company */}
             <div>
-              <h3 className="font-semibold text-foreground mb-4">{t('footer.company')}</h3>
+              <h3 className="text-xl font-bold text-foreground mb-4">{t('footer.company')}</h3>
               <ul className="space-y-2">
                 {companyLinks.map((link) => (
                   <li key={link.href}>
@@ -84,7 +82,7 @@ const Footer = () => {
 
             {/* Product */}
             <div>
-              <h3 className="font-semibold text-foreground mb-4">{t('footer.product')}</h3>
+              <h3 className="text-xl font-bold text-foreground mb-4">{t('footer.product')}</h3>
               <ul className="space-y-2">
                 {productLinks.map((link) => (
                   <li key={link.href}>
@@ -101,7 +99,7 @@ const Footer = () => {
 
             {/* Resources */}
             <div>
-              <h3 className="font-semibold text-foreground mb-4">{t('footer.resources')}</h3>
+              <h3 className="text-xl font-bold text-foreground mb-4">{t('footer.resources')}</h3>
               <ul className="space-y-2">
                 {resourceLinks.map((link) => (
                   <li key={link.href}>

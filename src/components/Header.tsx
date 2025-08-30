@@ -46,16 +46,17 @@ const Header = () => {
           <div className="hidden md:flex items-center space-x-12">
             {navigation.slice(1).map((item) => (
               <Link
-                key={item.href}
-                to={item.href}
-                className={`text-sm font-normal transition-colors duration-normal ${
-                  location.pathname === item.href
-                    ? 'text-foreground'
-                    : 'text-muted-foreground hover:text-foreground'
-                }`}
-              >
-                {item.name}
-              </Link>
+                 key={item.href}
+                 to={item.href}
+                 onClick={() => window.scrollTo(0, 0)}
+                 className={`text-sm font-normal transition-colors duration-normal ${
+                   location.pathname === item.href
+                     ? 'text-foreground'
+                     : 'text-muted-foreground hover:text-foreground'
+                 }`}
+               >
+                 {item.name}
+               </Link>
             ))}
           </div>
 
@@ -90,18 +91,21 @@ const Header = () => {
           <div className="md:hidden border-t border-border backdrop-elegant">
             <div className="px-2 pt-2 pb-3 space-y-1">
               {navigation.slice(1).map((item) => (
-                <Link
-                  key={item.href}
-                  to={item.href}
-                  className={`block px-4 py-3 rounded-md text-base font-normal transition-colors duration-normal ${
-                    location.pathname === item.href
-                      ? 'bg-primary/5 text-primary'
-                      : 'text-muted-foreground hover:bg-muted hover:text-foreground'
-                  }`}
-                  onClick={() => setIsMobileMenuOpen(false)}
-                >
-                  {item.name}
-                </Link>
+                 <Link
+                   key={item.href}
+                   to={item.href}
+                   className={`block px-4 py-3 rounded-md text-base font-normal transition-colors duration-normal ${
+                     location.pathname === item.href
+                       ? 'bg-primary/5 text-primary'
+                       : 'text-muted-foreground hover:bg-muted hover:text-foreground'
+                   }`}
+                   onClick={() => {
+                     setIsMobileMenuOpen(false);
+                     window.scrollTo(0, 0);
+                   }}
+                 >
+                   {item.name}
+                 </Link>
               ))}
               
               <div className="px-4 py-3 flex items-center justify-between border-t border-border mt-4 pt-4">

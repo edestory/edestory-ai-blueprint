@@ -71,37 +71,37 @@ const modules = [
     title: "AI Website Architect",
     description: "Проектирует структуру, UX и визуал, анализируя лидеров вашей ниши",
     icon: <Layers className="w-6 h-6" />,
-    gradient: "from-blue-500 to-indigo-500"
+    gradient: "from-primary to-primary-dark"
   },
   {
     title: "AI Content Factory",
     description: "Автономный «контент‑завод»: SEO‑тексты, описания, статьи, посты",
     icon: <Brain className="w-6 h-6" />,
-    gradient: "from-purple-500 to-pink-500"
+    gradient: "from-accent to-accent-light"
   },
   {
     title: "AI Marketer",
     description: "Мультиканальный маркетинг: конкурентный анализ 24/7, кампании",
     icon: <TrendingUp className="w-6 h-6" />,
-    gradient: "from-green-500 to-teal-500"
+    gradient: "from-muted-foreground to-foreground"
   },
   {
     title: "Умный семантический поиск",
     description: "На базе Google Vertex AI: понимает смысловые запросы",
     icon: <Zap className="w-6 h-6" />,
-    gradient: "from-yellow-500 to-orange-500"
+    gradient: "from-accent-light to-accent"
   },
   {
     title: "ERP/CRM на базе AI",
     description: "Централизованные заказы, клиенты, предиктивная аналитика",
     icon: <BarChart2 className="w-6 h-6" />,
-    gradient: "from-red-500 to-rose-500"
+    gradient: "from-primary-dark to-primary"
   },
   {
     title: "AI‑Закупщик и AI‑Логист",
     description: "Прогноз спроса, автозаказы поставщикам, 3PL оптимизация",
     icon: <Truck className="w-6 h-6" />,
-    gradient: "from-cyan-500 to-blue-500"
+    gradient: "from-foreground to-muted-foreground"
   }
 ];
 
@@ -185,10 +185,10 @@ const Index = () => {
                   </Badge>
                 </div>
                 
-                <h1 className="text-display mb-6 text-balance text-white">
+                <h1 className="text-3xl md:text-4xl lg:text-5xl font-light tracking-tight mb-6 text-balance text-white">
                   Ваша AI‑команда для управления e‑commerce бизнесом
                 </h1>
-                <p className="text-body-large text-gray-200 mb-8 text-balance">
+                <p className="text-base md:text-lg text-gray-200 mb-8 text-balance">
                   <strong>Мы предоставляем IT‑платформу «под ключ»</strong>, которая служит операционной 
                   системой для вашего бизнеса. Наши автономные AI‑агенты автоматизируют до 80% рутины 
                   и позволяют управлять магазином с ассортиментом до 100 000 товаров силами двух человек.
