@@ -30,13 +30,13 @@ const Hero = () => {
           </div>
 
           {/* Hero Title */}
-          <h1 className="text-[3.5rem] md:text-[4.5rem] lg:text-[5.5rem] font-light text-white mb-6 text-balance leading-tight">
-            Ваша AI-команда для управления{' '}
+          <h1 className="text-[2.6rem] md:text-[3.4rem] lg:text-[4.1rem] font-light text-white mb-6 text-balance leading-tight">
+            Ваша AI-команда для управления<br />
             <span className="font-normal">E-commerce бизнесом</span>
           </h1>
 
           {/* Subtitle */}
-          <p className="text-lg md:text-xl text-white/80 mb-8 max-w-4xl mx-auto text-balance">
+          <p className="text-base md:text-lg text-white/80 mb-8 max-w-4xl mx-auto text-balance">
             Мы предоставляем IT-платформу "под ключ", которая служит операционной системой для вашего бизнеса. 
             Наши автономные AI-агенты заменяют целый штат, автоматизируя 80% рутины и позволяя управлять 
             магазином в 100,000 товаров силами двух человек.
@@ -86,55 +86,57 @@ const Hero = () => {
                     лидерами ритейла, такими как Lush, Breitling и Dr. Martens. Мы строим ваш бизнес на 
                     headless-архитектуре Saleor, что гарантирует:
                   </p>
-                  <ul className="space-y-2 text-sm">
+                  <ul className="space-y-3 text-sm">
                     <li className="flex items-start">
                       <span className="w-2 h-2 bg-accent rounded-full mt-2 mr-3 flex-shrink-0"></span>
-                      <span><strong>Молниеносную скорость:</strong> Загрузка любой страницы вашего сайта в среднем менее 1.5 секунды</span>
+                      <span><strong>Молниеносную скорость:</strong> Загрузка любой страницы вашего сайта в среднем менее 1.5 секунды. Это напрямую влияет на конверсию и позиции в Google.</span>
                     </li>
                     <li className="flex items-start">
                       <span className="w-2 h-2 bg-accent rounded-full mt-2 mr-3 flex-shrink-0"></span>
-                      <span><strong>Безграничную гибкость:</strong> Легкая интеграция любых сервисов без ограничений</span>
+                      <span><strong>Безграничную гибкость:</strong> Наша архитектура позволяет легко интегрировать любые сервисы и адаптировать сайт под любые бизнес-задачи без ограничений.</span>
                     </li>
                     <li className="flex items-start">
                       <span className="w-2 h-2 bg-accent rounded-full mt-2 mr-3 flex-shrink-0"></span>
-                      <span><strong>Надежность и масштабируемость:</strong> Технологии, способные выдерживать миллионы посетителей</span>
+                      <span><strong>Надежность и масштабируемость:</strong> Технологии, способные выдерживать миллионы посетителей, теперь доступны вашему бизнесу.</span>
                     </li>
                   </ul>
+                  <p className="text-sm leading-relaxed mt-4 italic">
+                    Выбирая Edestory, вы получаете не просто красивый сайт, а перспективного технологического 
+                    партнера, который обеспечивает вашему бизнесу конкурентное преимущество на годы вперед.
+                  </p>
                 </div>
 
                 <div>
                   <h3 className="text-lg font-medium text-white mb-3">Что входит в полную автоматизацию от Edestory?</h3>
-                  <div className="grid md:grid-cols-2 gap-4 text-sm">
-                    <div className="space-y-3">
-                      <div>
-                        <strong className="text-accent">AI Website Architect:</strong> Персональный стратег для дизайна и UX
-                      </div>
-                      <div>
-                        <strong className="text-accent">AI Content Factory:</strong> Автономный генератор SEO-контента
-                      </div>
-                      <div>
-                        <strong className="text-accent">AI Marketer:</strong> Умный маркетолог для рекламных кампаний
-                      </div>
+                  <p className="text-sm leading-relaxed mb-4">
+                    Наша платформа — это экосистема автономных AI-агентов, каждый из которых отвечает за свою сферу вашего бизнеса:
+                  </p>
+                  <div className="space-y-4 text-sm">
+                    <div>
+                      <strong className="text-accent">AI Website Architect:</strong> Ваш персональный стратег, который проектирует структуру, дизайн и пользовательский опыт вашего сайта на основе анализа лидеров вашей ниши.
                     </div>
-                    <div className="space-y-3">
-                      <div>
-                        <strong className="text-accent">Семантический поиск:</strong> Система понимания запросов клиентов
-                      </div>
-                      <div>
-                        <strong className="text-accent">ERP и CRM на базе AI:</strong> Централизованное управление
-                      </div>
-                      <div>
-                        <strong className="text-accent">AI-Закупщик и Логист:</strong> Автоматизация запасов и логистики
-                      </div>
+                    <div>
+                      <strong className="text-accent">AI Content Factory:</strong> Автономный "контент-завод", который генерирует SEO-оптимизированные тексты, статьи для блога, посты для соцсетей и видеоролики, работая по утвержденному контент-плану.
+                    </div>
+                    <div>
+                      <strong className="text-accent">AI Marketer:</strong> Умный маркетолог, который постоянно анализирует стратегии ваших топ-5 конкурентов и на основе этих данных автоматически создает и оптимизирует ваши рекламные кампании в Google Ads, Meta, TikTok для достижения максимального ROI.
+                    </div>
+                    <div>
+                      <strong className="text-accent">Умный семантический поиск:</strong> Система на базе Google Vertex AI, которая понимает смысл запроса клиента, а не просто ищет по словам. Ваши клиенты могут писать, как думают («что-то стильное для офиса»), а поиск предложит им самые релевантные товары.
+                    </div>
+                    <div>
+                      <strong className="text-accent">Собственная ERP и CRM на базе AI:</strong> Централизованное управление заказами, клиентами и финансами с предиктивной аналитикой.
+                    </div>
+                    <div>
+                      <strong className="text-accent">AI-Закупщик и AI-Логист:</strong> Автоматизация управления запасами, прогнозирование спроса и оптимизация логистических цепочек.
                     </div>
                   </div>
                 </div>
 
                 <div className="bg-white/5 rounded-lg p-4">
                   <h4 className="text-base font-medium text-accent mb-2">Оптимизация для будущего: SEO и AIO</h4>
-                  <p className="text-sm">
-                    Ваш сайт будет построен с учетом требований поисковых систем и AI-моделей. 
-                    Не только Google, но и ChatGPT, Gemini будут рекомендовать ваш магазин.
+                  <p className="text-sm leading-relaxed">
+                    Ваш сайт, созданный на платформе Edestory, будет построен с учетом требований поисковых систем и AI-моделей (AIO - AI Answer Optimization). Это означает, что не только Google, но и ChatGPT, Gemini и другие AI-ассистенты будут рекомендовать ваш магазин своим пользователям, обеспечивая вам поток органического трафика на годы вперед.
                   </p>
                 </div>
 
