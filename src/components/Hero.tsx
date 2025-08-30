@@ -30,7 +30,7 @@ const Hero = () => {
           </div>
 
           {/* Hero Title */}
-          <h1 className="text-[2.6rem] md:text-[3.4rem] lg:text-[4.1rem] font-light text-white mb-6 text-balance leading-tight">
+          <h1 className="text-[1.95rem] md:text-[2.55rem] lg:text-[3.08rem] xl:text-[3.08rem] font-light text-white mb-6 text-balance leading-tight">
             Ваша AI-команда для управления<br />
             <span className="font-normal">E-commerce бизнесом</span>
           </h1>
@@ -47,15 +47,15 @@ const Hero = () => {
             <Button 
               variant="secondary" 
               size="lg" 
-              className="group px-8 py-4"
+              className="group px-8 py-4 bg-white text-primary hover:bg-white/90 border-0"
               onClick={() => setShowDetails(!showDetails)}
             >
-              <Zap className="w-5 h-5 mr-2" />
-              Узнать подробнее
+              <Zap className="w-5 h-5 mr-2 text-primary" />
+              <span className="text-primary font-medium">Узнать подробнее</span>
               {showDetails ? (
-                <ChevronUp className="w-4 h-4 ml-2 group-hover:translate-y-[-2px] transition-transform duration-normal" />
+                <ChevronUp className="w-4 h-4 ml-2 group-hover:translate-y-[-2px] transition-transform duration-normal text-primary" />
               ) : (
-                <ChevronDown className="w-4 h-4 ml-2 group-hover:translate-y-1 transition-transform duration-normal" />
+                <ChevronDown className="w-4 h-4 ml-2 group-hover:translate-y-1 transition-transform duration-normal text-primary" />
               )}
             </Button>
             
