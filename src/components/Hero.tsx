@@ -1,10 +1,11 @@
-import React from 'react';
-import { ArrowRight, Play, Sparkles, Zap, Users } from 'lucide-react';
+import React, { useState } from 'react';
+import { ArrowRight, Play, Sparkles, Zap, Users, ChevronDown, ChevronUp } from 'lucide-react';
 import { useLanguage } from '@/contexts/LanguageContext';
 import { Button } from '@/components/ui/button';
 
 const Hero = () => {
   const { t } = useLanguage();
+  const [showDetails, setShowDetails] = useState(false);
 
   const trustLogos = [
     { name: 'Shopify', width: 120 },
@@ -21,7 +22,7 @@ const Hero = () => {
       <div className="container-wide relative">
         <div className="text-center max-w-5xl mx-auto">
           {/* Badge */}
-          <div className="inline-flex items-center space-x-2 bg-white/15 backdrop-blur-sm border border-white/20 rounded-full px-6 py-3 mb-12">
+          <div className="inline-flex items-center space-x-2 bg-white/15 backdrop-blur-sm border border-white/20 rounded-full px-6 py-3 mb-8">
             <Sparkles className="w-4 h-4 text-white/80" />
             <span className="text-sm font-normal text-white">MVP Ready</span>
             <span className="text-sm text-white/60">•</span>
@@ -29,37 +30,126 @@ const Hero = () => {
           </div>
 
           {/* Hero Title */}
-          <h1 className="text-display font-light text-white mb-8 text-balance">
-            {t('hero.title').split(' ').slice(0, 3).join(' ')}{' '}
-            <span className="font-normal">
-              {t('hero.title').split(' ').slice(3).join(' ')}
-            </span>
+          <h1 className="text-[3.5rem] md:text-[4.5rem] lg:text-[5.5rem] font-light text-white mb-6 text-balance leading-tight">
+            Ваша AI-команда для управления{' '}
+            <span className="font-normal">E-commerce бизнесом</span>
           </h1>
 
           {/* Subtitle */}
-          <p className="text-body-large text-white/80 mb-12 max-w-3xl mx-auto text-balance">
-            {t('hero.subtitle')}
+          <p className="text-lg md:text-xl text-white/80 mb-8 max-w-4xl mx-auto text-balance">
+            Мы предоставляем IT-платформу "под ключ", которая служит операционной системой для вашего бизнеса. 
+            Наши автономные AI-агенты заменяют целый штат, автоматизируя 80% рутины и позволяя управлять 
+            магазином в 100,000 товаров силами двух человек.
           </p>
 
           {/* CTA Buttons */}
-          <div className="flex flex-col sm:flex-row items-center justify-center gap-6 mb-20">
-            <Button variant="secondary" size="lg" className="group px-8 py-4">
+          <div className="flex flex-col sm:flex-row items-center justify-center gap-6 mb-16">
+            <Button 
+              variant="secondary" 
+              size="lg" 
+              className="group px-8 py-4"
+              onClick={() => setShowDetails(!showDetails)}
+            >
               <Zap className="w-5 h-5 mr-2" />
-              {t('hero.cta')}
-              <ArrowRight className="w-4 h-4 ml-2 group-hover:translate-x-1 transition-transform duration-normal" />
+              Узнать подробнее
+              {showDetails ? (
+                <ChevronUp className="w-4 h-4 ml-2 group-hover:translate-y-[-2px] transition-transform duration-normal" />
+              ) : (
+                <ChevronDown className="w-4 h-4 ml-2 group-hover:translate-y-1 transition-transform duration-normal" />
+              )}
             </Button>
             
             <Button variant="ghost" size="lg" className="group text-white border-white/20 hover:bg-white/10 px-8 py-4">
               <Play className="w-4 h-4 mr-2" />
-              {t('hero.watchDemo')}
+              Смотреть демо
             </Button>
           </div>
+
+          {/* Detailed Information - Expandable */}
+          {showDetails && (
+            <div className="bg-white/10 backdrop-blur-sm border border-white/20 rounded-2xl p-8 mb-16 text-left max-w-4xl mx-auto">
+              <h2 className="text-2xl font-normal text-white mb-6 text-center">
+                Edestory: Операционная система для роста вашей прибыли
+              </h2>
+              
+              <div className="space-y-6 text-white/90">
+                <p className="text-base leading-relaxed">
+                  Мы продаем не просто сайт. Мы предоставляем результат — радикальное повышение эффективности 
+                  и прибыльности вашего e-commerce бизнеса. Наша платформа — это готовое решение "под ключ", 
+                  которое заменяет собой целый штат дорогостоящих специалистов, от маркетолога до закупщика.
+                </p>
+
+                <div>
+                  <h3 className="text-lg font-medium text-white mb-3">Технологии, которым доверяют лидеры</h3>
+                  <p className="text-base leading-relaxed mb-4">
+                    В основе Edestory лежат передовые технологии, проверенные годами и используемые мировыми 
+                    лидерами ритейла, такими как Lush, Breitling и Dr. Martens. Мы строим ваш бизнес на 
+                    headless-архитектуре Saleor, что гарантирует:
+                  </p>
+                  <ul className="space-y-2 text-sm">
+                    <li className="flex items-start">
+                      <span className="w-2 h-2 bg-accent rounded-full mt-2 mr-3 flex-shrink-0"></span>
+                      <span><strong>Молниеносную скорость:</strong> Загрузка любой страницы вашего сайта в среднем менее 1.5 секунды</span>
+                    </li>
+                    <li className="flex items-start">
+                      <span className="w-2 h-2 bg-accent rounded-full mt-2 mr-3 flex-shrink-0"></span>
+                      <span><strong>Безграничную гибкость:</strong> Легкая интеграция любых сервисов без ограничений</span>
+                    </li>
+                    <li className="flex items-start">
+                      <span className="w-2 h-2 bg-accent rounded-full mt-2 mr-3 flex-shrink-0"></span>
+                      <span><strong>Надежность и масштабируемость:</strong> Технологии, способные выдерживать миллионы посетителей</span>
+                    </li>
+                  </ul>
+                </div>
+
+                <div>
+                  <h3 className="text-lg font-medium text-white mb-3">Что входит в полную автоматизацию от Edestory?</h3>
+                  <div className="grid md:grid-cols-2 gap-4 text-sm">
+                    <div className="space-y-3">
+                      <div>
+                        <strong className="text-accent">AI Website Architect:</strong> Персональный стратег для дизайна и UX
+                      </div>
+                      <div>
+                        <strong className="text-accent">AI Content Factory:</strong> Автономный генератор SEO-контента
+                      </div>
+                      <div>
+                        <strong className="text-accent">AI Marketer:</strong> Умный маркетолог для рекламных кампаний
+                      </div>
+                    </div>
+                    <div className="space-y-3">
+                      <div>
+                        <strong className="text-accent">Семантический поиск:</strong> Система понимания запросов клиентов
+                      </div>
+                      <div>
+                        <strong className="text-accent">ERP и CRM на базе AI:</strong> Централизованное управление
+                      </div>
+                      <div>
+                        <strong className="text-accent">AI-Закупщик и Логист:</strong> Автоматизация запасов и логистики
+                      </div>
+                    </div>
+                  </div>
+                </div>
+
+                <div className="bg-white/5 rounded-lg p-4">
+                  <h4 className="text-base font-medium text-accent mb-2">Оптимизация для будущего: SEO и AIO</h4>
+                  <p className="text-sm">
+                    Ваш сайт будет построен с учетом требований поисковых систем и AI-моделей. 
+                    Не только Google, но и ChatGPT, Gemini будут рекомендовать ваш магазин.
+                  </p>
+                </div>
+
+                <p className="text-center text-base font-medium text-accent">
+                  Edestory — это не расход, это инвестиция в вашу прибыль.
+                </p>
+              </div>
+            </div>
+          )}
 
           {/* Trust Section */}
           <div className="space-y-8">
             <div className="flex items-center justify-center space-x-2 text-sm text-white/60">
               <Users className="w-4 h-4" />
-              <span>{t('hero.trustedBy')}</span>
+              <span>Технологиям доверяют</span>
             </div>
             
             <div className="flex flex-wrap items-center justify-center gap-12 opacity-40">
