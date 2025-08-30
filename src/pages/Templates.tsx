@@ -14,25 +14,72 @@ import AIArchitectChat from '@/components/AIArchitectChat';
 import { Button } from '@/components/ui/button';
 import { Badge } from '@/components/ui/badge';
 import { Card, CardContent, CardDescription, CardHeader, CardTitle } from '@/components/ui/card';
-import { ArrowRight, Play, Settings, Zap, CheckCircle, Eye, Download } from 'lucide-react';
+import { ArrowRight, Play, Settings, Zap, CheckCircle, Eye, Download, Sparkles } from 'lucide-react';
+import fashionImage from '@/assets/template-fashion.jpg';
+import electronicsImage from '@/assets/template-electronics.jpg';
+import beautyImage from '@/assets/template-beauty.jpg';
+import consultingImage from '@/assets/template-consulting.jpg';
+
 const templatesData = [
   {
     "id": "fashion-store",
     "title": "Fashion Store",
     "category": "Мода",
-    "preview": "/templates/fashion.jpg",
+    "preview": fashionImage,
     "description": "Элегантный шаблон для магазина одежды",
-    "features": ["Product showcase", "Size guide", "Wishlist"],
-    "demoUrl": "#"
+    "features": ["Product showcase", "Size guide", "Wishlist", "AR Try-on"],
+    "demoUrl": "#",
+    "gradient": "from-pink-500 to-purple-500"
   },
   {
     "id": "electronics",
     "title": "Electronics Hub", 
-    "category": "Электроника",
-    "preview": "/templates/electronics.jpg",
+    "category": "Электроника", 
+    "preview": electronicsImage,
     "description": "Технологичный дизайн для электроники",
-    "features": ["Spec comparison", "Reviews", "Tech specs"],
-    "demoUrl": "#"
+    "features": ["Spec comparison", "Reviews", "Tech specs", "Warranty"],
+    "demoUrl": "#",
+    "gradient": "from-blue-500 to-cyan-500"
+  },
+  {
+    "id": "beauty-store",
+    "title": "Beauty Studio",
+    "category": "Косметика",
+    "preview": beautyImage,
+    "description": "Минималистичный дизайн в духе Glossier",
+    "features": ["Virtual makeup", "Skin analysis", "Beauty tips", "Tutorials"],
+    "demoUrl": "#",
+    "gradient": "from-rose-400 to-pink-500"
+  },
+  {
+    "id": "consulting",
+    "title": "Premium Consulting",
+    "category": "Консалтинг",
+    "preview": consultingImage,
+    "description": "Строгий корпоративный стиль для B2B",
+    "features": ["Team showcase", "Case studies", "Expertise areas", "Client portal"],
+    "demoUrl": "#",
+    "gradient": "from-gray-600 to-gray-800"
+  },
+  {
+    "id": "food-delivery",
+    "title": "Food Delivery",
+    "category": "Еда",
+    "preview": "/api/placeholder/800/600",
+    "description": "Аппетитный дизайн для доставки еды",
+    "features": ["Live tracking", "Menu builder", "Reviews", "Loyalty program"],
+    "demoUrl": "#",
+    "gradient": "from-orange-500 to-red-500"
+  },
+  {
+    "id": "fitness",
+    "title": "Fitness Studio", 
+    "category": "Спорт",
+    "preview": "/api/placeholder/800/600",
+    "description": "Энергичный дизайн для фитнес-индустрии",
+    "features": ["Workout plans", "Progress tracking", "Nutrition", "Community"],
+    "demoUrl": "#",
+    "gradient": "from-emerald-500 to-teal-500"
   }
 ];
 
@@ -116,20 +163,30 @@ const Templates = () => {
       
       <main className="pt-16">
         {/* Hero Section */}
-        <Section className="pt-16 pb-12">
-          <Container>
+        <Section className="pt-24 pb-12 bg-gradient-to-br from-primary via-primary-dark to-foreground text-white relative overflow-hidden">
+          <div className="absolute inset-0 bg-[radial-gradient(circle_at_30%_20%,rgba(230,168,83,0.08),transparent_50%)]" />
+          <div className="absolute inset-0 bg-[radial-gradient(circle_at_70%_80%,rgba(230,168,83,0.05),transparent_50%)]" />
+          
+          <Container className="relative z-10">
             <div className="text-center max-w-4xl mx-auto mb-12">
-              <h1 className="text-display mb-6 text-balance">
+              <div className="flex items-center justify-center gap-3 mb-6">
+                <Sparkles className="w-8 h-8 text-accent animate-pulse" />
+                <Badge variant="outline" className="bg-white/10 border-white/30 text-white backdrop-blur-sm">
+                  20+ готовых шаблонов
+                </Badge>
+              </div>
+              
+              <h1 className="text-display mb-6 text-balance text-white">
                 Фабрика шаблонов Edestory
               </h1>
-              <p className="text-body-large text-muted-foreground mb-8 text-balance">
+              <p className="text-body-large text-gray-200 mb-8 text-balance">
                 <strong>Выбирайте из 20+ готовых шаблонов для вашего бизнеса и запускайте магазин за 5–10 минут.</strong> 
                 Каждый шаблон — «золотой стандарт»: интегрирован с Saleor, оптимизирован под SEO/AIO, 
                 стилизуется через единый <strong>theme.json</strong>.
               </p>
               
               <div className="flex flex-col sm:flex-row gap-4 justify-center items-center mb-8">
-                <Button asChild size="lg" className="text-lg px-8 py-6 bg-accent hover:bg-accent/90">
+                <Button asChild size="lg" className="text-lg px-8 py-6 bg-accent hover:bg-accent/90 text-white border-0">
                   <Link to="/templates/how-it-works">
                     <Play className="mr-2 h-5 w-5" />
                     Посмотреть, как это работает
@@ -138,7 +195,7 @@ const Templates = () => {
                 <Button 
                   variant="outline" 
                   size="lg" 
-                  className="text-lg px-8 py-6"
+                  className="text-lg px-8 py-6 border-white/30 text-white hover:bg-white/10 backdrop-blur-sm"
                   onClick={() => setShowAIChat(true)}
                 >
                   <Zap className="mr-2 h-5 w-5" />
@@ -228,12 +285,33 @@ const Templates = () => {
                 <Grid cols={3} gap="lg">
                   {filteredTemplates.map((template) => (
                     <Card key={template.id} className="card-hover group">
-                      <div className="relative overflow-hidden">
-                        <div className="aspect-video bg-gradient-to-br from-muted to-muted-alt flex items-center justify-center">
-                          <span className="text-muted-foreground">Preview Image</span>
+                      <div className="relative overflow-hidden rounded-t-lg">
+                        {template.preview.startsWith('/api/') ? (
+                          <div className="w-full aspect-video bg-gradient-to-br from-muted-alt to-secondary flex items-center justify-center">
+                            <div className="text-center">
+                              <div className={`w-16 h-16 mx-auto mb-3 rounded-full bg-gradient-to-br ${template.gradient} flex items-center justify-center`}>
+                                <Sparkles className="w-8 h-8 text-white" />
+                              </div>
+                              <span className="text-muted-foreground font-medium">Coming Soon</span>
+                            </div>
+                          </div>
+                        ) : (
+                          <img 
+                            src={template.preview} 
+                            alt={`${template.title} template preview`}
+                            className="w-full aspect-video object-cover group-hover:scale-105 transition-transform duration-300"
+                          />
+                        )}
+                        <div className="absolute inset-0 bg-gradient-to-t from-black/20 to-transparent" />
+                        <div className="absolute top-3 right-3">
+                          <Badge className={`bg-gradient-to-r ${template.gradient} text-white border-0 shadow-lg`}>
+                            {template.category}
+                          </Badge>
                         </div>
-                        <div className="absolute top-2 right-2">
-                          <Badge>{template.category}</Badge>
+                        <div className="absolute bottom-3 left-3">
+                          <div className="bg-white/90 backdrop-blur-sm px-2 py-1 rounded-md">
+                            <span className="text-xs font-medium text-gray-800">Live Preview</span>
+                          </div>
                         </div>
                       </div>
                       

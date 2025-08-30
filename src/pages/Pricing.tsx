@@ -10,7 +10,8 @@ import { Button } from '@/components/ui/button';
 import { Badge } from '@/components/ui/badge';
 import { Input } from '@/components/ui/input';
 import { Slider } from '@/components/ui/slider';
-import { CheckCircle, TrendingDown, Calculator, DollarSign, Users, Zap } from 'lucide-react';
+import { CheckCircle, TrendingDown, Calculator, DollarSign, Users, Zap, Sparkles, Euro, CreditCard } from 'lucide-react';
+import calculatorImage from '@/assets/pricing-calculator.jpg';
 
 const Pricing = () => {
   const [revenue, setRevenue] = useState([100000]);
@@ -85,16 +86,26 @@ const Pricing = () => {
       
       <main className="pt-16">
         {/* Hero Section */}
-        <Section className="py-24 bg-gradient-subtle">
-          <Container>
+        <Section className="py-24 bg-gradient-to-br from-primary via-primary-dark to-foreground text-white relative overflow-hidden">
+          <div className="absolute inset-0 bg-[radial-gradient(circle_at_30%_20%,rgba(230,168,83,0.08),transparent_50%)]" />
+          <div className="absolute inset-0 bg-[radial-gradient(circle_at_70%_80%,rgba(230,168,83,0.05),transparent_50%)]" />
+          
+          <Container className="relative z-10">
             <div className="text-center max-w-4xl mx-auto">
-              <h1 className="text-4xl md:text-5xl lg:text-6xl font-light tracking-tight text-foreground mb-6">
+              <div className="flex items-center justify-center gap-3 mb-6">
+                <Euro className="w-8 h-8 text-accent animate-pulse" />
+                <Badge variant="outline" className="bg-white/10 border-white/30 text-white backdrop-blur-sm">
+                  Прозрачная модель оплаты
+                </Badge>
+              </div>
+              
+              <h1 className="text-4xl md:text-5xl lg:text-6xl font-light tracking-tight text-white mb-6">
                 Цены и условия
               </h1>
-              <p className="text-lg md:text-xl text-muted-foreground leading-relaxed mb-8">
-                Revenue Share: <strong className="text-primary">10%</strong> от оборота → <strong className="text-success">-1%/год</strong> до минимума <strong className="text-success">5%</strong>
+              <p className="text-lg md:text-xl text-gray-200 leading-relaxed mb-8">
+                Revenue Share: <strong className="text-accent">10%</strong> от оборота → <strong className="text-accent">-1%/год</strong> до минимума <strong className="text-accent">5%</strong>
               </p>
-              <Badge variant="outline" className="text-base px-6 py-2">
+              <Badge variant="outline" className="text-base px-6 py-2 bg-white/10 border-white/30 text-white backdrop-blur-sm">
                 Нет скрытых комиссий • Нет абонентской платы
               </Badge>
             </div>

@@ -13,7 +13,12 @@ import { FAQ } from '@/components/FAQ';
 import { Button } from '@/components/ui/button';
 import { Badge } from '@/components/ui/badge';
 import { Card, CardContent, CardDescription, CardHeader, CardTitle } from '@/components/ui/card';
-import { ArrowRight, CheckCircle, TrendingUp, Users, Globe, Zap } from 'lucide-react';
+import { 
+  ArrowRight, CheckCircle, TrendingUp, Users, Globe, Zap, 
+  Layers, Cpu, Brain, ShoppingBag, BarChart2, Truck,
+  Shield, Clock, Award, Sparkles
+} from 'lucide-react';
+import heroImage from '@/assets/hero-ai-commerce.jpg';
 
 const faqItems = [
   {
@@ -65,32 +70,38 @@ const modules = [
   {
     title: "AI Website Architect",
     description: "Проектирует структуру, UX и визуал, анализируя лидеров вашей ниши",
-    icon: <Globe className="w-6 h-6" />
+    icon: <Layers className="w-6 h-6" />,
+    gradient: "from-blue-500 to-indigo-500"
   },
   {
     title: "AI Content Factory",
     description: "Автономный «контент‑завод»: SEO‑тексты, описания, статьи, посты",
-    icon: <TrendingUp className="w-6 h-6" />
+    icon: <Brain className="w-6 h-6" />,
+    gradient: "from-purple-500 to-pink-500"
   },
   {
     title: "AI Marketer",
     description: "Мультиканальный маркетинг: конкурентный анализ 24/7, кампании",
-    icon: <Users className="w-6 h-6" />
+    icon: <TrendingUp className="w-6 h-6" />,
+    gradient: "from-green-500 to-teal-500"
   },
   {
     title: "Умный семантический поиск",
     description: "На базе Google Vertex AI: понимает смысловые запросы",
-    icon: <Zap className="w-6 h-6" />
+    icon: <Zap className="w-6 h-6" />,
+    gradient: "from-yellow-500 to-orange-500"
   },
   {
     title: "ERP/CRM на базе AI",
     description: "Централизованные заказы, клиенты, предиктивная аналитика",
-    icon: <CheckCircle className="w-6 h-6" />
+    icon: <BarChart2 className="w-6 h-6" />,
+    gradient: "from-red-500 to-rose-500"
   },
   {
     title: "AI‑Закупщик и AI‑Логист",
     description: "Прогноз спроса, автозаказы поставщикам, 3PL оптимизация",
-    icon: <ArrowRight className="w-6 h-6" />
+    icon: <Truck className="w-6 h-6" />,
+    gradient: "from-cyan-500 to-blue-500"
   }
 ];
 
@@ -151,30 +162,65 @@ const Index = () => {
       
       <main>
         {/* Hero Section */}
-        <Section className="pt-32 pb-16 text-white relative overflow-hidden" style={{background: 'linear-gradient(135deg, #3d3d3d, #414141)'}}>
+        <Section className="pt-32 pb-16 text-white relative overflow-hidden min-h-[80vh] flex items-center" style={{background: 'linear-gradient(135deg, #3d3d3d, #414141)'}}>
           <div className="absolute inset-0 bg-[radial-gradient(circle_at_30%_20%,rgba(230,168,83,0.06),transparent_50%)]" />
           <div className="absolute inset-0 bg-[radial-gradient(circle_at_70%_80%,rgba(230,168,83,0.03),transparent_50%)]" />
+          
+          {/* Hero Image */}
+          <div className="absolute right-0 top-0 w-1/2 h-full overflow-hidden opacity-20">
+            <img 
+              src={heroImage} 
+              alt="AI-powered e-commerce platform interface" 
+              className="w-full h-full object-cover object-left"
+            />
+          </div>
+          
           <Container className="relative z-10">
-            <div className="text-center max-w-4xl mx-auto">
-              <h1 className="text-display mb-6 text-balance text-white">
-                Ваша AI‑команда для управления e‑commerce бизнесом
-              </h1>
-              <p className="text-body-large text-gray-200 mb-12 text-balance">
-                <strong>Мы предоставляем IT‑платформу «под ключ»</strong>, которая служит операционной 
-                системой для вашего бизнеса. Наши автономные AI‑агенты автоматизируют до 80% рутины 
-                и позволяют управлять магазином с ассортиментом до 100 000 товаров силами двух человек.
-              </p>
-              
-              <div className="flex flex-col sm:flex-row gap-4 justify-center items-center">
-                <Button asChild size="lg" className="text-lg px-8 py-6 bg-accent hover:bg-accent/90 text-white border-0">
-                  <Link to="/contact">
-                    Запросить демо
-                    <ArrowRight className="ml-2 h-5 w-5" />
-                  </Link>
-                </Button>
-                <Button asChild variant="outline" size="lg" className="text-lg px-8 py-6 border-white/30 text-white hover:bg-white/10 backdrop-blur-sm">
-                  <Link to="/product">Узнать подробнее</Link>
-                </Button>
+            <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
+              <div>
+                <div className="flex items-center gap-3 mb-6">
+                  <Sparkles className="w-6 h-6 text-accent" />
+                  <Badge variant="outline" className="bg-white/10 border-white/30 text-white backdrop-blur-sm">
+                    AI-powered автоматизация
+                  </Badge>
+                </div>
+                
+                <h1 className="text-display mb-6 text-balance text-white">
+                  Ваша AI‑команда для управления e‑commerce бизнесом
+                </h1>
+                <p className="text-body-large text-gray-200 mb-8 text-balance">
+                  <strong>Мы предоставляем IT‑платформу «под ключ»</strong>, которая служит операционной 
+                  системой для вашего бизнеса. Наши автономные AI‑агенты автоматизируют до 80% рутины 
+                  и позволяют управлять магазином с ассортиментом до 100 000 товаров силами двух человек.
+                </p>
+                
+                <div className="flex flex-col sm:flex-row gap-4 mb-8">
+                  <Button asChild size="lg" className="text-lg px-8 py-6 bg-accent hover:bg-accent/90 text-white border-0">
+                    <Link to="/contact">
+                      Запросить демо
+                      <ArrowRight className="ml-2 h-5 w-5" />
+                    </Link>
+                  </Button>
+                  <Button asChild variant="outline" size="lg" className="text-lg px-8 py-6 border-white/30 text-white hover:bg-white/10 backdrop-blur-sm">
+                    <Link to="/product">Узнать подробнее</Link>
+                  </Button>
+                </div>
+
+                {/* Stats */}
+                <div className="grid grid-cols-3 gap-6 text-center">
+                  <div>
+                    <div className="text-2xl font-semibold text-accent mb-1">1 час</div>
+                    <div className="text-sm text-gray-300">Время запуска</div>
+                  </div>
+                  <div>
+                    <div className="text-2xl font-semibold text-accent mb-1">80%</div>
+                    <div className="text-sm text-gray-300">Автоматизации</div>
+                  </div>
+                  <div>
+                    <div className="text-2xl font-semibold text-accent mb-1">100k</div>
+                    <div className="text-sm text-gray-300">Товаров в каталоге</div>
+                  </div>
+                </div>
               </div>
             </div>
           </Container>
@@ -209,29 +255,49 @@ const Index = () => {
               </p>
             </div>
 
-            <Grid cols={3} className="mb-12">
-              <div className="text-center">
-                <Zap className="w-12 h-12 mx-auto mb-4 text-accent" />
-                <h3 className="text-xl font-semibold mb-2">Скорость</h3>
-                <p className="text-muted-foreground">
-                  средняя загрузка страниц <strong>&lt; 1,5 с</strong> → выше конверсия и позиции в Google
-                </p>
-              </div>
-              <div className="text-center">
-                <Globe className="w-12 h-12 mx-auto mb-4 text-accent" />
-                <h3 className="text-xl font-semibold mb-2">Гибкость</h3>
-                <p className="text-muted-foreground">
-                  лёгкая интеграция любых сервисов под любые бизнес‑задачи
-                </p>
-              </div>
-              <div className="text-center">
-                <CheckCircle className="w-12 h-12 mx-auto mb-4 text-accent" />
-                <h3 className="text-xl font-semibold mb-2">Надёжность</h3>
-                <p className="text-muted-foreground">
-                  технологии, выдерживающие миллионы посетителей
-                </p>
-              </div>
-            </Grid>
+            <div className="grid grid-cols-1 md:grid-cols-3 gap-8 mb-12">
+              <Card className="text-center border-0 bg-gradient-to-br from-muted to-secondary hover:shadow-lg transition-all duration-300 group">
+                <CardHeader className="pb-4">
+                  <div className="w-16 h-16 mx-auto mb-4 rounded-full bg-gradient-to-br from-blue-500 to-cyan-500 flex items-center justify-center group-hover:scale-110 transition-transform">
+                    <Zap className="w-8 h-8 text-white" />
+                  </div>
+                  <CardTitle className="text-xl">Скорость</CardTitle>
+                </CardHeader>
+                <CardContent>
+                  <p className="text-muted-foreground">
+                    средняя загрузка страниц <strong>&lt; 1,5 с</strong> → выше конверсия и позиции в Google
+                  </p>
+                </CardContent>
+              </Card>
+
+              <Card className="text-center border-0 bg-gradient-to-br from-muted to-secondary hover:shadow-lg transition-all duration-300 group">
+                <CardHeader className="pb-4">
+                  <div className="w-16 h-16 mx-auto mb-4 rounded-full bg-gradient-to-br from-emerald-500 to-green-500 flex items-center justify-center group-hover:scale-110 transition-transform">
+                    <Globe className="w-8 h-8 text-white" />
+                  </div>
+                  <CardTitle className="text-xl">Гибкость</CardTitle>
+                </CardHeader>
+                <CardContent>
+                  <p className="text-muted-foreground">
+                    лёгкая интеграция любых сервисов под любые бизнес‑задачи
+                  </p>
+                </CardContent>
+              </Card>
+
+              <Card className="text-center border-0 bg-gradient-to-br from-muted to-secondary hover:shadow-lg transition-all duration-300 group">
+                <CardHeader className="pb-4">
+                  <div className="w-16 h-16 mx-auto mb-4 rounded-full bg-gradient-to-br from-orange-500 to-red-500 flex items-center justify-center group-hover:scale-110 transition-transform">
+                    <Shield className="w-8 h-8 text-white" />
+                  </div>
+                  <CardTitle className="text-xl">Надёжность</CardTitle>
+                </CardHeader>
+                <CardContent>
+                  <p className="text-muted-foreground">
+                    технологии, выдерживающие миллионы посетителей
+                  </p>
+                </CardContent>
+              </Card>
+            </div>
 
             <div className="bg-background/70 backdrop-blur-sm border border-border/50 rounded-lg p-6 max-w-3xl mx-auto">
               <p className="text-muted-foreground">
@@ -251,25 +317,32 @@ const Index = () => {
               </h2>
             </div>
 
-            <Grid cols={2} gap="lg">
+            <div className="grid grid-cols-1 lg:grid-cols-2 gap-8">
               {modules.map((module, index) => (
-                <Card key={index} className="card-hover">
-                  <CardHeader>
-                    <div className="flex items-center gap-3">
-                      <div className="p-2 bg-accent/10 rounded-lg text-accent">
-                        {module.icon}
+                <Card key={index} className="group hover:shadow-xl transition-all duration-300 border-0 bg-gradient-to-br from-background to-muted/50">
+                  <CardHeader className="pb-4">
+                    <div className="flex items-start gap-4">
+                      <div className={`p-3 rounded-xl bg-gradient-to-br ${module.gradient} group-hover:scale-110 transition-transform flex-shrink-0`}>
+                        <div className="text-white">
+                          {module.icon}
+                        </div>
                       </div>
-                      <CardTitle className="text-xl">{module.title}</CardTitle>
+                      <div className="flex-1">
+                        <CardTitle className="text-xl group-hover:text-primary transition-colors">
+                          {module.title}
+                        </CardTitle>
+                        <div className="w-12 h-0.5 bg-gradient-to-r from-accent to-transparent mt-3 group-hover:w-full transition-all duration-300" />
+                      </div>
                     </div>
                   </CardHeader>
                   <CardContent>
-                    <CardDescription className="text-base">
+                    <CardDescription className="text-base leading-relaxed text-muted-foreground group-hover:text-foreground transition-colors">
                       {module.description}
                     </CardDescription>
                   </CardContent>
                 </Card>
               ))}
-            </Grid>
+            </div>
           </Container>
         </Section>
 

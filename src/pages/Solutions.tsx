@@ -8,7 +8,10 @@ import { Grid } from '@/components/Grid';
 import { Card, CardContent, CardDescription, CardHeader, CardTitle } from '@/components/ui/card';
 import { Button } from '@/components/ui/button';
 import { Badge } from '@/components/ui/badge';
-import { ArrowRight, Target, TrendingUp, Users, ShoppingCart, BarChart3, Zap } from 'lucide-react';
+import { ArrowRight, Target, TrendingUp, Users, ShoppingCart, BarChart3, Zap, Sparkles } from 'lucide-react';
+import d2cImage from '@/assets/d2c-solution.jpg';
+import amazonImage from '@/assets/amazon-to-d2c.jpg';
+import retailImage from '@/assets/retail-solution.jpg';
 
 const Solutions = () => {
   const solutions = [
@@ -21,7 +24,9 @@ const Solutions = () => {
       result: 'Запуск за 1 час, поток контента, предсказуемый рост трафика/продаж',
       kpis: ['CAC↓', 'ROAS↑', 'NPS↑'],
       icon: <Target className="w-8 h-8" />,
-      status: 'MVP Ready'
+      image: d2cImage,
+      status: 'MVP Ready',
+      gradient: 'from-blue-500 to-indigo-600'
     },
     {
       id: 'amazon-to-d2c',
@@ -32,7 +37,9 @@ const Solutions = () => {
       result: 'Собственная база клиентов, маржинальность выше, контроль бренда',
       kpis: ['D2C-выручка↑', 'LTV↑', 'ROMI↑'],
       icon: <ShoppingCart className="w-8 h-8" />,
-      status: 'MVP Ready'
+      image: amazonImage,
+      status: 'MVP Ready',
+      gradient: 'from-orange-500 to-red-500'
     },
     {
       id: 'retail',
@@ -43,7 +50,9 @@ const Solutions = () => {
       result: 'Сокращение out-of-stock, рост оборачиваемости, прозрачный BI',
       kpis: ['Оборачиваемость↑', 'Out-of-stock↓', 'NPS↑'],
       icon: <BarChart3 className="w-8 h-8" />,
-      status: 'Coming Q1 2026'
+      image: retailImage,
+      status: 'Coming Q1 2026',
+      gradient: 'from-purple-500 to-pink-500'
     }
   ];
 
@@ -91,14 +100,24 @@ const Solutions = () => {
       
       <main className="pt-16">
         {/* Hero Section */}
-        <Section className="py-20 bg-gradient-subtle">
-          <Container>
+        <Section className="py-24 bg-gradient-to-br from-primary via-primary-dark to-foreground text-white relative overflow-hidden">
+          <div className="absolute inset-0 bg-[radial-gradient(circle_at_30%_20%,rgba(230,168,83,0.08),transparent_50%)]" />
+          <div className="absolute inset-0 bg-[radial-gradient(circle_at_70%_80%,rgba(230,168,83,0.05),transparent_50%)]" />
+          
+          <Container className="relative z-10">
             <div className="text-center max-w-4xl mx-auto">
-              <h1 className="text-4xl md:text-5xl lg:text-6xl font-light tracking-tight text-foreground mb-6">
+              <div className="flex items-center justify-center gap-3 mb-6">
+                <Sparkles className="w-8 h-8 text-accent" />
+                <Badge variant="outline" className="bg-white/10 border-white/30 text-white backdrop-blur-sm">
+                  Готовые решения
+                </Badge>
+              </div>
+              
+              <h1 className="text-4xl md:text-5xl lg:text-6xl font-light tracking-tight text-white mb-6">
                 Решения для вашего бизнеса
               </h1>
-              <p className="text-lg md:text-xl text-muted-foreground leading-relaxed">
-                Выберите сценарий, под которого мы уже собрали лучшую связку AI-модулей
+              <p className="text-lg md:text-xl text-gray-200 leading-relaxed">
+                Выберите сценарий, под который мы уже собрали лучшую связку AI-модулей
               </p>
             </div>
           </Container>
@@ -107,87 +126,121 @@ const Solutions = () => {
         {/* Solutions Grid */}
         <Section className="py-20">
           <Container>
-            <div className="space-y-8 max-w-5xl mx-auto">
+            <div className="space-y-12 max-w-6xl mx-auto">
               {solutions.map((solution, index) => (
-                <Card key={solution.id} className="border-border hover:shadow-lg transition-shadow">
-                  <CardHeader>
-                    <div className="flex items-start justify-between mb-4">
-                      <div className="flex items-center gap-4">
-                        <div className="p-3 bg-gradient-subtle rounded-xl text-primary">
-                          {solution.icon}
-                        </div>
-                        <div>
-                          <CardTitle className="text-2xl font-light text-foreground">
-                            {solution.title}
-                          </CardTitle>
-                          <CardDescription className="text-muted-foreground mt-1">
-                            {solution.description}
-                          </CardDescription>
-                        </div>
-                      </div>
-                      <Badge 
-                        variant={solution.status === 'MVP Ready' ? 'default' : 'outline'}
-                        className={solution.status === 'MVP Ready' ? 'bg-success text-success-foreground' : ''}
-                      >
-                        {solution.status}
-                      </Badge>
-                    </div>
-                  </CardHeader>
-                  
-                  <CardContent className="space-y-6">
-                    <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
-                      {/* Pain Point */}
-                      <div className="space-y-2">
-                        <h4 className="font-medium text-destructive">Боль</h4>
-                        <p className="text-sm text-muted-foreground leading-relaxed">
-                          {solution.pain}
-                        </p>
-                      </div>
+                <Card key={solution.id} className="border-0 bg-gradient-to-br from-background to-muted/30 hover:shadow-2xl transition-all duration-500 group overflow-hidden">
+                  <div className="grid grid-cols-1 lg:grid-cols-2 gap-0">
+                    {/* Image Section */}
+                    <div className="relative overflow-hidden">
+                      <img 
+                        src={solution.image} 
+                        alt={`${solution.title} solution`}
+                        className="w-full h-64 lg:h-full object-cover group-hover:scale-105 transition-transform duration-500"
+                      />
+                      <div className="absolute inset-0 bg-gradient-to-t from-black/20 to-transparent" />
                       
-                      {/* Solution */}
-                      <div className="space-y-2">
-                        <h4 className="font-medium text-primary">Решение</h4>
-                        <p className="text-sm text-muted-foreground leading-relaxed">
-                          {solution.solution}
-                        </p>
+                      {/* Floating Icon */}
+                      <div className="absolute top-6 left-6">
+                        <div className={`p-4 rounded-2xl bg-gradient-to-br ${solution.gradient} shadow-lg group-hover:scale-110 transition-transform`}>
+                          <div className="text-white">
+                            {solution.icon}
+                          </div>
+                        </div>
                       </div>
-                      
-                      {/* Result */}
-                      <div className="space-y-2">
-                        <h4 className="font-medium text-success">Результат</h4>
-                        <p className="text-sm text-muted-foreground leading-relaxed">
-                          {solution.result}
-                        </p>
-                      </div>
-                    </div>
-                    
-                    {/* KPIs */}
-                    <div className="flex flex-wrap gap-2 pt-4 border-t border-border">
-                      <span className="text-sm font-medium text-foreground mr-2">KPI:</span>
-                      {solution.kpis.map((kpi, kpiIndex) => (
-                        <Badge key={kpiIndex} variant="outline" className="text-xs">
-                          {kpi}
+
+                      {/* Status Badge */}
+                      <div className="absolute top-6 right-6">
+                        <Badge 
+                          variant={solution.status === 'MVP Ready' ? 'default' : 'outline'}
+                          className={`${solution.status === 'MVP Ready' ? 'bg-emerald-500 text-white' : 'bg-white/90 backdrop-blur-sm'} shadow-lg`}
+                        >
+                          {solution.status}
                         </Badge>
-                      ))}
+                      </div>
                     </div>
-                    
-                    {/* CTA */}
-                    <div className="flex gap-3 pt-2">
-                      <Button 
-                        size="lg" 
-                        disabled={solution.status !== 'MVP Ready'}
-                        className="flex-1"
-                      >
-                        Подробнее о решении
-                        <ArrowRight className="w-4 h-4 ml-2" />
-                      </Button>
-                      {solution.status === 'MVP Ready' && (
-                        <Button variant="outline" size="lg">
-                          Демо
-                        </Button>
-                      )}
+
+                    {/* Content Section */}
+                    <div className="p-8 lg:p-12">
+                      <CardHeader className="p-0 mb-6">
+                        <CardTitle className="text-3xl font-light text-foreground mb-2">
+                          {solution.title}
+                        </CardTitle>
+                        <CardDescription className="text-lg text-muted-foreground">
+                          {solution.description}
+                        </CardDescription>
+                      </CardHeader>
+                  
+                      <CardContent className="p-0 space-y-8">
+                        <div className="grid grid-cols-1 gap-6">
+                          {/* Pain Point */}
+                          <div className="p-4 rounded-lg bg-red-50 border border-red-100">
+                            <h4 className="font-semibold text-red-700 mb-2 flex items-center gap-2">
+                              <div className="w-2 h-2 bg-red-500 rounded-full" />
+                              Боль
+                            </h4>
+                            <p className="text-sm text-red-600 leading-relaxed">
+                              {solution.pain}
+                            </p>
+                          </div>
+                          
+                          {/* Solution */}
+                          <div className="p-4 rounded-lg bg-blue-50 border border-blue-100">
+                            <h4 className="font-semibold text-blue-700 mb-2 flex items-center gap-2">
+                              <div className="w-2 h-2 bg-blue-500 rounded-full" />
+                              Решение
+                            </h4>
+                            <p className="text-sm text-blue-600 leading-relaxed">
+                              {solution.solution}
+                            </p>
+                          </div>
+                          
+                          {/* Result */}
+                          <div className="p-4 rounded-lg bg-emerald-50 border border-emerald-100">
+                            <h4 className="font-semibold text-emerald-700 mb-2 flex items-center gap-2">
+                              <div className="w-2 h-2 bg-emerald-500 rounded-full" />
+                              Результат
+                            </h4>
+                            <p className="text-sm text-emerald-600 leading-relaxed">
+                              {solution.result}
+                            </p>
+                          </div>
+                        </div>
+                        
+                        {/* KPIs */}
+                        <div className="pt-4 border-t border-border/20">
+                          <span className="text-sm font-semibold text-foreground mb-3 block">Ключевые показатели (KPI):</span>
+                          <div className="flex flex-wrap gap-2">
+                            {solution.kpis.map((kpi, kpiIndex) => (
+                              <Badge 
+                                key={kpiIndex} 
+                                variant="outline" 
+                                className={`bg-gradient-to-r ${solution.gradient} text-white border-0 shadow-sm`}
+                              >
+                                {kpi}
+                              </Badge>
+                            ))}
+                          </div>
+                        </div>
+                        
+                        {/* CTA */}
+                        <div className="flex flex-col sm:flex-row gap-3">
+                          <Button 
+                            size="lg" 
+                            disabled={solution.status !== 'MVP Ready'}
+                            className={`flex-1 bg-gradient-to-r ${solution.gradient} border-0 hover:shadow-lg transition-all`}
+                          >
+                            Подробнее о решении
+                            <ArrowRight className="w-4 h-4 ml-2" />
+                          </Button>
+                          {solution.status === 'MVP Ready' && (
+                            <Button variant="outline" size="lg" className="border-2">
+                              Демо
+                            </Button>
+                          )}
+                        </div>
+                      </CardContent>
                     </div>
-                  </CardContent>
+                  </div>
                 </Card>
               ))}
             </div>
