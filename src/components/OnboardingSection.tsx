@@ -30,9 +30,9 @@ const OnboardingSection = () => {
       <div className="container-wide">
         {/* Header */}
         <div className="text-center max-w-4xl mx-auto mb-20">
-          <SectionTitleLight>
+          <h2 className="text-2xl font-medium text-foreground mb-8">
             {t('onboarding.title')}
-          </SectionTitleLight>
+          </h2>
           <DescriptionLight className="text-balance">
             {t('onboarding.subtitle')}
           </DescriptionLight>
@@ -64,7 +64,7 @@ const OnboardingSection = () => {
 
                 {/* Content */}
                 <div className="text-center lg:text-left">
-                  <h3 className="text-base font-medium text-foreground mb-4">
+                  <h3 className="text-sm font-medium text-foreground mb-4">
                     {step.title}
                   </h3>
                   <DescriptionLight>
