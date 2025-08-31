@@ -1,4 +1,4 @@
-import React from 'react';
+import React, { useState } from 'react';
 import { Helmet } from 'react-helmet-async';
 import { Link } from 'react-router-dom';
 import Header from '@/components/Header';
@@ -13,6 +13,7 @@ import { FAQ } from '@/components/FAQ';
 import { Button } from '@/components/ui/button';
 import { Badge } from '@/components/ui/badge';
 import { Card, CardContent, CardDescription, CardHeader, CardTitle } from '@/components/ui/card';
+import { Dialog, DialogContent, DialogHeader, DialogTitle, DialogTrigger } from '@/components/ui/dialog';
 import { SectionTitleLight, SubTitle, DescriptionLight } from '@/components/Typography';
 import { 
   ArrowRight, CheckCircle, TrendingUp, Users, Globe, Zap, 
@@ -75,10 +76,12 @@ const modules = [
     gradient: "from-primary to-primary-dark"
   },
   {
-    title: "AI Content Factory",
+    title: "AI-Агент: Контент-Завод",
+    subtitle: "Ваш личный отдел по созданию контента", 
     description: "Автономный «контент‑завод»: SEO‑тексты, описания, статьи, посты",
     icon: <Brain className="w-6 h-6" />,
-    gradient: "from-accent to-accent-light"
+    gradient: "from-accent to-accent-light",
+    hasModal: true
   },
   {
     title: "AI Marketer",
@@ -332,14 +335,73 @@ const Index = () => {
                         <SubTitle className="text-base group-hover:text-primary transition-colors">
                           {module.title}
                         </SubTitle>
+                        {module.subtitle && (
+                          <p className="text-sm text-muted-foreground mt-1">
+                            {module.subtitle}
+                          </p>
+                        )}
                         <div className="w-12 h-0.5 bg-gradient-to-r from-accent to-transparent mt-3 group-hover:w-full transition-all duration-300" />
                       </div>
                     </div>
                   </CardHeader>
-                  <CardContent>
+                  <CardContent className="space-y-4">
                     <DescriptionLight className="group-hover:text-foreground transition-colors">
                       {module.description}
                     </DescriptionLight>
+                    
+                    {module.hasModal && (
+                      <Dialog>
+                        <DialogTrigger asChild>
+                          <Button variant="outline" size="sm" className="w-full">
+                            Посмотреть, как это работает
+                          </Button>
+                        </DialogTrigger>
+                        <DialogContent className="max-w-4xl max-h-[80vh] overflow-y-auto">
+                          <DialogHeader>
+                            <DialogTitle className="text-2xl font-semibold mb-4">
+                              AI Content Factory: Ваш внутренний креативный отдел
+                            </DialogTitle>
+                          </DialogHeader>
+                          
+                          <div className="space-y-6 text-sm leading-relaxed">
+                            <p>
+                              Забудьте о поиске копирайтеров, дизайнеров и видеографов. "Контент-завод" — это неотъемлемая часть нашей e-commerce платформы, которая берет на себя всю работу по созданию контента, необходимого для жизни и роста вашего бренда.
+                            </p>
+                            
+                            <div>
+                              <h3 className="text-lg font-semibold mb-3 text-primary">
+                                Как работает ваш AI-Контент-Завод?
+                              </h3>
+                              
+                              <div className="space-y-4">
+                                <div>
+                                  <h4 className="font-medium text-foreground mb-2">
+                                    Фаза I: Получение Задания от Архитектора
+                                  </h4>
+                                  <ul className="list-disc list-inside space-y-2 text-muted-foreground ml-4">
+                                    <li>
+                                      <strong>Никаких лишних вопросов:</strong> Этот агент не проводит с вами отдельных интервью. Он получает всю необходимую информацию напрямую от AI-Архитектора после того, как вы утвердили общую стратегию сайта.
+                                    </li>
+                                    <li>
+                                      <strong>"Библия Контента" как основа:</strong> Вся работа строится на основе фундаментального документа — вашей персональной "Библии Контента", которая включает контент-стратегию, рубрики, форматы и Tone of Voice. Это гарантирует, что 100% создаваемого контента идеально соответствует вашему бренду с первого дня.
+                                    </li>
+                                  </ul>
+                                </div>
+                                
+                                <div>
+                                  <h4 className="font-medium text-foreground mb-2">
+                                    Фаза II: Автономная Генерация Контента
+                                  </h4>
+                                  <p className="text-muted-foreground ml-4">
+                                    <strong>Создание контент-плана:</strong> На основе "Библии Контента" агент еженедельно или ежемесячно генерирует и предлагает вам на утверждение детальный контент-план.
+                                  </p>
+                                </div>
+                              </div>
+                            </div>
+                          </div>
+                        </DialogContent>
+                      </Dialog>
+                    )}
                   </CardContent>
                 </Card>
               ))}
