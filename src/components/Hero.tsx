@@ -45,22 +45,70 @@ const Hero = () => {
 
           {/* CTA Buttons */}
           <div className="flex flex-col sm:flex-row items-center justify-center gap-6 mb-16">
-            <HeroButton type="primary" icon={Play}>
-              Запросить демо
-            </HeroButton>
+            {/* Встроенные стили для принудительного применения */}
+            <div dangerouslySetInnerHTML={{
+              __html: `
+                <style>
+                  .force-orange-btn {
+                    display: inline-flex !important;
+                    align-items: center !important;
+                    justify-content: center !important;
+                    padding: 16px 32px !important;
+                    background-color: #E6A853 !important;
+                    color: #ffffff !important;
+                    border: 1px solid #E6A853 !important;
+                    border-radius: 6px !important;
+                    font-weight: 500 !important;
+                    cursor: pointer !important;
+                    font-size: 14px !important;
+                    gap: 8px !important;
+                  }
+                  .force-gray-btn {
+                    display: inline-flex !important;
+                    align-items: center !important;
+                    justify-content: center !important;
+                    padding: 16px 32px !important;
+                    background-color: #3d3d3d !important;
+                    color: #ffffff !important;
+                    border: 1px solid #3d3d3d !important;
+                    border-radius: 6px !important;
+                    font-weight: 500 !important;
+                    cursor: pointer !important;
+                    font-size: 14px !important;
+                    gap: 8px !important;
+                  }
+                  .force-orange-btn *, .force-gray-btn * {
+                    color: #ffffff !important;
+                  }
+                </style>
+              `
+            }} />
             
-            <HeroButton 
-              type="secondary" 
+            <button className="force-orange-btn">
+              <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round">
+                <polygon points="5,3 19,12 5,21 12,12"/>
+              </svg>
+              Запросить демо
+            </button>
+            
+            <button 
+              className="force-gray-btn"
               onClick={() => setShowDetails(!showDetails)}
-              iconElement={
-                <>
-                  <Zap size={20} />
-                  {showDetails ? <ChevronUp size={16} /> : <ChevronDown size={16} />}
-                </>
-              }
             >
+              <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round">
+                <path d="m15 18-6-6 6-6"/>
+              </svg>
               Подробнее
-            </HeroButton>
+              {showDetails ? (
+                <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round">
+                  <path d="m18 15-6-6-6 6"/>
+                </svg>
+              ) : (
+                <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round">
+                  <path d="m6 9 6 6 6-6"/>
+                </svg>
+              )}
+            </button>
           </div>
 
           {/* Detailed Information - Expandable */}
