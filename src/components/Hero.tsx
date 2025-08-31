@@ -44,11 +44,40 @@ const Hero = () => {
 
           {/* CTA Buttons */}
           <div className="flex flex-col sm:flex-row items-center justify-center gap-6 mb-16">
-            <div 
-              onClick={() => {
-                console.log('Button clicked, showDetails:', showDetails);
-                setShowDetails(!showDetails);
+            {/* Оранжевая кнопка "Запросить демо" */}
+            <div
+              style={{
+                display: 'inline-flex',
+                alignItems: 'center',
+                justifyContent: 'center',
+                padding: '16px 32px',
+                backgroundColor: '#E6A853',
+                color: '#ffffff',
+                border: '1px solid #E6A853',
+                borderRadius: '6px',
+                fontWeight: '500',
+                cursor: 'pointer',
+                fontSize: '14px'
               }}
+            >
+              <Play 
+                size={20} 
+                style={{ 
+                  color: '#ffffff', 
+                  marginRight: '8px' 
+                }} 
+              />
+              <span style={{ 
+                color: '#ffffff', 
+                fontWeight: '500' 
+              }}>
+                Запросить демо
+              </span>
+            </div>
+
+            {/* Графитовая кнопка "Подробнее" */}
+            <div 
+              onClick={() => setShowDetails(!showDetails)}
               role="button"
               tabIndex={0}
               style={{
@@ -62,9 +91,7 @@ const Hero = () => {
                 borderRadius: '6px',
                 fontWeight: '500',
                 cursor: 'pointer',
-                fontSize: '14px',
-                backgroundImage: 'none',
-                boxShadow: 'none'
+                fontSize: '14px'
               }}
             >
               <Zap 
@@ -78,7 +105,7 @@ const Hero = () => {
                 color: '#ffffff', 
                 fontWeight: '500' 
               }}>
-                Узнать подробнее
+                Подробнее
               </span>
               {showDetails ? (
                 <ChevronUp 
@@ -98,11 +125,6 @@ const Hero = () => {
                 />
               )}
             </div>
-            
-            <Button variant="ghost" size="lg" className="group text-white border-white/20 hover:bg-white/10 px-8 py-4">
-              <Play className="w-4 h-4 mr-2" />
-              Смотреть демо
-            </Button>
           </div>
 
           {/* Detailed Information - Expandable */}
