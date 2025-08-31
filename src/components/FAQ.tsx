@@ -29,12 +29,12 @@ const FAQ = React.forwardRef<HTMLDivElement, FAQProps>(
         {(title || description) && (
           <div className="text-center mb-12">
             {title && (
-              <h2 className="text-3xl font-light text-foreground mb-4">
+              <h2 className="text-lg font-light text-foreground mb-4">
                 {title}
               </h2>
             )}
             {description && (
-              <p className="text-muted-foreground">
+              <p className="text-muted-foreground text-sm">
                 {description}
               </p>
             )}
@@ -48,10 +48,10 @@ const FAQ = React.forwardRef<HTMLDivElement, FAQProps>(
               value={`item-${index}`}
               className="border rounded-lg px-6"
             >
-              <AccordionTrigger className="text-left hover:no-underline">
+              <AccordionTrigger className="text-left hover:no-underline text-sm">
                 {item.question}
               </AccordionTrigger>
-              <AccordionContent className="text-muted-foreground pb-6">
+              <AccordionContent className="text-muted-foreground pb-6 text-sm">
                 {item.answer}
               </AccordionContent>
             </AccordionItem>
