@@ -47,15 +47,15 @@ const Hero = () => {
             <Button 
               variant="outline" 
               size="lg" 
-              className="group px-8 py-4 bg-white text-primary border-white hover:bg-white/90 hover:text-primary font-medium"
+              className="group px-8 py-4 bg-white/10 text-white border-white/20 hover:bg-white/20 hover:text-white font-medium"
               onClick={() => setShowDetails(!showDetails)}
             >
-              <Zap className="w-5 h-5 mr-2 text-primary" />
+              <Zap className="w-5 h-5 mr-2 text-white" />
               <span className="font-medium">Узнать подробнее</span>
               {showDetails ? (
-                <ChevronUp className="w-4 h-4 ml-2 group-hover:translate-y-[-2px] transition-transform duration-normal text-primary" />
+                <ChevronUp className="w-4 h-4 ml-2 group-hover:translate-y-[-2px] transition-transform duration-normal text-white" />
               ) : (
-                <ChevronDown className="w-4 h-4 ml-2 group-hover:translate-y-1 transition-transform duration-normal text-primary" />
+                <ChevronDown className="w-4 h-4 ml-2 group-hover:translate-y-1 transition-transform duration-normal text-white" />
               )}
             </Button>
             
