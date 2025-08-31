@@ -246,6 +246,17 @@
   .scrollbar-thin::-webkit-scrollbar-thumb:hover {
     @apply bg-muted-foreground/40;
   }
+  /* Hero Details Button - Force Dark Background */
+  .hero-details-button {
+    background-color: #3d3d3d !important;
+    color: #ffffff !important;
+    border: 1px solid #3d3d3d !important;
+    background-image: none !important;
+  }
+  
+  .hero-details-button * {
+    color: #ffffff !important;
+  }
 }
 
 /* Keyframes */

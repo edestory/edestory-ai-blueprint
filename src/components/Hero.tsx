@@ -45,23 +45,20 @@ const Hero = () => {
           {/* CTA Buttons */}
           <div className="flex flex-col sm:flex-row items-center justify-center gap-6 mb-16">
             <div 
-              onClick={() => setShowDetails(!showDetails)}
+              onClick={() => {
+                console.log('Button clicked, showDetails:', showDetails);
+                setShowDetails(!showDetails);
+              }}
               role="button"
               tabIndex={0}
-              className="cursor-pointer inline-flex items-center justify-center px-8 py-4 rounded-md font-medium"
-              style={{
-                backgroundColor: '#3d3d3d',
-                color: 'white',
-                border: '1px solid #3d3d3d',
-                minHeight: '48px'
-              }}
+              className="hero-details-button cursor-pointer inline-flex items-center justify-center px-8 py-4 rounded-md font-medium"
             >
-              <Zap size={20} color="white" style={{ marginRight: '8px' }} />
-              <span style={{ color: 'white', fontWeight: '500' }}>Узнать подробнее</span>
+              <Zap size={20} className="text-white mr-2" />
+              <span className="font-medium text-white">Узнать подробнее</span>
               {showDetails ? (
-                <ChevronUp size={16} color="white" style={{ marginLeft: '8px' }} />
+                <ChevronUp size={16} className="text-white ml-2 group-hover:translate-y-[-2px] transition-transform duration-normal" />
               ) : (
-                <ChevronDown size={16} color="white" style={{ marginLeft: '8px' }} />
+                <ChevronDown size={16} className="text-white ml-2 group-hover:translate-y-1 transition-transform duration-normal" />
               )}
             </div>
             
