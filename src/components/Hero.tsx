@@ -45,21 +45,23 @@ const Hero = () => {
           {/* CTA Buttons */}
           <div className="flex flex-col sm:flex-row items-center justify-center gap-6 mb-16">
             <div 
-              className="group inline-flex items-center justify-center px-8 py-4 font-medium rounded-md transition-colors cursor-pointer"
-              style={{ 
-                backgroundColor: '#3d3d3d !important', 
-                color: '#ffffff !important',
-                border: '1px solid #3d3d3d !important',
-                backgroundImage: 'none !important'
-              }}
               onClick={() => setShowDetails(!showDetails)}
+              role="button"
+              tabIndex={0}
+              className="cursor-pointer inline-flex items-center justify-center px-8 py-4 rounded-md font-medium"
+              style={{
+                backgroundColor: '#3d3d3d',
+                color: 'white',
+                border: '1px solid #3d3d3d',
+                minHeight: '48px'
+              }}
             >
-              <Zap className="w-5 h-5 mr-2" style={{ color: '#ffffff !important' }} />
-              <span className="font-medium" style={{ color: '#ffffff !important' }}>Узнать подробнее</span>
+              <Zap size={20} color="white" style={{ marginRight: '8px' }} />
+              <span style={{ color: 'white', fontWeight: '500' }}>Узнать подробнее</span>
               {showDetails ? (
-                <ChevronUp className="w-4 h-4 ml-2 group-hover:translate-y-[-2px] transition-transform duration-normal" style={{ color: '#ffffff !important' }} />
+                <ChevronUp size={16} color="white" style={{ marginLeft: '8px' }} />
               ) : (
-                <ChevronDown className="w-4 h-4 ml-2 group-hover:translate-y-1 transition-transform duration-normal" style={{ color: '#ffffff !important' }} />
+                <ChevronDown size={16} color="white" style={{ marginLeft: '8px' }} />
               )}
             </div>
             
