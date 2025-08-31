@@ -45,15 +45,20 @@ const Hero = () => {
           {/* CTA Buttons */}
           <div className="flex flex-col sm:flex-row items-center justify-center gap-6 mb-16">
             <button 
-              className="group inline-flex items-center justify-center px-8 py-4 bg-primary text-primary-foreground border border-primary hover:bg-primary-dark font-medium rounded-md transition-colors"
+              className="group inline-flex items-center justify-center px-8 py-4 font-medium rounded-md transition-colors"
+              style={{ 
+                backgroundColor: 'hsl(0 0% 24%)', 
+                color: 'hsl(0 0% 100%)',
+                border: '1px solid hsl(0 0% 24%)'
+              }}
               onClick={() => setShowDetails(!showDetails)}
             >
-              <Zap className="w-5 h-5 mr-2 text-primary-foreground" />
-              <span className="font-medium">Узнать подробнее</span>
+              <Zap className="w-5 h-5 mr-2" style={{ color: 'hsl(0 0% 100%)' }} />
+              <span className="font-medium" style={{ color: 'hsl(0 0% 100%)' }}>Узнать подробнее</span>
               {showDetails ? (
-                <ChevronUp className="w-4 h-4 ml-2 group-hover:translate-y-[-2px] transition-transform duration-normal text-primary-foreground" />
+                <ChevronUp className="w-4 h-4 ml-2 group-hover:translate-y-[-2px] transition-transform duration-normal" style={{ color: 'hsl(0 0% 100%)' }} />
               ) : (
-                <ChevronDown className="w-4 h-4 ml-2 group-hover:translate-y-1 transition-transform duration-normal text-primary-foreground" />
+                <ChevronDown className="w-4 h-4 ml-2 group-hover:translate-y-1 transition-transform duration-normal" style={{ color: 'hsl(0 0% 100%)' }} />
               )}
             </button>
             
