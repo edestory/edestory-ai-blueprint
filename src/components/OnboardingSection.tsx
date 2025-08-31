@@ -1,6 +1,7 @@
 import React from 'react';
 import { ArrowRight, CheckCircle } from 'lucide-react';
 import { useLanguage } from '@/contexts/LanguageContext';
+import { SectionTitleLight, DescriptionLight } from '@/components/Typography';
 
 const OnboardingSection = () => {
   const { t } = useLanguage();
@@ -29,12 +30,12 @@ const OnboardingSection = () => {
       <div className="container-wide">
         {/* Header */}
         <div className="text-center max-w-4xl mx-auto mb-20">
-          <h2 className="text-headline font-light text-foreground mb-8">
+          <SectionTitleLight className="text-2xl mb-8">
             {t('onboarding.title')}
-          </h2>
-          <p className="text-body-large text-muted-foreground text-balance">
+          </SectionTitleLight>
+          <DescriptionLight className="text-balance">
             {t('onboarding.subtitle')}
-          </p>
+          </DescriptionLight>
         </div>
 
         {/* Steps */}
@@ -63,12 +64,12 @@ const OnboardingSection = () => {
 
                 {/* Content */}
                 <div className="text-center lg:text-left">
-                  <h3 className="text-xl font-normal text-foreground mb-4">
+                  <h3 className="text-base font-medium text-foreground mb-4">
                     {step.title}
                   </h3>
-                  <p className="text-muted-foreground leading-relaxed">
+                  <DescriptionLight>
                     {step.description}
-                  </p>
+                  </DescriptionLight>
                 </div>
 
                 {/* Mobile Connector */}
