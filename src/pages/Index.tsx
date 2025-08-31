@@ -314,7 +314,7 @@ const Index = () => {
           <Container>
             <div className="text-center mb-12">
               <SectionTitleLight>
-                Что входит в полную автоматизацию Edestory
+                Что входит в стартовую автоматизацию Edestory
               </SectionTitleLight>
             </div>
 
