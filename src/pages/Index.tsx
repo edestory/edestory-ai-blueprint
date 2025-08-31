@@ -258,7 +258,7 @@ const Index = () => {
             <div className="grid grid-cols-1 md:grid-cols-3 gap-8 mb-12">
               <Card className="text-center border-0 bg-gradient-to-br from-muted to-secondary hover:shadow-lg transition-all duration-300 group">
                 <CardHeader className="pb-4">
-                  <div className="w-16 h-16 mx-auto mb-4 rounded-full bg-gradient-to-br from-blue-500 to-cyan-500 flex items-center justify-center group-hover:scale-110 transition-transform">
+                  <div className="w-16 h-16 mx-auto mb-4 rounded-full bg-gradient-to-br from-primary to-primary-dark flex items-center justify-center group-hover:scale-110 transition-transform">
                     <Zap className="w-8 h-8 text-white" />
                   </div>
                   <CardTitle className="text-xl">Скорость</CardTitle>
@@ -272,7 +272,7 @@ const Index = () => {
 
               <Card className="text-center border-0 bg-gradient-to-br from-muted to-secondary hover:shadow-lg transition-all duration-300 group">
                 <CardHeader className="pb-4">
-                  <div className="w-16 h-16 mx-auto mb-4 rounded-full bg-gradient-to-br from-emerald-500 to-green-500 flex items-center justify-center group-hover:scale-110 transition-transform">
+                  <div className="w-16 h-16 mx-auto mb-4 rounded-full bg-gradient-to-br from-accent to-accent-light flex items-center justify-center group-hover:scale-110 transition-transform">
                     <Globe className="w-8 h-8 text-white" />
                   </div>
                   <CardTitle className="text-xl">Гибкость</CardTitle>
@@ -286,7 +286,7 @@ const Index = () => {
 
               <Card className="text-center border-0 bg-gradient-to-br from-muted to-secondary hover:shadow-lg transition-all duration-300 group">
                 <CardHeader className="pb-4">
-                  <div className="w-16 h-16 mx-auto mb-4 rounded-full bg-gradient-to-br from-orange-500 to-red-500 flex items-center justify-center group-hover:scale-110 transition-transform">
+                  <div className="w-16 h-16 mx-auto mb-4 rounded-full bg-gradient-to-br from-primary to-accent flex items-center justify-center group-hover:scale-110 transition-transform">
                     <Shield className="w-8 h-8 text-white" />
                   </div>
                   <CardTitle className="text-xl">Надёжность</CardTitle>
