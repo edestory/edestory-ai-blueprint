@@ -30,7 +30,7 @@ const OnboardingSection = () => {
       <div className="container-wide">
         {/* Header */}
         <div className="text-center max-w-4xl mx-auto mb-20">
-          <SectionTitleLight className="text-2xl mb-8">
+          <SectionTitleLight>
             {t('onboarding.title')}
           </SectionTitleLight>
           <DescriptionLight className="text-balance">
