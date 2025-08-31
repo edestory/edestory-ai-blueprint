@@ -13,6 +13,7 @@ import { FAQ } from '@/components/FAQ';
 import { Button } from '@/components/ui/button';
 import { Badge } from '@/components/ui/badge';
 import { Card, CardContent, CardDescription, CardHeader, CardTitle } from '@/components/ui/card';
+import { SectionTitleLight, SubTitle, DescriptionLight } from '@/components/Typography';
 import { 
   ArrowRight, CheckCircle, TrendingUp, Users, Globe, Zap, 
   Layers, Cpu, Brain, ShoppingBag, BarChart2, Truck,
@@ -246,13 +247,13 @@ const Index = () => {
         <Section className="bg-muted-alt">
           <Container>
             <div className="text-center max-w-4xl mx-auto mb-12">
-              <h2 className="text-headline mb-6">
+              <SectionTitleLight>
                 Технологии, которым доверяют лидеры
-              </h2>
-              <p className="text-body-large text-muted-foreground mb-8">
-                В основе Edestory — headless‑архитектура <strong>Saleor</strong> (Next.js, GraphQL), 
+              </SectionTitleLight>
+              <DescriptionLight className="mb-8">
+                В основе Edestory — headless‑архитектура <SubTitle>Saleor</SubTitle> (Next.js, GraphQL), 
                 проверенная мировыми брендами (Lush, Breitling, Dr. Martens). Это гарантирует:
-              </p>
+              </DescriptionLight>
             </div>
 
             <div className="grid grid-cols-1 md:grid-cols-3 gap-8 mb-12">
@@ -261,12 +262,12 @@ const Index = () => {
                   <div className="w-16 h-16 mx-auto mb-4 rounded-full bg-gradient-to-br from-primary to-primary-dark flex items-center justify-center group-hover:scale-110 transition-transform">
                     <Zap className="w-8 h-8 text-white" />
                   </div>
-                  <CardTitle className="text-xl">Скорость</CardTitle>
+                  <SubTitle>Скорость</SubTitle>
                 </CardHeader>
                 <CardContent>
-                  <p className="text-muted-foreground">
-                    средняя загрузка страниц <strong>&lt; 1,5 с</strong> → выше конверсия и позиции в Google
-                  </p>
+                  <DescriptionLight>
+                    средняя загрузка страниц <SubTitle>&lt; 1,5 с</SubTitle> → выше конверсия и позиции в Google
+                  </DescriptionLight>
                 </CardContent>
               </Card>
 
@@ -275,12 +276,12 @@ const Index = () => {
                   <div className="w-16 h-16 mx-auto mb-4 rounded-full bg-gradient-to-br from-accent to-accent-light flex items-center justify-center group-hover:scale-110 transition-transform">
                     <Globe className="w-8 h-8 text-white" />
                   </div>
-                  <CardTitle className="text-xl">Гибкость</CardTitle>
+                  <SubTitle>Гибкость</SubTitle>
                 </CardHeader>
                 <CardContent>
-                  <p className="text-muted-foreground">
+                  <DescriptionLight>
                     лёгкая интеграция любых сервисов под любые бизнес‑задачи
-                  </p>
+                  </DescriptionLight>
                 </CardContent>
               </Card>
 
@@ -289,21 +290,21 @@ const Index = () => {
                   <div className="w-16 h-16 mx-auto mb-4 rounded-full bg-gradient-to-br from-primary to-accent flex items-center justify-center group-hover:scale-110 transition-transform">
                     <Shield className="w-8 h-8 text-white" />
                   </div>
-                  <CardTitle className="text-xl">Надёжность</CardTitle>
+                  <SubTitle>Надёжность</SubTitle>
                 </CardHeader>
                 <CardContent>
-                  <p className="text-muted-foreground">
+                  <DescriptionLight>
                     технологии, выдерживающие миллионы посетителей
-                  </p>
+                  </DescriptionLight>
                 </CardContent>
               </Card>
             </div>
 
             <div className="bg-background/70 backdrop-blur-sm border border-border/50 rounded-lg p-6 max-w-3xl mx-auto">
-              <p className="text-muted-foreground">
-                <strong>Важно:</strong> В стартовой конфигурации оператор управляет до <strong>1 000 SKU</strong>. 
-                При масштабировании архитектура поддерживает <strong>100 000 SKU</strong> под управлением двух операторов.
-              </p>
+              <DescriptionLight>
+                <SubTitle>Важно:</SubTitle> В стартовой конфигурации оператор управляет до <SubTitle>1 000 SKU</SubTitle>. 
+                При масштабировании архитектура поддерживает <SubTitle>100 000 SKU</SubTitle> под управлением двух операторов.
+              </DescriptionLight>
             </div>
           </Container>
         </Section>
@@ -312,9 +313,9 @@ const Index = () => {
         <Section className="bg-background">
           <Container>
             <div className="text-center mb-12">
-              <h2 className="text-headline mb-6">
+              <SectionTitleLight>
                 Что входит в полную автоматизацию Edestory
-              </h2>
+              </SectionTitleLight>
             </div>
 
             <div className="grid grid-cols-1 lg:grid-cols-2 gap-8">
@@ -328,17 +329,17 @@ const Index = () => {
                         </div>
                       </div>
                       <div className="flex-1">
-                        <CardTitle className="text-xl group-hover:text-primary transition-colors">
+                        <SubTitle className="text-base group-hover:text-primary transition-colors">
                           {module.title}
-                        </CardTitle>
+                        </SubTitle>
                         <div className="w-12 h-0.5 bg-gradient-to-r from-accent to-transparent mt-3 group-hover:w-full transition-all duration-300" />
                       </div>
                     </div>
                   </CardHeader>
                   <CardContent>
-                    <CardDescription className="text-base leading-relaxed text-muted-foreground group-hover:text-foreground transition-colors">
+                    <DescriptionLight className="group-hover:text-foreground transition-colors">
                       {module.description}
-                    </CardDescription>
+                    </DescriptionLight>
                   </CardContent>
                 </Card>
               ))}
@@ -350,9 +351,9 @@ const Index = () => {
         <Section className="bg-secondary">
           <Container>
             <div className="text-center mb-12">
-              <h2 className="text-headline mb-6">
+              <SectionTitleLight>
                 Онбординг за 1 час — как это работает
-              </h2>
+              </SectionTitleLight>
             </div>
 
             <div className="max-w-2xl mx-auto">
@@ -365,16 +366,16 @@ const Index = () => {
         <Section className="bg-muted-alt">
           <Container>
             <div className="text-center max-w-4xl mx-auto">
-              <h2 className="text-headline mb-6">
+              <SectionTitleLight>
                 Архитектура и безопасность данных
-              </h2>
-              <p className="text-body-large text-muted-foreground mb-8">
-                Vercel Edge → Next.js → <strong>Saleor Core</strong> → PostgreSQL (RLS) → AI‑сервисы → 6 модулей
-              </p>
-              <p className="text-muted-foreground">
+              </SectionTitleLight>
+              <DescriptionLight className="mb-8">
+                Vercel Edge → Next.js → <SubTitle>Saleor Core</SubTitle> → PostgreSQL (RLS) → AI‑сервисы → 6 модулей
+              </DescriptionLight>
+              <DescriptionLight>
                 Ключевые принципы: изоляция данных (Row‑Level Security), единое ядро, множество фронтендов, 
                 автоматический деплой новых клиентов.
-              </p>
+              </DescriptionLight>
             </div>
           </Container>
         </Section>
@@ -383,9 +384,9 @@ const Index = () => {
         <Section className="bg-background">
           <Container>
             <div className="text-center mb-12">
-              <h2 className="text-headline mb-6">
+              <SectionTitleLight>
                 Пример финансовой выгоды (референс‑кейс)
-              </h2>
+              </SectionTitleLight>
             </div>
 
             <div className="max-w-2xl mx-auto">
@@ -414,16 +415,16 @@ const Index = () => {
         <Section className="bg-muted">
           <Container>
             <div className="text-center max-w-3xl mx-auto">
-              <h2 className="text-headline mb-6">
+              <SectionTitleLight>
                 Ценообразование (коротко)
-              </h2>
-              <p className="text-body-large text-muted-foreground mb-8">
-                Модель <strong>Revenue Share</strong>: <strong>10%</strong> от оборота в первый год → 
-                <strong>–1% ежегодно</strong> до минимума <strong>5%</strong>
-              </p>
-              <p className="text-muted-foreground">
+              </SectionTitleLight>
+              <DescriptionLight className="mb-8">
+                Модель <SubTitle>Revenue Share</SubTitle>: <SubTitle>10%</SubTitle> от оборота в первый год → 
+                <SubTitle>–1% ежегодно</SubTitle> до минимума <SubTitle>5%</SubTitle>
+              </DescriptionLight>
+              <DescriptionLight>
                 Отдельно: рекламные бюджеты, внешние API и инфраструктура.
-              </p>
+              </DescriptionLight>
             </div>
           </Container>
         </Section>
