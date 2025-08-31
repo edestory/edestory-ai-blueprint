@@ -51,14 +51,51 @@ const Hero = () => {
               }}
               role="button"
               tabIndex={0}
-              className="hero-details-button cursor-pointer inline-flex items-center justify-center px-8 py-4 rounded-md font-medium"
+              style={{
+                display: 'inline-flex',
+                alignItems: 'center',
+                justifyContent: 'center',
+                padding: '16px 32px',
+                backgroundColor: '#3d3d3d',
+                color: '#ffffff',
+                border: '1px solid #3d3d3d',
+                borderRadius: '6px',
+                fontWeight: '500',
+                cursor: 'pointer',
+                fontSize: '14px',
+                backgroundImage: 'none',
+                boxShadow: 'none'
+              }}
             >
-              <Zap size={20} className="text-white mr-2" />
-              <span className="font-medium text-white">Узнать подробнее</span>
+              <Zap 
+                size={20} 
+                style={{ 
+                  color: '#ffffff', 
+                  marginRight: '8px' 
+                }} 
+              />
+              <span style={{ 
+                color: '#ffffff', 
+                fontWeight: '500' 
+              }}>
+                Узнать подробнее
+              </span>
               {showDetails ? (
-                <ChevronUp size={16} className="text-white ml-2 group-hover:translate-y-[-2px] transition-transform duration-normal" />
+                <ChevronUp 
+                  size={16} 
+                  style={{ 
+                    color: '#ffffff', 
+                    marginLeft: '8px' 
+                  }} 
+                />
               ) : (
-                <ChevronDown size={16} className="text-white ml-2 group-hover:translate-y-1 transition-transform duration-normal" />
+                <ChevronDown 
+                  size={16} 
+                  style={{ 
+                    color: '#ffffff', 
+                    marginLeft: '8px' 
+                  }} 
+                />
               )}
             </div>
             
