@@ -45,9 +45,9 @@ const Hero = () => {
           {/* CTA Buttons */}
           <div className="flex flex-col sm:flex-row items-center justify-center gap-6 mb-16">
             <Button 
-              variant="outline" 
+              variant="ghost" 
               size="lg" 
-              className="group px-8 py-4 bg-slate-800 text-white border-slate-700 hover:bg-slate-700 hover:text-white font-medium"
+              className="group px-8 py-4 bg-slate-800 text-white border border-slate-700 hover:bg-slate-700 hover:text-white font-medium"
               onClick={() => setShowDetails(!showDetails)}
             >
               <Zap className="w-5 h-5 mr-2 text-white" />
