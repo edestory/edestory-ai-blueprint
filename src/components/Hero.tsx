@@ -44,20 +44,18 @@ const Hero = () => {
 
           {/* CTA Buttons */}
           <div className="flex flex-col sm:flex-row items-center justify-center gap-6 mb-16">
-            <Button 
-              variant="ghost" 
-              size="lg" 
-              className="group px-8 py-4 !bg-slate-800 !text-white !border !border-slate-700 hover:!bg-slate-700 hover:!text-white font-medium"
+            <button 
+              className="group inline-flex items-center justify-center px-8 py-4 bg-slate-800 text-white border border-slate-700 hover:bg-slate-700 font-medium rounded-md transition-colors"
               onClick={() => setShowDetails(!showDetails)}
             >
-              <Zap className="w-5 h-5 mr-2 !text-white" />
-              <span className="font-medium">Узнать подробнее</span>
+              <Zap className="w-5 h-5 mr-2 text-white" />
+              <span className="font-medium text-white">Узнать подробнее</span>
               {showDetails ? (
-                <ChevronUp className="w-4 h-4 ml-2 group-hover:translate-y-[-2px] transition-transform duration-normal !text-white" />
+                <ChevronUp className="w-4 h-4 ml-2 group-hover:translate-y-[-2px] transition-transform duration-normal text-white" />
               ) : (
-                <ChevronDown className="w-4 h-4 ml-2 group-hover:translate-y-1 transition-transform duration-normal !text-white" />
+                <ChevronDown className="w-4 h-4 ml-2 group-hover:translate-y-1 transition-transform duration-normal text-white" />
               )}
-            </Button>
+            </button>
             
             <Button variant="ghost" size="lg" className="group text-white border-white/20 hover:bg-white/10 px-8 py-4">
               <Play className="w-4 h-4 mr-2" />
