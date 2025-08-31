@@ -2,6 +2,7 @@ import React, { useState } from 'react';
 import { ArrowRight, Play, Sparkles, Zap, Users, ChevronDown, ChevronUp } from 'lucide-react';
 import { useLanguage } from '@/contexts/LanguageContext';
 import { Button } from '@/components/ui/button';
+import { HeroButton } from '@/components/HeroButton';
 
 const Hero = () => {
   const { t } = useLanguage();
@@ -44,87 +45,22 @@ const Hero = () => {
 
           {/* CTA Buttons */}
           <div className="flex flex-col sm:flex-row items-center justify-center gap-6 mb-16">
-            {/* Оранжевая кнопка "Запросить демо" */}
-            <div
-              style={{
-                display: 'inline-flex',
-                alignItems: 'center',
-                justifyContent: 'center',
-                padding: '16px 32px',
-                backgroundColor: '#E6A853',
-                color: '#ffffff',
-                border: '1px solid #E6A853',
-                borderRadius: '6px',
-                fontWeight: '500',
-                cursor: 'pointer',
-                fontSize: '14px'
-              }}
-            >
-              <Play 
-                size={20} 
-                style={{ 
-                  color: '#ffffff', 
-                  marginRight: '8px' 
-                }} 
-              />
-              <span style={{ 
-                color: '#ffffff', 
-                fontWeight: '500' 
-              }}>
-                Запросить демо
-              </span>
-            </div>
-
-            {/* Графитовая кнопка "Подробнее" */}
-            <div 
+            <HeroButton type="primary" icon={Play}>
+              Запросить демо
+            </HeroButton>
+            
+            <HeroButton 
+              type="secondary" 
               onClick={() => setShowDetails(!showDetails)}
-              role="button"
-              tabIndex={0}
-              style={{
-                display: 'inline-flex',
-                alignItems: 'center',
-                justifyContent: 'center',
-                padding: '16px 32px',
-                backgroundColor: '#3d3d3d',
-                color: '#ffffff',
-                border: '1px solid #3d3d3d',
-                borderRadius: '6px',
-                fontWeight: '500',
-                cursor: 'pointer',
-                fontSize: '14px'
-              }}
+              iconElement={
+                <>
+                  <Zap size={20} />
+                  {showDetails ? <ChevronUp size={16} /> : <ChevronDown size={16} />}
+                </>
+              }
             >
-              <Zap 
-                size={20} 
-                style={{ 
-                  color: '#ffffff', 
-                  marginRight: '8px' 
-                }} 
-              />
-              <span style={{ 
-                color: '#ffffff', 
-                fontWeight: '500' 
-              }}>
-                Подробнее
-              </span>
-              {showDetails ? (
-                <ChevronUp 
-                  size={16} 
-                  style={{ 
-                    color: '#ffffff', 
-                    marginLeft: '8px' 
-                  }} 
-                />
-              ) : (
-                <ChevronDown 
-                  size={16} 
-                  style={{ 
-                    color: '#ffffff', 
-                    marginLeft: '8px' 
-                  }} 
-                />
-              )}
-            </div>
+              Подробнее
+            </HeroButton>
           </div>
 
           {/* Detailed Information - Expandable */}
