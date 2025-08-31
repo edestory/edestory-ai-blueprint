@@ -44,23 +44,24 @@ const Hero = () => {
 
           {/* CTA Buttons */}
           <div className="flex flex-col sm:flex-row items-center justify-center gap-6 mb-16">
-            <button 
-              className="group inline-flex items-center justify-center px-8 py-4 font-medium rounded-md transition-colors"
+            <div 
+              className="group inline-flex items-center justify-center px-8 py-4 font-medium rounded-md transition-colors cursor-pointer"
               style={{ 
-                backgroundColor: 'hsl(0 0% 24%)', 
-                color: 'hsl(0 0% 100%)',
-                border: '1px solid hsl(0 0% 24%)'
+                backgroundColor: '#3d3d3d !important', 
+                color: '#ffffff !important',
+                border: '1px solid #3d3d3d !important',
+                backgroundImage: 'none !important'
               }}
               onClick={() => setShowDetails(!showDetails)}
             >
-              <Zap className="w-5 h-5 mr-2" style={{ color: 'hsl(0 0% 100%)' }} />
-              <span className="font-medium" style={{ color: 'hsl(0 0% 100%)' }}>Узнать подробнее</span>
+              <Zap className="w-5 h-5 mr-2" style={{ color: '#ffffff !important' }} />
+              <span className="font-medium" style={{ color: '#ffffff !important' }}>Узнать подробнее</span>
               {showDetails ? (
-                <ChevronUp className="w-4 h-4 ml-2 group-hover:translate-y-[-2px] transition-transform duration-normal" style={{ color: 'hsl(0 0% 100%)' }} />
+                <ChevronUp className="w-4 h-4 ml-2 group-hover:translate-y-[-2px] transition-transform duration-normal" style={{ color: '#ffffff !important' }} />
               ) : (
-                <ChevronDown className="w-4 h-4 ml-2 group-hover:translate-y-1 transition-transform duration-normal" style={{ color: 'hsl(0 0% 100%)' }} />
+                <ChevronDown className="w-4 h-4 ml-2 group-hover:translate-y-1 transition-transform duration-normal" style={{ color: '#ffffff !important' }} />
               )}
-            </button>
+            </div>
             
             <Button variant="ghost" size="lg" className="group text-white border-white/20 hover:bg-white/10 px-8 py-4">
               <Play className="w-4 h-4 mr-2" />
