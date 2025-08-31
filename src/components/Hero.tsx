@@ -47,7 +47,7 @@ const Hero = () => {
             <Button 
               variant="outline" 
               size="lg" 
-              className="group px-8 py-4 bg-white/10 text-white border-white/20 hover:bg-white/20 hover:text-white font-medium"
+              className="group px-8 py-4 bg-slate-800 text-white border-slate-700 hover:bg-slate-700 hover:text-white font-medium"
               onClick={() => setShowDetails(!showDetails)}
             >
               <Zap className="w-5 h-5 mr-2 text-white" />
