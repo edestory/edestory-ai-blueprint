@@ -41,8 +41,7 @@ const Footer = () => {
             {/* Brand */}
             <div className="lg:col-span-2">
               <Link to="/" className="flex items-center space-x-2 mb-4">
-                <div className="w-8 h-8 bg-gradient-primary rounded-lg"></div>
-                <span className="text-xl font-bold text-foreground">Edestory</span>
+                <span className="text-xl font-bold text-foreground lowercase">edestory</span>
               </Link>
               
               <p className="text-muted-foreground mb-6 max-w-md">
@@ -65,7 +64,7 @@ const Footer = () => {
 
             {/* Company */}
             <div>
-              <h3 className="text-xl font-bold text-foreground mb-4">{t('footer.company')}</h3>
+              <h3 className="text-base font-bold text-foreground mb-4">{t('footer.company')}</h3>
               <ul className="space-y-2">
                 {companyLinks.map((link) => (
                   <li key={link.href}>
@@ -82,7 +81,7 @@ const Footer = () => {
 
             {/* Product */}
             <div>
-              <h3 className="text-xl font-bold text-foreground mb-4">{t('footer.product')}</h3>
+              <h3 className="text-base font-bold text-foreground mb-4">{t('footer.product')}</h3>
               <ul className="space-y-2">
                 {productLinks.map((link) => (
                   <li key={link.href}>
@@ -99,7 +98,7 @@ const Footer = () => {
 
             {/* Resources */}
             <div>
-              <h3 className="text-xl font-bold text-foreground mb-4">{t('footer.resources')}</h3>
+              <h3 className="text-base font-bold text-foreground mb-4">{t('footer.resources')}</h3>
               <ul className="space-y-2">
                 {resourceLinks.map((link) => (
                   <li key={link.href}>
