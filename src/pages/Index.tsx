@@ -165,10 +165,10 @@ const Index = () => {
   return (
     <>
       <Helmet>
-        <title>Edestory — AI-автоматизация e-commerce: запуск за 1 час, Rev-Share 10%</title>
+        <title>Ваши клиенты, ваши цены, ваша прибыль - Edestory</title>
         <meta 
           name="description" 
-          content="White-label платформа на Saleor. 6 AI-модулей: сайт, контент, маркетинг, поддержка, логистика, аналитика. Запуск за 1 час. Marbella, Spain." 
+          content="Создайте независимый e-commerce за 60 минут и увеличьте маржинальность на 20-25%. Полнофункциональная платформа для прямых продаж с AI-автоматизацией." 
         />
         <script type="application/ld+json">
           {JSON.stringify(organizationLD)}
@@ -206,39 +206,40 @@ const Index = () => {
                 </div>
                 
                 <h1 className="text-3xl md:text-4xl lg:text-5xl font-light tracking-tight mb-6 text-balance text-white">
-                  Ваша AI‑команда для управления e‑commerce бизнесом
+                  Ваши клиенты, ваши цены, ваша прибыль
                 </h1>
-                <p className="text-base md:text-lg text-gray-200 mb-8 text-balance">
-                  <strong>Мы предоставляем IT‑платформу «под ключ»</strong>, которая служит операционной 
-                  системой для вашего бизнеса. Наши автономные AI‑агенты автоматизируют до 80% рутины 
-                  и позволяют управлять магазином с ассортиментом до 100 000 товаров силами двух человек.
+                <p className="text-xl md:text-2xl text-gray-200 mb-4 font-medium text-balance">
+                  Создайте независимый e-commerce за 60 минут и увеличьте маржинальность на 20-25%
+                </p>
+                <p className="text-base md:text-lg text-gray-300 mb-8 text-balance">
+                  Полнофункциональная платформа для прямых продаж с AI-автоматизацией всех процессов
                 </p>
                 
                 <div className="flex flex-col sm:flex-row gap-4 mb-8">
                   <Button asChild size="lg" className="text-lg px-8 py-6 bg-accent hover:bg-accent/90 text-white border-0">
                     <Link to="/contact">
-                      Запросить демо
+                      Запустить тестовый магазин за 1 час
                       <ArrowRight className="ml-2 h-5 w-5" />
                     </Link>
                   </Button>
                   <Button asChild variant="outline" size="lg" className="text-lg px-8 py-6 border-white/30 text-white hover:bg-white/10 backdrop-blur-sm">
-                    <Link to="/product">Узнать подробнее</Link>
+                    <Link to="/pricing">Рассчитать экономию</Link>
                   </Button>
                 </div>
 
                 {/* Stats */}
                 <div className="grid grid-cols-3 gap-6 text-center">
                   <div>
-                    <div className="text-2xl font-semibold text-accent mb-1">1 час</div>
-                    <div className="text-sm text-gray-300">Время запуска</div>
+                    <div className="text-2xl font-semibold text-accent mb-1">60 мин</div>
+                    <div className="text-sm text-gray-300">Готовый магазин</div>
                   </div>
                   <div>
-                    <div className="text-2xl font-semibold text-accent mb-1">80%</div>
-                    <div className="text-sm text-gray-300">Автоматизации</div>
+                    <div className="text-2xl font-semibold text-accent mb-1">10%</div>
+                    <div className="text-sm text-gray-300">Комиссия vs 30% маркетплейсов</div>
                   </div>
                   <div>
-                    <div className="text-2xl font-semibold text-accent mb-1">100k</div>
-                    <div className="text-sm text-gray-300">Товаров в каталоге</div>
+                    <div className="text-2xl font-semibold text-accent mb-1">€300k+</div>
+                    <div className="text-sm text-gray-300">Экономия в год</div>
                   </div>
                 </div>
               </div>
@@ -246,84 +247,135 @@ const Index = () => {
           </Container>
         </Section>
 
-        {/* About Section */}
-        <Section className="bg-muted">
+        {/* Pain Points Section */}
+        <Section className="bg-background">
           <Container>
-            <div className="text-center max-w-4xl mx-auto">
-              <h2 className="text-headline mb-6">
-                Edestory: операционная система для роста вашей прибыли
+            <div className="text-center max-w-4xl mx-auto mb-12">
+              <h2 className="text-3xl md:text-4xl font-light tracking-tight mb-6 text-foreground">
+                Почему производители массово покидают маркетплейсы в 2025
               </h2>
-              <p className="text-body-large text-muted-foreground mb-8">
-                Мы продаём не просто сайт. Мы предоставляем <strong>результат</strong> — радикальное 
-                повышение эффективности и прибыльности вашего e‑commerce. Платформа Edestory — готовое 
-                решение «под ключ», заменяющее целый штат специалистов: от маркетолога и SEO до закупщика и логиста.
-              </p>
+            </div>
+
+            <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
+              <Card className="border border-destructive/20 bg-gradient-to-br from-destructive/5 to-destructive/10 hover:shadow-lg transition-all">
+                <CardHeader>
+                  <CardTitle className="text-destructive flex items-center gap-3">
+                    <TrendingUp className="w-6 h-6 rotate-180" />
+                    Комиссии убивают бизнес
+                  </CardTitle>
+                </CardHeader>
+                <CardContent>
+                  <p className="text-muted-foreground">30-40% от оборота + скрытые платежи за размещение, рекламу и логистику</p>
+                </CardContent>
+              </Card>
+
+              <Card className="border border-destructive/20 bg-gradient-to-br from-destructive/5 to-destructive/10 hover:shadow-lg transition-all">
+                <CardHeader>
+                  <CardTitle className="text-destructive flex items-center gap-3">
+                    <BarChart2 className="w-6 h-6" />
+                    Ценовые войны без дна
+                  </CardTitle>
+                </CardHeader>
+                <CardContent>
+                  <p className="text-muted-foreground">Конкуренты демпингуют, маржа падает до 5-8%, прибыль исчезает</p>
+                </CardContent>
+              </Card>
+
+              <Card className="border border-destructive/20 bg-gradient-to-br from-destructive/5 to-destructive/10 hover:shadow-lg transition-all">
+                <CardHeader>
+                  <CardTitle className="text-destructive flex items-center gap-3">
+                    <Users className="w-6 h-6" />
+                    Клиенты не ваши
+                  </CardTitle>
+                </CardHeader>
+                <CardContent>
+                  <p className="text-muted-foreground">Нет базы для ремаркетинга, полная зависимость от алгоритмов платформы</p>
+                </CardContent>
+              </Card>
+
+              <Card className="border border-destructive/20 bg-gradient-to-br from-destructive/5 to-destructive/10 hover:shadow-lg transition-all">
+                <CardHeader>
+                  <CardTitle className="text-destructive flex items-center gap-3">
+                    <Shield className="w-6 h-6" />
+                    Правила меняются без вас
+                  </CardTitle>
+                </CardHeader>
+                <CardContent>
+                  <p className="text-muted-foreground">Блокировки, штрафы, изменение условий в одностороннем порядке</p>
+                </CardContent>
+              </Card>
             </div>
           </Container>
         </Section>
 
-        {/* Technology Section */}
-        <Section className="bg-muted-alt">
+        {/* Profit-Sharing Model Section */}
+        <Section className="bg-gradient-to-br from-accent/5 to-primary/5">
           <Container>
             <div className="text-center max-w-4xl mx-auto mb-12">
-              <SectionTitleLight>
-                Технологии, которым доверяют лидеры
-              </SectionTitleLight>
-              <DescriptionLight className="mb-8">
-                В основе Edestory — headless‑архитектура <SubTitle>Saleor</SubTitle> (Next.js, GraphQL), 
-                проверенная мировыми брендами (Lush, Breitling, Dr. Martens). Это гарантирует:
-              </DescriptionLight>
+              <h2 className="text-3xl md:text-4xl font-light tracking-tight mb-6 text-foreground">
+                10% от оборота vs 30% комиссий маркетплейсов
+              </h2>
+              <p className="text-xl text-muted-foreground mb-8">
+                Мы зарабатываем только когда растете вы
+              </p>
             </div>
 
-            <div className="grid grid-cols-1 md:grid-cols-3 gap-8 mb-12">
-              <Card className="text-center border-0 bg-gradient-to-br from-muted to-secondary hover:shadow-lg transition-all duration-300 group">
-                <CardHeader className="pb-4">
-                  <div className="w-16 h-16 mx-auto mb-4 rounded-full bg-gradient-to-br from-primary to-primary-dark flex items-center justify-center group-hover:scale-110 transition-transform">
-                    <Zap className="w-8 h-8 text-white" />
+            <div className="max-w-4xl mx-auto mb-12">
+              <div className="bg-background rounded-lg shadow-lg overflow-hidden">
+                <div className="grid grid-cols-2 gap-0">
+                  <div className="bg-destructive/10 p-6 border-r border-border">
+                    <h3 className="text-xl font-semibold text-center mb-6 text-destructive">Маркетплейсы</h3>
                   </div>
-                  <SubTitle>Скорость</SubTitle>
-                </CardHeader>
-                <CardContent>
-                  <DescriptionLight>
-                    средняя загрузка страниц <SubTitle>&lt; 1,5 с</SubTitle> → выше конверсия и позиции в Google
-                  </DescriptionLight>
-                </CardContent>
-              </Card>
-
-              <Card className="text-center border-0 bg-gradient-to-br from-muted to-secondary hover:shadow-lg transition-all duration-300 group">
-                <CardHeader className="pb-4">
-                  <div className="w-16 h-16 mx-auto mb-4 rounded-full bg-gradient-to-br from-accent to-accent-light flex items-center justify-center group-hover:scale-110 transition-transform">
-                    <Globe className="w-8 h-8 text-white" />
+                  <div className="bg-accent/10 p-6">
+                    <h3 className="text-xl font-semibold text-center mb-6 text-accent">Edestory</h3>
                   </div>
-                  <SubTitle>Гибкость</SubTitle>
-                </CardHeader>
-                <CardContent>
-                  <DescriptionLight>
-                    лёгкая интеграция любых сервисов под любые бизнес‑задачи
-                  </DescriptionLight>
-                </CardContent>
-              </Card>
-
-              <Card className="text-center border-0 bg-gradient-to-br from-muted to-secondary hover:shadow-lg transition-all duration-300 group">
-                <CardHeader className="pb-4">
-                  <div className="w-16 h-16 mx-auto mb-4 rounded-full bg-gradient-to-br from-primary to-accent flex items-center justify-center group-hover:scale-110 transition-transform">
-                    <Shield className="w-8 h-8 text-white" />
+                </div>
+                
+                <div className="grid grid-cols-2 gap-0 text-sm">
+                  <div className="p-4 border-r border-b border-border bg-destructive/5">
+                    <div className="font-medium text-muted-foreground mb-1">Комиссия:</div>
+                    <div className="text-lg font-semibold text-destructive">30-40%</div>
                   </div>
-                  <SubTitle>Надёжность</SubTitle>
-                </CardHeader>
-                <CardContent>
-                  <DescriptionLight>
-                    технологии, выдерживающие миллионы посетителей
-                  </DescriptionLight>
-                </CardContent>
-              </Card>
+                  <div className="p-4 border-b border-border bg-accent/5">
+                    <div className="font-medium text-muted-foreground mb-1">Комиссия:</div>
+                    <div className="text-lg font-semibold text-accent">10%</div>
+                  </div>
+                  
+                  <div className="p-4 border-r border-b border-border bg-destructive/5">
+                    <div className="font-medium text-muted-foreground mb-1">Скрытые платежи:</div>
+                    <div className="text-lg font-semibold text-destructive">3-5%</div>
+                  </div>
+                  <div className="p-4 border-b border-border bg-accent/5">
+                    <div className="font-medium text-muted-foreground mb-1">Скрытые платежи:</div>
+                    <div className="text-lg font-semibold text-accent">0%</div>
+                  </div>
+                  
+                  <div className="p-4 border-r border-b border-border bg-destructive/5">
+                    <div className="font-medium text-muted-foreground mb-1">Контроль цен:</div>
+                    <div className="text-lg font-semibold text-destructive">НЕТ</div>
+                  </div>
+                  <div className="p-4 border-b border-border bg-accent/5">
+                    <div className="font-medium text-muted-foreground mb-1">Контроль цен:</div>
+                    <div className="text-lg font-semibold text-accent">100%</div>
+                  </div>
+                  
+                  <div className="p-4 border-r border-border bg-destructive/5">
+                    <div className="font-medium text-muted-foreground mb-1">База клиентов:</div>
+                    <div className="text-lg font-semibold text-destructive">НЕТ</div>
+                  </div>
+                  <div className="p-4 border-border bg-accent/5">
+                    <div className="font-medium text-muted-foreground mb-1">База клиентов:</div>
+                    <div className="text-lg font-semibold text-accent">ВАША</div>
+                  </div>
+                </div>
+              </div>
             </div>
 
-            <div className="bg-background/70 backdrop-blur-sm border border-border/50 rounded-lg p-6 max-w-3xl mx-auto">
-              <DescriptionLight>
-                <SubTitle>Важно:</SubTitle> В стартовой конфигурации оператор управляет до <SubTitle>1 000 SKU</SubTitle>. 
-                При масштабировании архитектура поддерживает <SubTitle>100 000 SKU</SubTitle> под управлением двух операторов.
-              </DescriptionLight>
+            <div className="text-center bg-primary/10 rounded-lg p-8 max-w-2xl mx-auto">
+              <h3 className="text-2xl font-semibold mb-4 text-primary">Калькулятор экономии</h3>
+              <p className="text-lg text-muted-foreground mb-4">При обороте €1M/год экономия составит</p>
+              <div className="text-4xl font-bold text-primary mb-2">€300,000</div>
+              <p className="text-sm text-muted-foreground">Это €200k+ чистой прибыли дополнительно в год</p>
             </div>
           </Container>
         </Section>
@@ -709,95 +761,281 @@ const Index = () => {
           </Container>
         </Section>
 
-        {/* Onboarding Section */}
-        <Section className="bg-secondary">
-          <Container>
-            <div className="text-center mb-12">
-              <SectionTitleLight>
-                Онбординг за 1 час — как это работает
-              </SectionTitleLight>
-            </div>
-
-            <div className="max-w-2xl mx-auto">
-              <Steps steps={onboardingSteps} variant="numbered" />
-            </div>
-          </Container>
-        </Section>
-
-        {/* Architecture Section */}
-        <Section className="bg-muted-alt">
-          <Container>
-            <div className="text-center max-w-4xl mx-auto">
-              <SectionTitleLight>
-                Архитектура и безопасность данных
-              </SectionTitleLight>
-              <DescriptionLight className="mb-8">
-                Vercel Edge → Next.js → <SubTitle>Saleor Core</SubTitle> → PostgreSQL (RLS) → AI‑сервисы → 6 модулей
-              </DescriptionLight>
-              <DescriptionLight>
-                Ключевые принципы: изоляция данных (Row‑Level Security), единое ядро, множество фронтендов, 
-                автоматический деплой новых клиентов.
-              </DescriptionLight>
-            </div>
-          </Container>
-        </Section>
-
-        {/* Financial Benefits Section */}
+        {/* Cases Section */}
         <Section className="bg-background">
           <Container>
             <div className="text-center mb-12">
-              <SectionTitleLight>
-                Пример финансовой выгоды (референс‑кейс)
-              </SectionTitleLight>
+              <h2 className="text-3xl md:text-4xl font-light tracking-tight mb-6 text-foreground">
+                Как наши клиенты освободились от маркетплейсов
+              </h2>
             </div>
 
-            <div className="max-w-2xl mx-auto">
-              <Grid cols={3} gap="lg" className="text-center">
-                <Metric
-                  value="€125k/год"
-                  label="До (типичный стек)"
-                  variant="default"
-                />
-                <Metric
-                  value="€37k/год"
-                  label="После (на Edestory)"
-                  variant="accent"
-                />
-                <Metric
-                  value="~€88k/год"
-                  label="Экономия"
-                  variant="accent"
-                />
-              </Grid>
+            <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
+              <Card className="border-0 bg-gradient-to-br from-accent/5 to-primary/5 hover:shadow-xl transition-all">
+                <CardHeader>
+                  <Badge className="w-fit bg-accent/10 text-accent border-accent/20 mb-4">Fashion</Badge>
+                  <CardTitle className="text-xl text-foreground">
+                    От 8% маржи на WB до 35% в собственном магазине
+                  </CardTitle>
+                </CardHeader>
+                <CardContent className="space-y-4">
+                  <div className="grid grid-cols-2 gap-4 text-sm">
+                    <div>
+                      <p className="font-medium text-muted-foreground">Было:</p>
+                      <p className="text-destructive">€500k оборот</p>
+                      <p className="text-destructive">€40k прибыль (8%)</p>
+                    </div>
+                    <div>
+                      <p className="font-medium text-muted-foreground">Стало:</p>
+                      <p className="text-accent">€600k оборот</p>
+                      <p className="text-accent">€210k прибыль (35%)</p>
+                    </div>
+                  </div>
+                  <div className="bg-accent/10 rounded-lg p-4 text-center">
+                    <p className="text-2xl font-bold text-accent">+425%</p>
+                    <p className="text-sm text-muted-foreground">к прибыли за 6 месяцев</p>
+                  </div>
+                </CardContent>
+              </Card>
+
+              <Card className="border-0 bg-gradient-to-br from-primary/5 to-accent/5 hover:shadow-xl transition-all">
+                <CardHeader>
+                  <Badge className="w-fit bg-primary/10 text-primary border-primary/20 mb-4">Beauty</Badge>
+                  <CardTitle className="text-xl text-foreground">
+                    Отказались от Amazon и увеличили LTV клиента в 3 раза
+                  </CardTitle>
+                </CardHeader>
+                <CardContent className="space-y-4">
+                  <div className="grid grid-cols-2 gap-4 text-sm">
+                    <div>
+                      <p className="font-medium text-muted-foreground">Было:</p>
+                      <p className="text-destructive">CAC €45</p>
+                      <p className="text-destructive">LTV €120</p>
+                    </div>
+                    <div>
+                      <p className="font-medium text-muted-foreground">Стало:</p>
+                      <p className="text-accent">CAC €30</p>
+                      <p className="text-accent">LTV €360</p>
+                    </div>
+                  </div>
+                  <div className="bg-primary/10 rounded-lg p-4 text-center">
+                    <p className="text-2xl font-bold text-primary">+200%</p>
+                    <p className="text-sm text-muted-foreground">к прибыльности клиента</p>
+                  </div>
+                </CardContent>
+              </Card>
             </div>
           </Container>
         </Section>
 
-        {/* Pricing Section */}
+        {/* Path to Independence Section */}
+        <Section className="bg-gradient-to-br from-primary/5 to-accent/5">
+          <Container>
+            <div className="text-center mb-12">
+              <h2 className="text-3xl md:text-4xl font-light tracking-tight mb-6 text-foreground">
+                От маркетплейса к независимости за 90 дней
+              </h2>
+            </div>
+
+            <div className="max-w-4xl mx-auto">
+              <div className="grid grid-cols-1 md:grid-cols-4 gap-6 mb-12">
+                <Card className="text-center border-0 bg-background/50 backdrop-blur-sm">
+                  <CardHeader className="pb-4">
+                    <div className="w-16 h-16 mx-auto mb-4 rounded-full bg-gradient-to-br from-primary to-accent flex items-center justify-center">
+                      <span className="text-2xl font-bold text-white">1</span>
+                    </div>
+                    <CardTitle className="text-lg">День 1-7</CardTitle>
+                  </CardHeader>
+                  <CardContent>
+                    <p className="text-sm text-muted-foreground">Запуск магазина + миграция товаров</p>
+                  </CardContent>
+                </Card>
+
+                <Card className="text-center border-0 bg-background/50 backdrop-blur-sm">
+                  <CardHeader className="pb-4">
+                    <div className="w-16 h-16 mx-auto mb-4 rounded-full bg-gradient-to-br from-accent to-primary flex items-center justify-center">
+                      <span className="text-2xl font-bold text-white">2</span>
+                    </div>
+                    <CardTitle className="text-lg">День 8-30</CardTitle>
+                  </CardHeader>
+                  <CardContent>
+                    <p className="text-sm text-muted-foreground">Настройка AI-маркетинга + первые продажи</p>
+                  </CardContent>
+                </Card>
+
+                <Card className="text-center border-0 bg-background/50 backdrop-blur-sm">
+                  <CardHeader className="pb-4">
+                    <div className="w-16 h-16 mx-auto mb-4 rounded-full bg-gradient-to-br from-primary to-accent flex items-center justify-center">
+                      <span className="text-2xl font-bold text-white">3</span>
+                    </div>
+                    <CardTitle className="text-lg">День 31-60</CardTitle>
+                  </CardHeader>
+                  <CardContent>
+                    <p className="text-sm text-muted-foreground">Наращивание органического трафика</p>
+                  </CardContent>
+                </Card>
+
+                <Card className="text-center border-0 bg-background/50 backdrop-blur-sm">
+                  <CardHeader className="pb-4">
+                    <div className="w-16 h-16 mx-auto mb-4 rounded-full bg-gradient-to-br from-accent to-primary flex items-center justify-center">
+                      <span className="text-2xl font-bold text-white">4</span>
+                    </div>
+                    <CardTitle className="text-lg">День 61-90</CardTitle>
+                  </CardHeader>
+                  <CardContent>
+                    <p className="text-sm text-muted-foreground">Снижение зависимости от маркетплейсов до 30%</p>
+                  </CardContent>
+                </Card>
+              </div>
+
+              <div className="bg-background/70 backdrop-blur-sm border border-border/50 rounded-lg p-8">
+                <h3 className="text-xl font-semibold mb-6 text-center">Метрики успеха</h3>
+                <div className="grid grid-cols-3 gap-6 text-center">
+                  <div>
+                    <div className="text-2xl font-bold text-primary mb-2">10%</div>
+                    <div className="text-sm text-muted-foreground">продаж через свой сайт<br/>Месяц 1</div>
+                  </div>
+                  <div>
+                    <div className="text-2xl font-bold text-accent mb-2">25%</div>
+                    <div className="text-sm text-muted-foreground">прямых продаж<br/>Месяц 2</div>
+                  </div>
+                  <div>
+                    <div className="text-2xl font-bold text-primary mb-2">50%+</div>
+                    <div className="text-sm text-muted-foreground">независимость<br/>Месяц 3</div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </Container>
+        </Section>
+
+        {/* Trust Section */}
         <Section className="bg-muted">
           <Container>
-            <div className="text-center max-w-3xl mx-auto">
-              <SectionTitleLight>
-                Ценообразование (коротко)
-              </SectionTitleLight>
-              <DescriptionLight className="mb-8">
-                Модель <SubTitle>Revenue Share</SubTitle>: <SubTitle>10%</SubTitle> от оборота в первый год → 
-                <SubTitle>–1% ежегодно</SubTitle> до минимума <SubTitle>5%</SubTitle>
-              </DescriptionLight>
-              <DescriptionLight>
-                Отдельно: рекламные бюджеты, внешние API и инфраструктура.
-              </DescriptionLight>
+            <div className="text-center max-w-4xl mx-auto mb-12">
+              <h2 className="text-3xl md:text-4xl font-light tracking-tight mb-6 text-foreground">
+                Технологии, которым доверяют лидеры рынка
+              </h2>
+              <p className="text-xl text-muted-foreground mb-8">
+                Saleor используют Lush, Breitling, Dr. Martens для обработки миллионов заказов
+              </p>
+            </div>
+
+            <div className="grid grid-cols-2 md:grid-cols-4 gap-8 text-center">
+              <div className="flex flex-col items-center">
+                <div className="w-16 h-16 mb-4 rounded-full bg-gradient-to-br from-primary to-accent flex items-center justify-center">
+                  <Shield className="w-8 h-8 text-white" />
+                </div>
+                <h3 className="font-semibold mb-2">99.9% uptime</h3>
+                <p className="text-sm text-muted-foreground">Гарантированная надежность</p>
+              </div>
+              <div className="flex flex-col items-center">
+                <div className="w-16 h-16 mb-4 rounded-full bg-gradient-to-br from-accent to-primary flex items-center justify-center">
+                  <CheckCircle className="w-8 h-8 text-white" />
+                </div>
+                <h3 className="font-semibold mb-2">GDPR compliance</h3>
+                <p className="text-sm text-muted-foreground">Защита данных клиентов</p>
+              </div>
+              <div className="flex flex-col items-center">
+                <div className="w-16 h-16 mb-4 rounded-full bg-gradient-to-br from-primary to-accent flex items-center justify-center">
+                  <Award className="w-8 h-8 text-white" />
+                </div>
+                <h3 className="font-semibold mb-2">PCI DSS</h3>
+                <p className="text-sm text-muted-foreground">Безопасность платежей</p>
+              </div>
+              <div className="flex flex-col items-center">
+                <div className="w-16 h-16 mb-4 rounded-full bg-gradient-to-br from-accent to-primary flex items-center justify-center">
+                  <Zap className="w-8 h-8 text-white" />
+                </div>
+                <h3 className="font-semibold mb-2">SSL шифрование</h3>
+                <p className="text-sm text-muted-foreground">Защищенное соединение</p>
+              </div>
             </div>
           </Container>
         </Section>
 
-        {/* FAQ Section */}
-        <Section className="bg-secondary">
+        {/* Objections Section */}
+        <Section className="bg-background">
           <Container>
-            <FAQ 
-              title="FAQ (AIO)" 
-              items={faqItems}
-            />
+            <div className="text-center mb-12">
+              <h2 className="text-3xl md:text-4xl font-light tracking-tight mb-6 text-foreground">
+                Отвечаем на ваши сомнения
+              </h2>
+            </div>
+
+            <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
+              <Card className="text-center border-0 bg-gradient-to-br from-background to-muted hover:shadow-lg transition-all">
+                <CardHeader>
+                  <CardTitle className="text-lg text-foreground mb-2">"А если не получится?"</CardTitle>
+                  <Badge className="mx-auto bg-accent/10 text-accent border-accent/20">30-дневная гарантия</Badge>
+                </CardHeader>
+                <CardContent>
+                  <p className="text-muted-foreground">Не подошло — вернем 100% средств, no questions asked</p>
+                </CardContent>
+              </Card>
+
+              <Card className="text-center border-0 bg-gradient-to-br from-background to-muted hover:shadow-lg transition-all">
+                <CardHeader>
+                  <CardTitle className="text-lg text-foreground mb-2">"А если технически сложно?"</CardTitle>
+                  <Badge className="mx-auto bg-primary/10 text-primary border-primary/20">Настройка за вас</Badge>
+                </CardHeader>
+                <CardContent>
+                  <p className="text-muted-foreground">Наши эксперты настроят все с нуля до полной готовности в течение 24 часов</p>
+                </CardContent>
+              </Card>
+
+              <Card className="text-center border-0 bg-gradient-to-br from-background to-muted hover:shadow-lg transition-all">
+                <CardHeader>
+                  <CardTitle className="text-lg text-foreground mb-2">"А если клиентов не будет?"</CardTitle>
+                  <Badge className="mx-auto bg-accent/10 text-accent border-accent/20">Гарантируем результат</Badge>
+                </CardHeader>
+                <CardContent>
+                  <p className="text-muted-foreground">Гарантируем первых 100 посетителей или настроим рекламу бесплатно</p>
+                </CardContent>
+              </Card>
+            </div>
+          </Container>
+        </Section>
+
+        {/* Final CTA Section */}
+        <Section className="bg-gradient-to-br from-primary/10 to-accent/10">
+          <Container>
+            <div className="text-center max-w-4xl mx-auto">
+              <h2 className="text-3xl md:text-4xl font-light tracking-tight mb-6 text-foreground">
+                2025 год — время освобождения от маркетплейсов
+              </h2>
+              <p className="text-xl text-muted-foreground mb-8">
+                Пока конкуренты увязают в комиссиях, станьте независимыми
+              </p>
+              
+              <div className="bg-destructive/10 border border-destructive/20 rounded-lg p-6 mb-8 max-w-2xl mx-auto">
+                <p className="text-lg font-medium text-destructive mb-2">
+                  Каждый день на маркетплейсе стоит вам €500+ упущенной прибыли
+                </p>
+                <p className="text-sm text-muted-foreground">
+                  Начните прямо сейчас — первый месяц работы покроет все инвестиции
+                </p>
+              </div>
+
+              <div className="flex flex-col sm:flex-row gap-4 justify-center mb-8">
+                <Button asChild size="lg" className="text-lg px-8 py-6 bg-accent hover:bg-accent/90 text-white border-0">
+                  <Link to="/contact">
+                    Запустить тестовый магазин за 1 час
+                    <ArrowRight className="ml-2 h-5 w-5" />
+                  </Link>
+                </Button>
+                <Button asChild variant="outline" size="lg" className="text-lg px-8 py-6">
+                  <Link to="/pricing">Рассчитать экономию</Link>
+                </Button>
+              </div>
+
+              <div className="text-center">
+                <Button asChild variant="ghost" className="text-primary hover:text-primary/80">
+                  <Link to="/templates">Посмотреть как это работает</Link>
+                </Button>
+                <p className="text-sm text-muted-foreground mt-2">3-минутное демо реального магазина</p>
+              </div>
+            </div>
           </Container>
         </Section>
       </main>
