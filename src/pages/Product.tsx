@@ -1,5 +1,5 @@
-import React from 'react';
-import { Helmet } from 'react-helmet-async';
+import React from 'react';  
+import { SEOHead, generateSoftwareApplicationLD } from '@/components/SEOHead';
 import { Link } from 'react-router-dom';
 import Header from '@/components/Header';
 import Footer from '@/components/Footer';
@@ -119,19 +119,16 @@ const Product = () => {
 
   return (
     <>
-      <Helmet>
-        <title>Платформа Edestory — операционная система e-commerce на Saleor</title>
-        <meta 
-          name="description" 
-          content="6 AI-модулей: Архитектор, Контент, Маркетолог, Поддержка, Логистика, Аналитика. Мульти-тенант, RLS, запуск за 1 час." 
-        />
-        <script type="application/ld+json">
-          {JSON.stringify(organizationLD)}
-        </script>
-        <script type="application/ld+json">
-          {JSON.stringify(breadcrumbLD)}
-        </script>
-      </Helmet>
+      <SEOHead
+        title="AI-платформа для независимости от маркетплейсов"
+        description="6 AI-модулей для полной автоматизации e-commerce. Архитектор, Контент, Маркетинг, Поддержка, Логистика и Аналитика - все в одной платформе."
+        keywords="AI модули, e-commerce автоматизация, независимость от маркетплейсов, AI архитектор, AI контент, AI маркетинг"
+        url="https://ede-story.com/product"
+        structuredData={generateSoftwareApplicationLD(
+          'Edestory AI Platform',
+          'Полнофункциональная AI-платформа для автоматизации e-commerce и освобождения от зависимости маркетплейсов'
+        )}
+      />
 
       <Header />
       

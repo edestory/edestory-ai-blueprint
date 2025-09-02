@@ -1,5 +1,5 @@
 import React, { useState } from 'react';
-import { Helmet } from 'react-helmet-async';
+import { SEOHead, generateOrganizationLD } from '@/components/SEOHead';
 import Header from '@/components/Header';
 import Footer from '@/components/Footer';
 import { Container } from '@/components/Container';
@@ -63,23 +63,13 @@ const Pricing = () => {
 
   return (
     <>
-      <Helmet>
-        <title>Ценообразование Edestory — Revenue Share 10% → 5%</title>
-        <meta name="description" content="10% в первый год, затем -1% ежегодно до минимума 5%. Включено: лицензия, модули, обновления, поддержка. Отдельно: API, реклама, логистика." />
-        <meta name="keywords" content="ценообразование, revenue share, комиссия, стоимость, тарифы Edestory" />
-        <link rel="canonical" href="https://ede-story.com/pricing" />
-        
-        {/* Open Graph */}
-        <meta property="og:title" content="Ценообразование Edestory — Revenue Share 10% → 5%" />
-        <meta property="og:description" content="Прозрачная модель: 10% от оборота в первый год, затем снижение до 5%" />
-        <meta property="og:url" content="https://ede-story.com/pricing" />
-        <meta property="og:type" content="website" />
-        
-        {/* Structured Data */}
-        <script type="application/ld+json">
-          {JSON.stringify(structuredData)}
-        </script>
-      </Helmet>
+      <SEOHead
+        title="20% от прибыли vs 30% комиссий маркетплейсов"
+        description="Модель взаимной заинтересованности: мы зарабатываем только когда растете вы. Предоплата 0 рублей, платите за результат с чистой прибыли."
+        keywords="profit sharing, 20% от прибыли, без предоплаты, модель ценообразования, альтернатива маркетплейсам"
+        url="https://ede-story.com/pricing"
+        structuredData={generateOrganizationLD()}
+      />
       
       <Header />
       

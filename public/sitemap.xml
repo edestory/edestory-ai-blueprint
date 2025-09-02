@@ -1,0 +1,93 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9" xmlns:xhtml="http://www.w3.org/1999/xhtml">
+  <url>
+    <loc>https://ede-story.com/</loc>
+    <lastmod>2025-01-02</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>1.0</priority>
+    <xhtml:link rel="alternate" hreflang="ru" href="https://ede-story.com/" />
+    <xhtml:link rel="alternate" hreflang="en" href="https://ede-story.com/en/" />
+  </url>
+  <url>
+    <loc>https://ede-story.com/en/</loc>
+    <lastmod>2025-01-02</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>1.0</priority>
+    <xhtml:link rel="alternate" hreflang="ru" href="https://ede-story.com/" />
+    <xhtml:link rel="alternate" hreflang="en" href="https://ede-story.com/en/" />
+  </url>
+  <url>
+    <loc>https://ede-story.com/product</loc>
+    <lastmod>2025-01-02</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+    <xhtml:link rel="alternate" hreflang="ru" href="https://ede-story.com/product" />
+    <xhtml:link rel="alternate" hreflang="en" href="https://ede-story.com/en/product" />
+  </url>
+  <url>
+    <loc>https://ede-story.com/en/product</loc>
+    <lastmod>2025-01-02</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+    <xhtml:link rel="alternate" hreflang="ru" href="https://ede-story.com/product" />
+    <xhtml:link rel="alternate" hreflang="en" href="https://ede-story.com/en/product" />
+  </url>
+  <url>
+    <loc>https://ede-story.com/pricing</loc>
+    <lastmod>2025-01-02</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+    <xhtml:link rel="alternate" hreflang="ru" href="https://ede-story.com/pricing" />
+    <xhtml:link rel="alternate" hreflang="en" href="https://ede-story.com/en/pricing" />
+  </url>
+  <url>
+    <loc>https://ede-story.com/en/pricing</loc>
+    <lastmod>2025-01-02</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+    <xhtml:link rel="alternate" hreflang="ru" href="https://ede-story.com/pricing" />
+    <xhtml:link rel="alternate" hreflang="en" href="https://ede-story.com/en/pricing" />
+  </url>
+  <url>
+    <loc>https://ede-story.com/solutions</loc>
+    <lastmod>2025-01-02</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+  </url>
+  <url>
+    <loc>https://ede-story.com/cases</loc>
+    <lastmod>2025-01-02</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+  </url>
+  <url>
+    <loc>https://ede-story.com/resources</loc>
+    <lastmod>2025-01-02</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.6</priority>
+  </url>
+  <url>
+    <loc>https://ede-story.com/templates</loc>
+    <lastmod>2025-01-02</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
+  </url>
+  <url>
+    <loc>https://ede-story.com/about</loc>
+    <lastmod>2025-01-02</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.5</priority>
+  </url>
+  <url>
+    <loc>https://ede-story.com/contact</loc>
+    <lastmod>2025-01-02</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.5</priority>
+  </url>
+  <url>
+    <loc>https://ede-story.com/legal</loc>
+    <lastmod>2025-01-02</lastmod>
+    <changefreq>yearly</changefreq>
+    <priority>0.3</priority>
+  </url>
+</urlset>

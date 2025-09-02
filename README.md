@@ -1,73 +1,171 @@
-# Welcome to your Lovable project
+# Edestory - Corporate Landing Page
 
-## Project info
+> AI-powered SaaS platform for direct sales, freeing manufacturers from marketplace dependency
 
-**URL**: https://lovable.dev/projects/8cc233b2-acf2-4990-8d6d-ec3aa4ce8352
+## 🚀 Quick Start
 
-## How can I edit this code?
+### Prerequisites
+- Node.js 18+ and npm
+- Git
 
-There are several ways of editing your application.
+### Installation
 
-**Use Lovable**
-
-Simply visit the [Lovable Project](https://lovable.dev/projects/8cc233b2-acf2-4990-8d6d-ec3aa4ce8352) and start prompting.
-
-Changes made via Lovable will be committed automatically to this repo.
-
-**Use your preferred IDE**
-
-If you want to work locally using your own IDE, you can clone this repo and push changes. Pushed changes will also be reflected in Lovable.
-
-The only requirement is having Node.js & npm installed - [install with nvm](https://github.com/nvm-sh/nvm#installing-and-updating)
-
-Follow these steps:
-
-```sh
-# Step 1: Clone the repository using the project's Git URL.
+```bash
+# Clone the repository
 git clone <YOUR_GIT_URL>
+cd edestory-landing
 
-# Step 2: Navigate to the project directory.
-cd <YOUR_PROJECT_NAME>
+# Install dependencies
+npm install
 
-# Step 3: Install the necessary dependencies.
-npm i
+# Copy environment variables
+cp .env.example .env.local
 
-# Step 4: Start the development server with auto-reloading and an instant preview.
+# Start development server
 npm run dev
 ```
 
-**Edit a file directly in GitHub**
+The application will be available at `http://localhost:8080`
 
-- Navigate to the desired file(s).
-- Click the "Edit" button (pencil icon) at the top right of the file view.
-- Make your changes and commit the changes.
+## 🛠 Development
 
-**Use GitHub Codespaces**
+### Available Scripts
 
-- Navigate to the main page of your repository.
-- Click on the "Code" button (green button) near the top right.
-- Select the "Codespaces" tab.
-- Click on "New codespace" to launch a new Codespace environment.
-- Edit files directly within the Codespace and commit and push your changes once you're done.
+```bash
+npm run dev          # Start development server
+npm run build        # Build for production
+npm run build:dev    # Build for development
+npm run preview      # Preview production build
+npm run lint         # Run ESLint
+npm run type-check   # Run TypeScript checks
+```
 
-## What technologies are used for this project?
+### Tech Stack
 
-This project is built with:
+- **Framework:** Vite + React 18
+- **Styling:** Tailwind CSS + CSS Variables
+- **TypeScript:** Strict mode enabled
+- **UI Components:** Radix UI + shadcn/ui
+- **Icons:** Lucide React
+- **Forms:** React Hook Form + Zod
+- **SEO:** React Helmet Async
 
-- Vite
-- TypeScript
-- React
-- shadcn-ui
-- Tailwind CSS
+### Project Structure
 
-## How can I deploy this project?
+```
+src/
+├── components/          # React components
+│   ├── ui/             # Base UI components (shadcn/ui)
+│   ├── sections/       # Page sections
+│   └── forms/          # Form components
+├── pages/              # Page components
+├── lib/                # Utilities and helpers
+│   ├── seo.ts         # SEO utilities
+│   └── utils.ts       # General utilities
+├── hooks/              # Custom React hooks
+├── contexts/           # React contexts
+└── assets/             # Static assets
+```
 
-Simply open [Lovable](https://lovable.dev/projects/8cc233b2-acf2-4990-8d6d-ec3aa4ce8352) and click on Share -> Publish.
+## 🌐 Internationalization
 
-## Can I connect a custom domain to my Lovable project?
+The site supports multiple languages:
+- **Russian (ru)** - Primary language
+- **English (en)** - International market
 
-Yes, you can!
+Language switching is available in the header navigation.
 
-To connect a domain, navigate to Project > Settings > Domains and click Connect Domain.
+## 🎨 Design System
 
-Read more here: [Setting up a custom domain](https://docs.lovable.dev/tips-tricks/custom-domain#step-by-step-guide)
+### Colors
+- **Graphite:** `#3d3d3d` - Main banners and headings
+- **Black:** `#171717` - Body text
+- **Gold:** `#E6A853` - Accents and buttons
+- **Burgundy:** `#8B2635` - Negative accents
+
+### Typography
+- **Font:** Montserrat (300, 400, 500, 600, 700)
+- **Display:** `font-display: swap` for performance
+- **Fallback:** system-ui, sans-serif
+
+## 📈 SEO & Performance
+
+### SEO Features
+- Meta tags optimization
+- Open Graph and Twitter Cards
+- JSON-LD structured data
+- Sitemap generation
+- Multi-language hreflang tags
+
+### Performance Targets
+- Lighthouse Performance: ≥95
+- Accessibility: ≥95
+- Best Practices: ≥95
+- SEO: ≥95
+
+## 🚀 Deployment
+
+### Build for Production
+
+```bash
+npm run build
+```
+
+### Environment Variables
+Copy `.env.example` to `.env.local` and configure:
+- Analytics tracking IDs
+- API endpoints
+- Contact form webhooks
+- Social media links
+
+### Deployment Platforms
+Ready for deployment on:
+- Vercel (recommended)
+- Netlify
+- Google Cloud Platform
+- Any static hosting service
+
+## 📋 Features
+
+### Core Pages
+- **Home** - Main landing page with value proposition
+- **Product** - AI modules and features overview
+- **Pricing** - 20% profit-sharing model details
+- **Solutions** - Industry-specific solutions
+- **Cases** - Customer success stories
+- **Resources** - Blog, guides, and templates
+- **Contact** - Contact forms and company info
+
+### Key Components
+- Responsive hero sections
+- Interactive calculator
+- AI agent modules showcase
+- Customer testimonials
+- Multi-language support
+- Contact forms with validation
+- SEO-optimized structure
+
+## 🔧 Configuration
+
+### TypeScript
+Strict mode enabled with comprehensive type checking.
+
+### ESLint
+Configured with React and TypeScript rules for code quality.
+
+### Tailwind CSS
+Custom design system with CSS variables for consistent theming.
+
+## 📞 Support
+
+For technical questions or issues:
+- **Email:** support@ede-story.com
+- **Documentation:** Check this README and inline code comments
+
+## 📄 License
+
+Copyright © 2025 Edestory. All rights reserved.
+
+---
+
+**Built with ❤️ for manufacturers seeking marketplace independence**

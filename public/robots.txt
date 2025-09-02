@@ -1,3 +1,10 @@
+User-agent: *
+Allow: /
+
+# Sitemap
+Sitemap: https://ede-story.com/sitemap.xml
+
+# Specific bots
 User-agent: Googlebot
 Allow: /
 
@@ -10,5 +17,22 @@ Allow: /
 User-agent: facebookexternalhit
 Allow: /
 
-User-agent: *
-Allow: /
+# SEO optimized
+Crawl-delay: 1
+
+# Disallow admin and API routes
+Disallow: /api/
+Disallow: /admin/
+Disallow: /_next/
+Disallow: /assets/
+
+# Allow important pages
+Allow: /$
+Allow: /product
+Allow: /pricing
+Allow: /solutions
+Allow: /cases
+Allow: /resources
+Allow: /templates
+Allow: /about
+Allow: /contact

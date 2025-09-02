@@ -1,5 +1,5 @@
 import React, { useState } from 'react';
-import { Helmet } from 'react-helmet-async';
+import { SEOHead, generateOrganizationLD, generateFAQPageLD } from '@/components/SEOHead';
 import { Link } from 'react-router-dom';
 import Header from '@/components/Header';
 import Footer from '@/components/Footer';
@@ -164,20 +164,6 @@ const faqPageLD = {
 const Index = () => {
   return (
     <>
-      <Helmet>
-        <title>Ваши клиенты, ваши цены, ваша прибыль - Edestory</title>
-        <meta 
-          name="description" 
-          content="Создайте независимый e-commerce за 60 минут и увеличьте маржинальность на 20-25%. Полнофункциональная платформа для прямых продаж с AI-автоматизацией." 
-        />
-        <script type="application/ld+json">
-          {JSON.stringify(organizationLD)}
-        </script>
-        <script type="application/ld+json">
-          {JSON.stringify(faqPageLD)}
-        </script>
-      </Helmet>
-
       <Header />
       
       <main>
