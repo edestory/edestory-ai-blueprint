@@ -14,16 +14,15 @@ import { CheckCircle, TrendingDown, Calculator, DollarSign, Users, Zap, Sparkles
 import calculatorImage from '@/assets/pricing-calculator.jpg';
 
 const Pricing = () => {
-  const [revenue, setRevenue] = useState([100000]);
+  const [profit, setProfit] = useState([20000]);
   
-  const calculateFee = (revenueAmount: number, year: number = 1) => {
-    const baseRate = 10;
-    const reductionPerYear = 1;
-    const minRate = 5;
-    const currentRate = Math.max(minRate, baseRate - (reductionPerYear * (year - 1)));
+  const calculateFee = (profitAmount: number) => {
+    const profitShareRate = 20;
+    const marketplaceRate = 30;
     return {
-      rate: currentRate,
-      fee: (revenueAmount * currentRate) / 100
+      edestoryFee: (profitAmount * profitShareRate) / 100,
+      marketplaceFee: (profitAmount * marketplaceRate) / 100,
+      savings: (profitAmount * (marketplaceRate - profitShareRate)) / 100
     };
   };
 
@@ -103,10 +102,10 @@ const Pricing = () => {
                 Цены и условия
               </h1>
               <p className="text-lg md:text-xl text-gray-200 leading-relaxed mb-8">
-                Revenue Share: <strong className="text-accent">10%</strong> от оборота → <strong className="text-accent">-1%/год</strong> до минимума <strong className="text-accent">5%</strong>
+                Profit-sharing: <strong className="text-accent">20% от прибыли</strong> вместо <strong className="text-burgundy-light">30% комиссий маркетплейсов</strong>
               </p>
               <Badge variant="outline" className="text-base px-6 py-2 bg-white/10 border-white/30 text-white backdrop-blur-sm">
-                Нет скрытых комиссий • Нет абонентской платы
+                Предоплата 0 рублей • Платите только с результата
               </Badge>
             </div>
           </Container>
@@ -129,63 +128,65 @@ const Pricing = () => {
               <CardContent className="space-y-8">
                 <div>
                   <label className="block text-sm font-medium text-foreground mb-4">
-                    Ваш месячный оборот: <span className="text-primary font-semibold">${revenue[0].toLocaleString()}</span>
+                    Ваша месячная прибыль: <span className="text-primary font-semibold">€{profit[0].toLocaleString()}</span>
                   </label>
                   <Slider
-                    value={revenue}
-                    onValueChange={setRevenue}
-                    max={1000000}
-                    min={10000}
-                    step={10000}
+                    value={profit}
+                    onValueChange={setProfit}
+                    max={100000}
+                    min={5000}
+                    step={2500}
                     className="w-full"
                   />
                   <div className="flex justify-between text-xs text-muted-foreground mt-2">
-                    <span>$10K</span>
-                    <span>$1M</span>
+                    <span>€5K</span>
+                    <span>€100K</span>
                   </div>
                 </div>
 
-                <div className="grid grid-cols-1 md:grid-cols-5 gap-4">
-                  {years.map((year) => {
-                    const yearlyRevenue = revenue[0] * 12;
-                    const { rate, fee } = calculateFee(yearlyRevenue, year);
-                    const monthlyFee = fee / 12;
-                    
-                    return (
-                      <Card key={year} className={`text-center ${year === 1 ? 'border-primary' : 'border-border'}`}>
-                        <CardHeader className="pb-2">
-                          <CardTitle className="text-lg">Год {year}</CardTitle>
-                          <div className="flex items-center justify-center">
-                            <TrendingDown className="w-4 h-4 text-success mr-1" />
-                            <span className="text-2xl font-light text-primary">{rate}%</span>
-                          </div>
-                        </CardHeader>
-                        <CardContent className="pt-0">
-                          <div className="text-sm text-muted-foreground mb-1">Комиссия/месяц</div>
-                          <div className="font-semibold text-foreground">${monthlyFee.toLocaleString()}</div>
-                          <div className="text-xs text-muted-foreground mt-2">
-                            ${fee.toLocaleString()}/год
-                          </div>
-                        </CardContent>
-                      </Card>
-                    );
-                  })}
+                <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
+                  <Card className="border-burgundy/20">
+                    <CardHeader className="pb-4">
+                      <CardTitle className="text-lg flex items-center gap-2">
+                        <span className="text-burgundy">Маркетплейсы</span>
+                      </CardTitle>
+                    </CardHeader>
+                    <CardContent>
+                      <div className="text-center">
+                        <div className="text-3xl font-bold text-burgundy mb-2">
+                          €{calculateFee(profit[0]).marketplaceFee.toLocaleString()}
+                        </div>
+                        <p className="text-sm text-muted-foreground">30% комиссия в месяц</p>
+                      </div>
+                    </CardContent>
+                  </Card>
+
+                  <Card className="border-accent/20">
+                    <CardHeader className="pb-4">
+                      <CardTitle className="text-lg flex items-center gap-2">
+                        <span className="text-accent">Edestory</span>
+                      </CardTitle>
+                    </CardHeader>
+                    <CardContent>
+                      <div className="text-center">
+                        <div className="text-3xl font-bold text-accent mb-2">
+                          €{calculateFee(profit[0]).edestoryFee.toLocaleString()}
+                        </div>
+                        <p className="text-sm text-muted-foreground">20% от прибыли в месяц</p>
+                      </div>
+                    </CardContent>
+                  </Card>
                 </div>
 
                 <div className="text-center bg-gradient-subtle rounded-xl p-6">
                   <h3 className="text-lg font-medium text-foreground mb-2">
-                    Экономия за 5 лет
+                    Ваша экономия каждый месяц
                   </h3>
                   <div className="text-3xl font-light text-success">
-                    ${((calculateFee(revenue[0] * 12 * 5, 1).fee - 
-                        (calculateFee(revenue[0] * 12, 1).fee + 
-                         calculateFee(revenue[0] * 12, 2).fee + 
-                         calculateFee(revenue[0] * 12, 3).fee + 
-                         calculateFee(revenue[0] * 12, 4).fee + 
-                         calculateFee(revenue[0] * 12, 5).fee))).toLocaleString()}
+                    €{calculateFee(profit[0]).savings.toLocaleString()}
                   </div>
                   <p className="text-sm text-muted-foreground mt-2">
-                    по сравнению с фиксированной ставкой 10%
+                    или €{(calculateFee(profit[0]).savings * 12).toLocaleString()} в год
                   </p>
                 </div>
               </CardContent>

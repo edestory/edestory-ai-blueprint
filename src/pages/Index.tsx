@@ -234,8 +234,8 @@ const Index = () => {
                     <div className="text-sm text-gray-300">Готовый магазин</div>
                   </div>
                   <div>
-                    <div className="text-2xl font-semibold text-accent mb-1">10%</div>
-                    <div className="text-sm text-gray-300">Комиссия vs 30% маркетплейсов</div>
+                    <div className="text-2xl font-semibold text-accent mb-1">20%</div>
+                    <div className="text-sm text-gray-300">от прибыли vs 30% маркетплейсов</div>
                   </div>
                   <div>
                     <div className="text-2xl font-semibold text-accent mb-1">€300k+</div>
@@ -313,7 +313,7 @@ const Index = () => {
           <Container>
             <div className="text-center max-w-4xl mx-auto mb-12">
               <h2 className="text-3xl md:text-4xl font-light tracking-tight mb-6 text-foreground">
-                10% от оборота vs 30% комиссий маркетплейсов
+                20% от прибыли vs 30% комиссий маркетплейсов
               </h2>
               <p className="text-xl text-muted-foreground mb-8">
                 Мы зарабатываем только когда растете вы
@@ -323,8 +323,8 @@ const Index = () => {
             <div className="max-w-4xl mx-auto mb-12">
               <div className="bg-background rounded-lg shadow-lg overflow-hidden">
                 <div className="grid grid-cols-2 gap-0">
-                  <div className="bg-destructive/10 p-6 border-r border-border">
-                    <h3 className="text-xl font-semibold text-center mb-6 text-destructive">Маркетплейсы</h3>
+                  <div className="bg-burgundy/10 p-6 border-r border-border">
+                    <h3 className="text-xl font-semibold text-center mb-6 text-burgundy">Маркетплейсы</h3>
                   </div>
                   <div className="bg-accent/10 p-6">
                     <h3 className="text-xl font-semibold text-center mb-6 text-accent">Edestory</h3>
@@ -332,36 +332,36 @@ const Index = () => {
                 </div>
                 
                 <div className="grid grid-cols-2 gap-0 text-sm">
-                  <div className="p-4 border-r border-b border-border bg-destructive/5">
+                  <div className="p-4 border-r border-b border-border bg-burgundy/5">
                     <div className="font-medium text-muted-foreground mb-1">Комиссия:</div>
-                    <div className="text-lg font-semibold text-destructive">30-40%</div>
+                    <div className="text-lg font-semibold text-burgundy">30%</div>
                   </div>
                   <div className="p-4 border-b border-border bg-accent/5">
-                    <div className="font-medium text-muted-foreground mb-1">Комиссия:</div>
-                    <div className="text-lg font-semibold text-accent">10%</div>
+                    <div className="font-medium text-muted-foreground mb-1">От прибыли:</div>
+                    <div className="text-lg font-semibold text-accent">20%</div>
                   </div>
                   
-                  <div className="p-4 border-r border-b border-border bg-destructive/5">
+                  <div className="p-4 border-r border-b border-border bg-burgundy/5">
                     <div className="font-medium text-muted-foreground mb-1">Скрытые платежи:</div>
-                    <div className="text-lg font-semibold text-destructive">3-5%</div>
+                    <div className="text-lg font-semibold text-burgundy">3-5%</div>
                   </div>
                   <div className="p-4 border-b border-border bg-accent/5">
                     <div className="font-medium text-muted-foreground mb-1">Скрытые платежи:</div>
                     <div className="text-lg font-semibold text-accent">0%</div>
                   </div>
                   
-                  <div className="p-4 border-r border-b border-border bg-destructive/5">
+                  <div className="p-4 border-r border-b border-border bg-burgundy/5">
                     <div className="font-medium text-muted-foreground mb-1">Контроль цен:</div>
-                    <div className="text-lg font-semibold text-destructive">НЕТ</div>
+                    <div className="text-lg font-semibold text-burgundy">НЕТ</div>
                   </div>
                   <div className="p-4 border-b border-border bg-accent/5">
                     <div className="font-medium text-muted-foreground mb-1">Контроль цен:</div>
                     <div className="text-lg font-semibold text-accent">100%</div>
                   </div>
                   
-                  <div className="p-4 border-r border-border bg-destructive/5">
+                  <div className="p-4 border-r border-border bg-burgundy/5">
                     <div className="font-medium text-muted-foreground mb-1">База клиентов:</div>
-                    <div className="text-lg font-semibold text-destructive">НЕТ</div>
+                    <div className="text-lg font-semibold text-burgundy">НЕТ</div>
                   </div>
                   <div className="p-4 border-border bg-accent/5">
                     <div className="font-medium text-muted-foreground mb-1">База клиентов:</div>
@@ -373,9 +373,9 @@ const Index = () => {
 
             <div className="text-center bg-primary/10 rounded-lg p-8 max-w-2xl mx-auto">
               <h3 className="text-2xl font-semibold mb-4 text-primary">Калькулятор экономии</h3>
-              <p className="text-lg text-muted-foreground mb-4">При обороте €1M/год экономия составит</p>
-              <div className="text-4xl font-bold text-primary mb-2">€300,000</div>
-              <p className="text-sm text-muted-foreground">Это €200k+ чистой прибыли дополнительно в год</p>
+              <p className="text-lg text-muted-foreground mb-4">При прибыли €200k/год экономия составит</p>
+              <div className="text-4xl font-bold text-primary mb-2">€20,000</div>
+              <p className="text-sm text-muted-foreground">в сравнении с маркетплейсами</p>
             </div>
           </Container>
         </Section>
@@ -428,9 +428,9 @@ const Index = () => {
                           {module.modalId === 'content' && (
                             <>
                               <DialogHeader>
-                                <DialogTitle className="text-2xl font-semibold mb-4">
-                                  AI Content Factory: Ваш внутренний креативный отдел
-                                </DialogTitle>
+                                 <DialogTitle className="text-xl font-semibold mb-4">
+                                   AI Content Factory: Ваш внутренний креативный отдел
+                                 </DialogTitle>
                               </DialogHeader>
                               
                               <div className="space-y-6 text-sm leading-relaxed">
@@ -475,9 +475,9 @@ const Index = () => {
                           {module.modalId === 'architect' && (
                             <>
                               <DialogHeader>
-                                <DialogTitle className="text-2xl font-semibold mb-4">
-                                  AI Website Architect: Ваш цифровой стратег
-                                </DialogTitle>
+                                 <DialogTitle className="text-xl font-semibold mb-4">
+                                   AI Website Architect: Ваш цифровой стратег
+                                 </DialogTitle>
                               </DialogHeader>
                               
                               <div className="space-y-6 text-sm leading-relaxed">
@@ -538,9 +538,9 @@ const Index = () => {
                           {module.modalId === 'marketer' && (
                             <>
                               <DialogHeader>
-                                <DialogTitle className="text-2xl font-semibold mb-4">
-                                  AI Marketer: Ваш центр управления трафиком и аналитикой
-                                </DialogTitle>
+                                 <DialogTitle className="text-xl font-semibold mb-4">
+                                   AI Marketer: Ваш центр управления трафиком и аналитикой
+                                 </DialogTitle>
                               </DialogHeader>
                               
                               <div className="space-y-6 text-sm leading-relaxed">
@@ -596,9 +596,9 @@ const Index = () => {
                           {module.modalId === 'support' && (
                             <>
                               <DialogHeader>
-                                <DialogTitle className="text-2xl font-semibold mb-4">
-                                  AI-Консультант: Больше чем чат-бот, лучше чем менеджер
-                                </DialogTitle>
+                                 <DialogTitle className="text-xl font-semibold mb-4">
+                                   AI-Консультант: Больше чем чат-бот, лучше чем менеджер
+                                 </DialogTitle>
                               </DialogHeader>
                               
                               <div className="space-y-6 text-sm leading-relaxed">
@@ -675,9 +675,9 @@ const Index = () => {
                           {module.modalId === 'logistics' && (
                             <>
                               <DialogHeader>
-                                <DialogTitle className="text-2xl font-semibold mb-4">
-                                  AI Procurement & Logistics Manager: Ваш аналитический центр управления товарами
-                                </DialogTitle>
+                                 <DialogTitle className="text-xl font-semibold mb-4">
+                                   AI Procurement & Logistics Manager: Ваш аналитический центр управления товарами
+                                 </DialogTitle>
                               </DialogHeader>
                               
                               <div className="space-y-6 text-sm leading-relaxed">
@@ -739,9 +739,9 @@ const Index = () => {
                           {module.modalId === 'analyst' && (
                             <>
                               <DialogHeader>
-                                <DialogTitle className="text-2xl font-semibold mb-4">
-                                  AI-Аналитик: Ваш центр управления данными
-                                </DialogTitle>
+                                 <DialogTitle className="text-xl font-semibold mb-4">
+                                   AI-Аналитик: Ваш центр управления данными
+                                 </DialogTitle>
                               </DialogHeader>
                               
                               <div className="space-y-6 text-sm leading-relaxed">
@@ -775,7 +775,7 @@ const Index = () => {
                 <CardHeader>
                   <Badge className="w-fit bg-accent/10 text-accent border-accent/20 mb-4">Fashion</Badge>
                   <CardTitle className="text-xl text-foreground">
-                    От 8% маржи на WB до 35% в собственном магазине
+                    От 8% маржи на Амазон до 35% в собственном магазине
                   </CardTitle>
                 </CardHeader>
                 <CardContent className="space-y-4">
@@ -967,10 +967,10 @@ const Index = () => {
               <Card className="text-center border-0 bg-gradient-to-br from-background to-muted hover:shadow-lg transition-all">
                 <CardHeader>
                   <CardTitle className="text-lg text-foreground mb-2">"А если не получится?"</CardTitle>
-                  <Badge className="mx-auto bg-accent/10 text-accent border-accent/20">30-дневная гарантия</Badge>
+                  <Badge className="mx-auto bg-accent/10 text-accent border-accent/20">Предоплата 0 рублей</Badge>
                 </CardHeader>
                 <CardContent>
-                  <p className="text-muted-foreground">Не подошло — вернем 100% средств, no questions asked</p>
+                  <p className="text-muted-foreground">Не подошло — ничем не рискуете. Платите за результат с чистой прибыли 20%</p>
                 </CardContent>
               </Card>
 

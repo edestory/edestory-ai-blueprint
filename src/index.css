@@ -33,6 +33,11 @@
     --accent-light: 35 85% 65%;
     --accent-foreground: 0 0% 100%;
     
+    /* 4. Бордовый (для негативных акцентов) */
+    --burgundy: 0 50% 35%; /* #8B2635 */
+    --burgundy-light: 0 50% 45%;
+    --burgundy-foreground: 0 0% 100%;
+    
     /* 4. Светло-серый #1 (основные секции) */
     --muted: 0 0% 99%; /* #fcfcfc */
     --muted-foreground: 0 0% 45%;
@@ -228,6 +233,19 @@
   /* Text utilities */
   .text-balance {
     text-wrap: balance;
+  }
+  
+  /* Burgundy color utilities */
+  .text-burgundy {
+    color: hsl(var(--burgundy));
+  }
+  
+  .text-burgundy-light {
+    color: hsl(var(--burgundy-light));
+  }
+  
+  .bg-burgundy {
+    background-color: hsl(var(--burgundy));
   }
 
   /* Custom scrollbar */

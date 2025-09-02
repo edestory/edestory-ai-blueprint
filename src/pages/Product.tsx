@@ -141,12 +141,11 @@ const Product = () => {
           <Container>
             <div className="text-center max-w-4xl mx-auto">
               <h1 className="text-display mb-6 text-balance">
-                Edestory — операционная система вашего e‑commerce
+                Платформа для независимости от маркетплейсов
               </h1>
               <p className="text-body-large text-muted-foreground text-balance">
-                Edestory — white‑label SaaS‑платформа, которая превращает ваш интернет‑магазин в управляемый 
-                данными бизнес. Один оператор управляет до 1 000 SKU; архитектура масштабируется до 
-                100 000 SKU силами двух человек.
+                Полнофункциональная SaaS-платформа с AI-автоматизацией всех процессов прямых продаж. 
+                Освободитесь от 30% комиссий маркетплейсов и создайте собственный канал продаж за 60 минут.
               </p>
             </div>
           </Container>
@@ -293,11 +292,12 @@ const Product = () => {
           <Container>
             <div className="text-center max-w-3xl mx-auto">
               <h2 className="text-headline mb-6">
-                Модель монетизации
+                Модель profit-sharing
               </h2>
               <p className="text-body-large text-muted-foreground mb-8">
-                Revenue Share: 10% в первый год → –1%/год до 5%. Клиент отдельно оплачивает API 
-                и инфраструктуру. Наша цель — <strong>рост вашей прибыли</strong>, мы зарабатываем вместе с вами.
+                Мы берем <strong>20% от чистой прибыли</strong> вместо 30% комиссий маркетплейсов. 
+                Предоплаты нет — платите только с результата. Наша цель — максимизировать <strong>вашу прибыль</strong>, 
+                мы зарабатываем только когда растете вы.
               </p>
             </div>
           </Container>

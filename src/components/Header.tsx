@@ -73,7 +73,7 @@ const Header = () => {
 
             {/* CTA Button */}
             <Button variant="default" size="sm" className="hidden md:inline-flex font-normal">
-              {t('common.demo')}
+              Начать прямо сейчас
             </Button>
 
             {/* Mobile Menu Button */}
@@ -118,7 +118,7 @@ const Header = () => {
                 </button>
                 
                 <Button variant="default" size="sm" onClick={() => setIsMobileMenuOpen(false)} className="font-normal">
-                  {t('common.demo')}
+                  Начать прямо сейчас
                 </Button>
               </div>
             </div>
