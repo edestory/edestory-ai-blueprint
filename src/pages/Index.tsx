@@ -195,13 +195,13 @@ const Index = () => {
                   </Badge>
                 </div>
                 
-                <h1 className="text-3xl md:text-4xl lg:text-5xl font-light tracking-tight mb-6 text-balance text-white">
-                  EDESTORY AI: Ваш автопилот для роста прибыли в E-commerce
+                <h1 className="text-2xl md:text-3xl lg:text-4xl font-light tracking-tight mb-6 text-balance text-white leading-tight">
+                  EDESTORY AI: Ваш автопилот<br/>для роста прибыли в E-commerce
                 </h1>
-                <p className="text-xl md:text-2xl text-gray-200 mb-4 font-medium text-balance">
+                <p className="text-lg md:text-xl text-gray-200 mb-4 font-medium text-balance">
                   Перестаньте терять до 40% прибыли на маркетплейсах. Запустите собственный, полностью автоматизированный канал продаж в Европе с оплатой только за результат.
                 </p>
-                <p className="text-base md:text-lg text-gray-300 mb-8 text-balance">
+                <p className="text-sm md:text-base text-gray-300 mb-8 text-balance">
                   Мы строим для вас бизнес, а не просто сайт.
                 </p>
                 
@@ -260,19 +260,19 @@ const Index = () => {
                   </DialogHeader>
                   <div className="space-y-6">
                     <div>
-                      <h4 className="font-semibold text-destructive mb-2">Демпинг и ценовые войны</h4>
+                      <h4 className="font-semibold text-primary mb-2">Демпинг и ценовые войны</h4>
                       <p className="text-muted-foreground">Вы вынуждены конкурировать ценой, а не качеством, что разрушает ценность вашего бренда.</p>
                     </div>
                     <div>
-                      <h4 className="font-semibold text-destructive mb-2">Высокие комиссии</h4>
+                      <h4 className="font-semibold text-primary mb-2">Высокие комиссии</h4>
                       <p className="text-muted-foreground">Сборы платформ могут достигать 30%, съедая значительную часть вашей выручки.</p>
                     </div>
                     <div>
-                      <h4 className="font-semibold text-destructive mb-2">Отсутствие контроля</h4>
+                      <h4 className="font-semibold text-primary mb-2">Отсутствие контроля</h4>
                       <p className="text-muted-foreground">Вы не владеете данными своих покупателей, не можете выстраивать с ними отношения и стимулировать повторные продажи.</p>
                     </div>
                     <div>
-                      <h4 className="font-semibold text-destructive mb-2">Операционная сложность</h4>
+                      <h4 className="font-semibold text-primary mb-2">Операционная сложность</h4>
                       <p className="text-muted-foreground">Управление логистикой, возвратами и поддержкой в разных странах требует огромных ресурсов и экспертизы.</p>
                     </div>
                   </div>
@@ -281,9 +281,9 @@ const Index = () => {
             </div>
 
             <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
-              <Card className="border border-destructive/20 bg-gradient-to-br from-destructive/5 to-destructive/10 hover:shadow-lg transition-all">
+              <Card className="border border-primary/20 bg-gradient-to-br from-primary/5 to-primary/10 hover:shadow-lg transition-all">
                 <CardHeader>
-                  <CardTitle className="text-destructive flex items-center gap-3">
+                  <CardTitle className="text-primary flex items-center gap-3">
                     <TrendingUp className="w-6 h-6 rotate-180" />
                     Комиссии убивают бизнес
                   </CardTitle>
@@ -293,9 +293,9 @@ const Index = () => {
                 </CardContent>
               </Card>
 
-              <Card className="border border-destructive/20 bg-gradient-to-br from-destructive/5 to-destructive/10 hover:shadow-lg transition-all">
+              <Card className="border border-primary/20 bg-gradient-to-br from-primary/5 to-primary/10 hover:shadow-lg transition-all">
                 <CardHeader>
-                  <CardTitle className="text-destructive flex items-center gap-3">
+                  <CardTitle className="text-primary flex items-center gap-3">
                     <BarChart2 className="w-6 h-6" />
                     Ценовые войны без дна
                   </CardTitle>
@@ -305,9 +305,9 @@ const Index = () => {
                 </CardContent>
               </Card>
 
-              <Card className="border border-destructive/20 bg-gradient-to-br from-destructive/5 to-destructive/10 hover:shadow-lg transition-all">
+              <Card className="border border-primary/20 bg-gradient-to-br from-primary/5 to-primary/10 hover:shadow-lg transition-all">
                 <CardHeader>
-                  <CardTitle className="text-destructive flex items-center gap-3">
+                  <CardTitle className="text-primary flex items-center gap-3">
                     <Users className="w-6 h-6" />
                     Клиенты не ваши
                   </CardTitle>
@@ -317,9 +317,9 @@ const Index = () => {
                 </CardContent>
               </Card>
 
-              <Card className="border border-destructive/20 bg-gradient-to-br from-destructive/5 to-destructive/10 hover:shadow-lg transition-all">
+              <Card className="border border-primary/20 bg-gradient-to-br from-primary/5 to-primary/10 hover:shadow-lg transition-all">
                 <CardHeader>
-                  <CardTitle className="text-destructive flex items-center gap-3">
+                  <CardTitle className="text-primary flex items-center gap-3">
                     <Shield className="w-6 h-6" />
                     Правила меняются без вас
                   </CardTitle>
@@ -1215,11 +1215,11 @@ const Index = () => {
                       <Textarea id="message" placeholder="Расскажите о вашем бизнесе и задачах..." rows={3} />
                     </div>
                     <div className="flex flex-col sm:flex-row gap-3 pt-4">
-                      <Button type="submit" size="lg" className="flex-1 bg-accent hover:bg-accent/90 text-white">
+                      <Button type="submit" className="bg-accent hover:bg-accent/90 text-white px-6 py-2">
                         <Send className="mr-2 h-4 w-4" />
                         Получить бесплатный расчет прибыли
                       </Button>
-                      <Button type="button" variant="outline" size="lg" asChild className="flex-1">
+                      <Button type="button" variant="outline" asChild className="px-6 py-2">
                         <Link to="/contact">Запланировать онлайн-демонстрацию</Link>
                       </Button>
                     </div>
@@ -1227,12 +1227,10 @@ const Index = () => {
                 </Card>
               </div>
 
-              <div className="bg-accent/10 border border-accent/20 rounded-lg p-6 max-w-2xl mx-auto">
-                <p className="text-sm text-muted-foreground">
-                  <Shield className="inline w-4 h-4 mr-2" />
-                  Мы гарантируем конфиденциальность ваших данных и не передаем их третьим лицам
-                </p>
-              </div>
+              <p className="text-sm text-muted-foreground text-center mt-6">
+                <Shield className="inline w-4 h-4 mr-2" />
+                Мы гарантируем конфиденциальность ваших данных
+              </p>
             </div>
           </Container>
         </Section>
