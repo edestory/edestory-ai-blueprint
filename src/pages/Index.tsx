@@ -4,6 +4,7 @@ import { Link } from 'react-router-dom';
 import Header from '@/components/Header';
 import Footer from '@/components/Footer';
 import ChatWidget from '@/components/ChatWidget';
+import { WhyUsSection } from '@/components/WhyUsSection';
 import { Container } from '@/components/Container';
 import { Section } from '@/components/Section';
 import { Grid } from '@/components/Grid';
@@ -14,11 +15,14 @@ import { Button } from '@/components/ui/button';
 import { Badge } from '@/components/ui/badge';
 import { Card, CardContent, CardDescription, CardHeader, CardTitle } from '@/components/ui/card';
 import { Dialog, DialogContent, DialogHeader, DialogTitle, DialogTrigger } from '@/components/ui/dialog';
+import { Input } from '@/components/ui/input';
+import { Label } from '@/components/ui/label';
+import { Textarea } from '@/components/ui/textarea';
 import { SectionTitleLight, SubTitle, DescriptionLight } from '@/components/Typography';
 import { 
   ArrowRight, CheckCircle, TrendingUp, Users, Globe, Zap, 
   Layers, Cpu, Brain, ShoppingBag, BarChart2, Truck,
-  Shield, Clock, Award, Sparkles
+  Shield, Clock, Award, Sparkles, Send
 } from 'lucide-react';
 import heroImage from '@/assets/hero-ai-commerce.jpg';
 
@@ -192,24 +196,24 @@ const Index = () => {
                 </div>
                 
                 <h1 className="text-3xl md:text-4xl lg:text-5xl font-light tracking-tight mb-6 text-balance text-white">
-                  Ваши клиенты, ваши цены, ваша прибыль
+                  EDESTORY AI: Ваш автопилот для роста прибыли в E-commerce
                 </h1>
                 <p className="text-xl md:text-2xl text-gray-200 mb-4 font-medium text-balance">
-                  Создайте независимый e-commerce за 60 минут и увеличьте маржинальность на 20-25%
+                  Перестаньте терять до 40% прибыли на маркетплейсах. Запустите собственный, полностью автоматизированный канал продаж в Европе с оплатой только за результат.
                 </p>
                 <p className="text-base md:text-lg text-gray-300 mb-8 text-balance">
-                  Полнофункциональная платформа для прямых продаж с AI-автоматизацией всех процессов
+                  Мы строим для вас бизнес, а не просто сайт.
                 </p>
                 
                 <div className="flex flex-col sm:flex-row gap-4 mb-8">
                   <Button asChild size="lg" className="text-lg px-8 py-6 bg-accent hover:bg-accent/90 text-white border-0">
-                    <Link to="/contact">
-                      Запустить тестовый магазин за 1 час
+                    <Link to="/pricing">
+                      Рассчитать мою потенциальную прибыль
                       <ArrowRight className="ml-2 h-5 w-5" />
                     </Link>
                   </Button>
                   <Button asChild variant="outline" size="lg" className="text-lg px-8 py-6 border-white/30 text-white hover:bg-white/10 backdrop-blur-sm">
-                    <Link to="/pricing">Рассчитать экономию</Link>
+                    <Link to="/contact">Заказать бесплатную демо-версию</Link>
                   </Button>
                 </div>
 
@@ -238,8 +242,42 @@ const Index = () => {
           <Container>
             <div className="text-center max-w-4xl mx-auto mb-12">
               <h2 className="text-3xl md:text-4xl font-light tracking-tight mb-6 text-foreground">
-                Почему производители массово покидают маркетплейсы в 2025
+                Куда на самом деле уходит ваша прибыль?
               </h2>
+              <p className="text-xl text-muted-foreground mb-6">
+                Вы усердно работаете, чтобы произвести качественный товар, а маркетплейсы забирают львиную долю вашей маржи через скрытые комиссии, ценовые войны и дорогие рекламные инструменты.
+              </p>
+              <Dialog>
+                <DialogTrigger asChild>
+                  <Button variant="outline" className="mb-8">
+                    Подробнее о проблемах маркетплейсов
+                    <ArrowRight className="ml-2 h-4 w-4" />
+                  </Button>
+                </DialogTrigger>
+                <DialogContent className="max-w-2xl max-h-[80vh] overflow-y-auto">
+                  <DialogHeader>
+                    <DialogTitle className="text-xl mb-4">Системные проблемы глобальных платформ</DialogTitle>
+                  </DialogHeader>
+                  <div className="space-y-6">
+                    <div>
+                      <h4 className="font-semibold text-destructive mb-2">Демпинг и ценовые войны</h4>
+                      <p className="text-muted-foreground">Вы вынуждены конкурировать ценой, а не качеством, что разрушает ценность вашего бренда.</p>
+                    </div>
+                    <div>
+                      <h4 className="font-semibold text-destructive mb-2">Высокие комиссии</h4>
+                      <p className="text-muted-foreground">Сборы платформ могут достигать 30%, съедая значительную часть вашей выручки.</p>
+                    </div>
+                    <div>
+                      <h4 className="font-semibold text-destructive mb-2">Отсутствие контроля</h4>
+                      <p className="text-muted-foreground">Вы не владеете данными своих покупателей, не можете выстраивать с ними отношения и стимулировать повторные продажи.</p>
+                    </div>
+                    <div>
+                      <h4 className="font-semibold text-destructive mb-2">Операционная сложность</h4>
+                      <p className="text-muted-foreground">Управление логистикой, возвратами и поддержкой в разных странах требует огромных ресурсов и экспертизы.</p>
+                    </div>
+                  </div>
+                </DialogContent>
+              </Dialog>
             </div>
 
             <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
@@ -294,16 +332,168 @@ const Index = () => {
           </Container>
         </Section>
 
-        {/* Profit-Sharing Model Section */}
+        {/* Solution Section */}
+        <Section className="bg-muted">
+          <Container>
+            <div className="text-center max-w-4xl mx-auto mb-12">
+              <h2 className="text-3xl md:text-4xl font-light tracking-tight mb-6 text-foreground">
+                Мы даем не инструмент. Мы строим для вас готовый бизнес под ключ.
+              </h2>
+              <p className="text-xl text-muted-foreground mb-6">
+                Получите полностью укомплектованную и автоматизированную e-commerce компанию в Европе, которой управляет всего 1-2 ваших обученных сотрудника.
+              </p>
+              <Dialog>
+                <DialogTrigger asChild>
+                  <Button variant="outline" className="mb-8">
+                    Подробнее о нашем решении
+                    <ArrowRight className="ml-2 h-4 w-4" />
+                  </Button>
+                </DialogTrigger>
+                <DialogContent className="max-w-2xl max-h-[80vh] overflow-y-auto">
+                  <DialogHeader>
+                    <DialogTitle className="text-xl mb-4">Платформа "Автопилот прибыли"</DialogTitle>
+                  </DialogHeader>
+                  <div className="space-y-4">
+                    <p className="text-muted-foreground">Наша платформа — это единая операционная система для вашего бизнеса. Мы интегрируем все необходимые компоненты:</p>
+                    <ul className="space-y-3">
+                      <li className="flex items-start gap-3">
+                        <CheckCircle className="w-5 h-5 text-accent mt-0.5 flex-shrink-0" />
+                        <span><strong>Современный интернет-магазин</strong> под вашим брендом</span>
+                      </li>
+                      <li className="flex items-start gap-3">
+                        <CheckCircle className="w-5 h-5 text-accent mt-0.5 flex-shrink-0" />
+                        <span><strong>ERP-систему</strong> для управления ресурсами и финансами</span>
+                      </li>
+                      <li className="flex items-start gap-3">
+                        <CheckCircle className="w-5 h-5 text-accent mt-0.5 flex-shrink-0" />
+                        <span><strong>WMS-систему</strong> для интеграции со складами и логистикой</span>
+                      </li>
+                      <li className="flex items-start gap-3">
+                        <CheckCircle className="w-5 h-5 text-accent mt-0.5 flex-shrink-0" />
+                        <span><strong>CRM-систему</strong> для построения долгосрочных отношений с клиентами</span>
+                      </li>
+                      <li className="flex items-start gap-3">
+                        <CheckCircle className="w-5 h-5 text-accent mt-0.5 flex-shrink-0" />
+                        <span><strong>Автоматизированный маркетинг</strong> и аналитику для постоянного роста</span>
+                      </li>
+                    </ul>
+                    <p className="text-muted-foreground mt-4">В результате ваши клиенты получают пятизвездочный сервис и лучшие цены, а вы — растущую прибыль и полный контроль.</p>
+                  </div>
+                </DialogContent>
+              </Dialog>
+            </div>
+          </Container>
+        </Section>
+
+        {/* How It Works Section */}
+        <Section className="bg-background">
+          <Container>
+            <div className="text-center max-w-4xl mx-auto mb-12">
+              <h2 className="text-3xl md:text-4xl font-light tracking-tight mb-6 text-foreground">
+                Три шага к удвоению вашей чистой прибыли
+              </h2>
+              <p className="text-xl text-muted-foreground mb-6">
+                Наш процесс прозрачен, быстр и с первого дня нацелен на измеримый финансовый результат.
+              </p>
+              <Dialog>
+                <DialogTrigger asChild>
+                  <Button variant="outline" className="mb-8">
+                    Подробнее о процессе
+                    <ArrowRight className="ml-2 h-4 w-4" />
+                  </Button>
+                </DialogTrigger>
+                <DialogContent className="max-w-2xl max-h-[80vh] overflow-y-auto">
+                  <DialogHeader>
+                    <DialogTitle className="text-xl mb-4">Детальный процесс работы</DialogTitle>
+                  </DialogHeader>
+                  <div className="space-y-6">
+                    <div>
+                      <h4 className="font-semibold text-accent mb-2">1. Анализ и стратегия</h4>
+                      <p className="text-muted-foreground">Мы глубоко изучаем экономику вашего бизнеса, фиксируем текущую прибыль (baseline) и разрабатываем пошаговый план для её кратного роста.</p>
+                    </div>
+                    <div>
+                      <h4 className="font-semibold text-accent mb-2">2. Запуск "под ключ"</h4>
+                      <p className="text-muted-foreground">Наша команда создает и настраивает всю IT-инфраструктуру, интегрирует логистику и платежные системы, обучает ваших сотрудников.</p>
+                    </div>
+                    <div>
+                      <h4 className="font-semibold text-accent mb-2">3. Автоматизация и масштабирование</h4>
+                      <p className="text-muted-foreground">AI-автопилот берет на себя рутинные операции, оптимизирует рекламу и позволяет вам выходить на рынки новых стран за 48 часов, пока ваша команда контролирует стратегию.</p>
+                    </div>
+                  </div>
+                </DialogContent>
+              </Dialog>
+            </div>
+
+            <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
+              <Card className="text-center hover:shadow-lg transition-all">
+                <CardHeader>
+                  <div className="w-16 h-16 bg-accent/10 rounded-full flex items-center justify-center mx-auto mb-4">
+                    <BarChart2 className="w-8 h-8 text-accent" />
+                  </div>
+                  <CardTitle className="text-xl">Анализ и стратегия</CardTitle>
+                </CardHeader>
+                <CardContent>
+                  <p className="text-muted-foreground">Глубокий анализ экономики бизнеса и разработка стратегии роста прибыли</p>
+                </CardContent>
+              </Card>
+
+              <Card className="text-center hover:shadow-lg transition-all">
+                <CardHeader>
+                  <div className="w-16 h-16 bg-accent/10 rounded-full flex items-center justify-center mx-auto mb-4">
+                    <Zap className="w-8 h-8 text-accent" />
+                  </div>
+                  <CardTitle className="text-xl">Запуск "под ключ"</CardTitle>
+                </CardHeader>
+                <CardContent>
+                  <p className="text-muted-foreground">Полная настройка IT-инфраструктуры, интеграций и обучение команды</p>
+                </CardContent>
+              </Card>
+
+              <Card className="text-center hover:shadow-lg transition-all">
+                <CardHeader>
+                  <div className="w-16 h-16 bg-accent/10 rounded-full flex items-center justify-center mx-auto mb-4">
+                    <Globe className="w-8 h-8 text-accent" />
+                  </div>
+                  <CardTitle className="text-xl">Автоматизация и масштабирование</CardTitle>
+                </CardHeader>
+                <CardContent>
+                  <p className="text-muted-foreground">AI-автопилот управляет операциями и обеспечивает быстрый выход на новые рынки</p>
+                </CardContent>
+              </Card>
+            </div>
+          </Container>
+        </Section>
+
+        {/* Business Model Section */}
         <Section className="bg-gradient-to-br from-accent/5 to-primary/5">
           <Container>
             <div className="text-center max-w-4xl mx-auto mb-12">
               <h2 className="text-3xl md:text-4xl font-light tracking-tight mb-6 text-foreground">
-                20% от прибыли vs 30% комиссий маркетплейсов
+                Наша модель: 0€ на старте. 100% фокус на вашей прибыли.
               </h2>
-              <p className="text-xl text-muted-foreground mb-8">
-                Мы зарабатываем только когда растете вы
+              <p className="text-xl text-muted-foreground mb-6">
+                Мы единственные на рынке, кто рискует вместе с вами. Наша оплата — это 20% от дополнительно заработанной вами прибыли. Нет результата — нет оплаты.
               </p>
+              <Dialog>
+                <DialogTrigger asChild>
+                  <Button variant="outline" className="mb-8">
+                    Подробнее о нашей модели
+                    <ArrowRight className="ml-2 h-4 w-4" />
+                  </Button>
+                </DialogTrigger>
+                <DialogContent className="max-w-2xl">
+                  <DialogHeader>
+                    <DialogTitle className="text-xl mb-4">Модель Win-Win-Win</DialogTitle>
+                  </DialogHeader>
+                  <div className="space-y-4">
+                    <p className="text-muted-foreground">Мы полностью отказались от устаревших моделей с платой за запуск или ежемесячной подпиской. Наша философия проста: мы должны приносить реальную, измеримую ценность, чтобы зарабатывать.</p>
+                    
+                    <p className="text-muted-foreground">Такой подход гарантирует, что вся наша команда — от разработчиков до маркетологов — сфокусирована на одной-единственной цели: увеличении вашей чистой прибыли.</p>
+                    
+                    <p className="text-muted-foreground"><strong>Вы ничем не рискуете</strong>, получая в партнеры команду, мотивированную на ваш успех.</p>
+                  </div>
+                </DialogContent>
+              </Dialog>
             </div>
 
             <div className="max-w-4xl mx-auto mb-12">
@@ -747,6 +937,9 @@ const Index = () => {
           </Container>
         </Section>
 
+        {/* Why Us Section */}
+        <WhyUsSection />
+
         {/* Cases Section */}
         <Section className="bg-background">
           <Container>
@@ -988,38 +1181,57 @@ const Index = () => {
           <Container>
             <div className="text-center max-w-4xl mx-auto">
               <h2 className="text-3xl md:text-4xl font-light tracking-tight mb-6 text-foreground">
-                2025 год — время освобождения от маркетплейсов
+                Готовы вернуть контроль над своей прибылью?
               </h2>
               <p className="text-xl text-muted-foreground mb-8">
-                Пока конкуренты увязают в комиссиях, станьте независимыми
+                Закажите бесплатный и ни к чему не обязывающий расчет вашего потенциального роста или получите персональную демонстрацию платформы EDESTORY AI от нашего основателя.
               </p>
               
-              <div className="bg-destructive/10 border border-destructive/20 rounded-lg p-6 mb-8 max-w-2xl mx-auto">
-                <p className="text-lg font-medium text-destructive mb-2">
-                  Каждый день на маркетплейсе стоит вам €500+ упущенной прибыли
-                </p>
+              <div className="max-w-2xl mx-auto mb-8">
+                <Card className="p-6">
+                  <form className="space-y-4">
+                    <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
+                      <div>
+                        <Label htmlFor="name">Имя</Label>
+                        <Input id="name" placeholder="Ваше имя" />
+                      </div>
+                      <div>
+                        <Label htmlFor="company">Компания</Label>
+                        <Input id="company" placeholder="Название компании" />
+                      </div>
+                    </div>
+                    <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
+                      <div>
+                        <Label htmlFor="email">E-mail</Label>
+                        <Input id="email" type="email" placeholder="email@company.com" />
+                      </div>
+                      <div>
+                        <Label htmlFor="phone">Телефон</Label>
+                        <Input id="phone" placeholder="+7 (___) ___-__-__" />
+                      </div>
+                    </div>
+                    <div>
+                      <Label htmlFor="message">Дополнительная информация (необязательно)</Label>
+                      <Textarea id="message" placeholder="Расскажите о вашем бизнесе и задачах..." rows={3} />
+                    </div>
+                    <div className="flex flex-col sm:flex-row gap-3 pt-4">
+                      <Button type="submit" size="lg" className="flex-1 bg-accent hover:bg-accent/90 text-white">
+                        <Send className="mr-2 h-4 w-4" />
+                        Получить бесплатный расчет прибыли
+                      </Button>
+                      <Button type="button" variant="outline" size="lg" asChild className="flex-1">
+                        <Link to="/contact">Запланировать онлайн-демонстрацию</Link>
+                      </Button>
+                    </div>
+                  </form>
+                </Card>
+              </div>
+
+              <div className="bg-accent/10 border border-accent/20 rounded-lg p-6 max-w-2xl mx-auto">
                 <p className="text-sm text-muted-foreground">
-                  Начните прямо сейчас — первый месяц работы покроет все инвестиции
+                  <Shield className="inline w-4 h-4 mr-2" />
+                  Мы гарантируем конфиденциальность ваших данных и не передаем их третьим лицам
                 </p>
-              </div>
-
-              <div className="flex flex-col sm:flex-row gap-4 justify-center mb-8">
-                <Button asChild size="lg" className="text-lg px-8 py-6 bg-accent hover:bg-accent/90 text-white border-0">
-                  <Link to="/contact">
-                    Запустить тестовый магазин за 1 час
-                    <ArrowRight className="ml-2 h-5 w-5" />
-                  </Link>
-                </Button>
-                <Button asChild variant="outline" size="lg" className="text-lg px-8 py-6">
-                  <Link to="/pricing">Рассчитать экономию</Link>
-                </Button>
-              </div>
-
-              <div className="text-center">
-                <Button asChild variant="ghost" className="text-primary hover:text-primary/80">
-                  <Link to="/templates">Посмотреть как это работает</Link>
-                </Button>
-                <p className="text-sm text-muted-foreground mt-2">3-минутное демо реального магазина</p>
               </div>
             </div>
           </Container>
