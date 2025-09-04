@@ -15,8 +15,28 @@ const Contact = () => {
 
   const handleSubmit = async (e: React.FormEvent) => {
     e.preventDefault();
-    // TODO: API call to /api/lead
-    console.log('Form submitted:', formData);
+    
+    // Simulate API call - replace with actual endpoint
+    try {
+      // const response = await fetch('/api/contact', {
+      //   method: 'POST',
+      //   headers: { 'Content-Type': 'application/json' },
+      //   body: JSON.stringify(formData)
+      // });
+      
+      // For demo purposes, show success message
+      alert('Сообщение отправлено! Мы свяжемся с вами в течение 24 часов.');
+      
+      // Reset form
+      setFormData({
+        name: '',
+        email: '',
+        company: '',
+        message: ''
+      });
+    } catch (error) {
+      alert('Ошибка при отправке сообщения. Попробуйте позже.');
+    }
   };
 
   const handleChange = (e: React.ChangeEvent<HTMLInputElement | HTMLTextAreaElement>) => {

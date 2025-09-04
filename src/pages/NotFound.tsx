@@ -5,10 +5,20 @@ const NotFound = () => {
   const location = useLocation();
 
   useEffect(() => {
-    console.error(
-      "404 Error: User attempted to access non-existent route:",
-      location.pathname
-    );
+    // Track 404 errors for monitoring
+    const track404 = () => {
+      try {
+        if (typeof window !== 'undefined' && 'gtag' in window && typeof window.gtag === 'function') {
+          (window as any).gtag('event', 'page_not_found', {
+            page_path: location.pathname
+          });
+        }
+      } catch {
+        // Silently fail if analytics not available
+      }
+    };
+    
+    track404();
   }, [location.pathname]);
 
   return (

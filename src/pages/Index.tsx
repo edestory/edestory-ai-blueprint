@@ -1,5 +1,7 @@
 import React, { useState } from 'react';
 import { SEOHead, generateOrganizationLD, generateFAQPageLD } from '@/components/SEOHead';
+import PageSEO from '@/components/PageSEO';
+import SkipLink from '@/components/SkipLink';
 import { Link } from 'react-router-dom';
 import Header from '@/components/Header';
 import Footer from '@/components/Footer';
@@ -19,6 +21,7 @@ import { Input } from '@/components/ui/input';
 import { Label } from '@/components/ui/label';
 import { Textarea } from '@/components/ui/textarea';
 import { SectionTitleLight, SubTitle, DescriptionLight } from '@/components/Typography';
+import { generateSoftwareApplicationLD, generateFAQLD } from '@/lib/seo';
 import { 
   ArrowRight, CheckCircle, TrendingUp, Users, Globe, Zap, 
   Layers, Cpu, Brain, ShoppingBag, BarChart2, Truck,
@@ -166,11 +169,34 @@ const faqPageLD = {
 };
 
 const Index = () => {
+  const breadcrumbs = [
+    { name: 'Главная', url: '/' }
+  ];
+
+  const structuredData = [
+    generateSoftwareApplicationLD({
+      name: 'Edestory AI Platform',
+      description: 'AI-платформа для автоматизации e-commerce бизнеса с полным циклом от создания до продаж',
+      price: '10% от дополнительной прибыли'
+    }),
+    generateFAQLD(faqItems)
+  ];
+
   return (
     <>
+      <PageSEO 
+        title="Ваш автопилот для роста прибыли в E-commerce"
+        description="Перестаньте терять до 40% прибыли на маркетплейсах. Запустите полностью автоматизированный канал продаж в Европе с оплатой только за результат."
+        keywords="AI автопилот, e-commerce, рост прибыли, автоматизация продаж, маркетплейсы"
+        url="https://ede-story.com/"
+        breadcrumbs={breadcrumbs}
+        structuredData={structuredData}
+      />
+      
+      <SkipLink />
       <Header />
       
-      <main>
+      <main id="main-content" role="main">
         {/* Hero Section */}
         <Section className="pt-32 pb-16 text-white relative overflow-hidden min-h-[80vh] flex items-center" style={{background: 'linear-gradient(135deg, #3d3d3d, #414141)'}}>
           <div className="absolute inset-0 bg-[radial-gradient(circle_at_30%_20%,rgba(230,168,83,0.06),transparent_50%)]" />
